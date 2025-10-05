@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { 
   Mail, 
   Phone, 
@@ -34,15 +35,35 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      // Configuration EmailJS avec vos vraies clés
+      const serviceId = 'service_udoxh7q'; // Votre Service ID
+      const templateId = 'template_4z8ufe7'; // Votre Template ID
+      const publicKey = 'M_113sDZ9bNhKys_6'; // Votre Public Key
+      
+      // Initialiser EmailJS avec votre clé publique
+      emailjs.init(publicKey);
+      
+      // Envoyer l'email
+      await emailjs.send(serviceId, templateId, {
+        title: formData.subject,
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      });
+      
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      setTimeout(() => setIsSubmitted(false), 5000);
+      
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setIsSubmitting(false);
+      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+    }
   };
 
   const contactInfo = [
