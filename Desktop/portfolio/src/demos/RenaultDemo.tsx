@@ -16,10 +16,10 @@ const RenaultDemo = () => {
         'Base de données MySQL optimisée'
       ]}
       screenshots={[
-        { url: '/demos/renault/renault-1.png', caption: 'Dashboard principal' },
-        { url: '/demos/renault/renault-2.png', caption: 'Gestion des clients' },
-        { url: '/demos/renault/renault-3.png', caption: 'Suivi des ventes' },
-        { url: '/demos/renault/renault-4.png', caption: 'Rapports et analyses' }
+        { url: `${process.env.PUBLIC_URL}/demos/renault/renault-1.png`, caption: 'Dashboard principal' },
+        { url: `${process.env.PUBLIC_URL}/demos/renault/renault-2.png`, caption: 'Gestion des clients' },
+        { url: `${process.env.PUBLIC_URL}/demos/renault/renault-3.png`, caption: 'Suivi des ventes' },
+        { url: `${process.env.PUBLIC_URL}/demos/renault/renault-4.png`, caption: 'Rapports et analyses' }
       ]}
       github="https://github.com/Remi2222/renault-crm"
       client="Renault, El Jadida"

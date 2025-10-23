@@ -16,17 +16,17 @@ const FastcubeDemo = () => {
         'Interface utilisateur React.js'
       ]}
       screenshots={[
-        { url: '/demos/fastcube/homeweb.png', caption: 'Page d\'accueil de la plateforme FASTCUBE' },
-        { url: '/demos/fastcube/acceuil2.png', caption: 'Interface d\'accueil alternative' },
-        { url: '/demos/fastcube/home2.png', caption: 'Vue principale du site' },
-        { url: '/demos/fastcube/chatbot.png', caption: 'Interface du chatbot IA conversationnel' },
-        { url: '/demos/fastcube/recommondation.png', caption: 'Moteur de recommandation intelligent' },
-        { url: '/demos/fastcube/service.png', caption: 'Page des services IA disponibles' },
-        { url: '/demos/fastcube/dashboard.png', caption: 'Dashboard d\'administration et analytics' },
-        { url: '/demos/fastcube/blog.png', caption: 'Section blog et articles IA' },
-        { url: '/demos/fastcube/ticketpage.png', caption: 'Système de tickets et support' },
-        { url: '/demos/fastcube/newslatterpage.png', caption: 'Newsletter et abonnements' },
-        { url: '/demos/fastcube/contactus.png', caption: 'Page contact et support client' }
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/homeweb.png`, caption: 'Page d\'accueil de la plateforme FASTCUBE' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/acceuil2.png`, caption: 'Interface d\'accueil alternative' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/home2.png`, caption: 'Vue principale du site' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/chatbot.png`, caption: 'Interface du chatbot IA conversationnel' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/recommondation.png`, caption: 'Moteur de recommandation intelligent' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/service.png`, caption: 'Page des services IA disponibles' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/dashboard.png`, caption: 'Dashboard d\'administration et analytics' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/blog.png`, caption: 'Section blog et articles IA' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/ticketpage.png`, caption: 'Système de tickets et support' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/newslatterpage.png`, caption: 'Newsletter et abonnements' },
+        { url: `${process.env.PUBLIC_URL}/demos/fastcube/contactus.png`, caption: 'Page contact et support client' }
       ]}
       github="https://github.com/Remi2222/fastcube"
       status="Terminé"

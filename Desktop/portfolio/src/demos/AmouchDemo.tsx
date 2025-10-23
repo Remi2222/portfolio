@@ -16,10 +16,10 @@ const AmouchDemo = () => {
         'Base de données MySQL relationnelle'
       ]}
       screenshots={[
-        { url: '/demos/amouch/amouch-1.png', caption: 'Catalogue des animaux' },
-        { url: '/demos/amouch/amouch-2.png', caption: 'Système de réservation' },
-        { url: '/demos/amouch/amouch-3.png', caption: 'Gestion des stocks' },
-        { url: '/demos/amouch/amouch-4.png', caption: 'Interface d\'administration' }
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-1.png`, caption: 'Catalogue des animaux' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-2.png`, caption: 'Système de réservation' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-3.png`, caption: 'Gestion des stocks' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-4.png`, caption: 'Interface d\'administration' }
       ]}
       github="https://github.com/Remi2222/amouch"
       status="Terminé"

@@ -16,10 +16,10 @@ const TicketsDemo = () => {
         'Base de données MySQL optimisée'
       ]}
       screenshots={[
-        { url: '/demos/tickets/tickets-1.png', caption: 'Page de recherche de trajets' },
-        { url: '/demos/tickets/tickets-2.png', caption: 'Sélection des places' },
-        { url: '/demos/tickets/tickets-3.png', caption: 'Processus de paiement' },
-        { url: '/demos/tickets/tickets-4.png', caption: 'Historique des réservations' }
+        { url: `${process.env.PUBLIC_URL}/demos/tickets/tickets-1.png`, caption: 'Page de recherche de trajets' },
+        { url: `${process.env.PUBLIC_URL}/demos/tickets/tickets-2.png`, caption: 'Sélection des places' },
+        { url: `${process.env.PUBLIC_URL}/demos/tickets/tickets-3.png`, caption: 'Processus de paiement' },
+        { url: `${process.env.PUBLIC_URL}/demos/tickets/tickets-4.png`, caption: 'Historique des réservations' }
       ]}
       github="https://github.com/Remi2222/tickets-bus"
       status="Terminé"

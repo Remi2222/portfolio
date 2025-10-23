@@ -16,14 +16,14 @@ const EliteClickDemo = () => {
         'Base de données MySQL optimisée'
       ]}
       screenshots={[
-        { url: '/demos/elite-click/login.jpg', caption: 'Écran de connexion sécurisé' },
-        { url: '/demos/elite-click/home.jpg', caption: 'Page d\'accueil de l\'application' },
-        { url: '/demos/elite-click/service.jpg', caption: 'Catalogue des services publicitaires' },
-        { url: '/demos/elite-click/profil.jpg', caption: 'Interface de profil utilisateur' },
-        { url: '/demos/elite-click/commandes.jpg', caption: 'Gestion des commandes clients' },
-        { url: '/demos/elite-click/commercialetabledeboard.jpg', caption: 'Tableau de bord commercial - Analytics' },
-        { url: '/demos/elite-click/commercialeclient.jpg', caption: 'Interface commerciale - Gestion clients' },
-        { url: '/demos/elite-click/commerciale localisation.jpg', caption: 'Interface commerciale - Localisation et suivi' }
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/login.jpg`, caption: 'Écran de connexion sécurisé' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/home.jpg`, caption: 'Page d\'accueil de l\'application' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/service.jpg`, caption: 'Catalogue des services publicitaires' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/profil.jpg`, caption: 'Interface de profil utilisateur' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/commandes.jpg`, caption: 'Gestion des commandes clients' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/commercialetabledeboard.jpg`, caption: 'Tableau de bord commercial - Analytics' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/commercialeclient.jpg`, caption: 'Interface commerciale - Gestion clients' },
+        { url: `${process.env.PUBLIC_URL}/demos/elite-click/commerciale localisation.jpg`, caption: 'Interface commerciale - Localisation et suivi' }
       ]}
       github="https://github.com/Remi2222/eliteclick"
       client="Elite Click, Beni Mellal"

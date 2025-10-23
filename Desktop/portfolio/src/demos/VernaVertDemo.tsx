@@ -16,10 +16,10 @@ const VernaVertDemo = () => {
         'Gestion des ressources et équipes'
       ]}
       screenshots={[
-        { url: '/demos/verna-vert/vernavert-1.png', caption: 'Interface principale de gestion' },
-        { url: '/demos/verna-vert/vernavert-2.png', caption: 'Planification des interventions' },
-        { url: '/demos/verna-vert/vernavert-3.png', caption: 'Gestion des équipes et ressources' },
-        { url: '/demos/verna-vert/vernavert-4.png', caption: 'Rapports et statistiques' }
+        { url: `${process.env.PUBLIC_URL}/demos/verna-vert/vernavert-1.png`, caption: 'Interface principale de gestion' },
+        { url: `${process.env.PUBLIC_URL}/demos/verna-vert/vernavert-2.png`, caption: 'Planification des interventions' },
+        { url: `${process.env.PUBLIC_URL}/demos/verna-vert/vernavert-3.png`, caption: 'Gestion des équipes et ressources' },
+        { url: `${process.env.PUBLIC_URL}/demos/verna-vert/vernavert-4.png`, caption: 'Rapports et statistiques' }
       ]}
       github="https://github.com/Remi2222/verna-vert"
       client="Verna vert, Rabat"

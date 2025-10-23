@@ -16,10 +16,10 @@ const ChoWorksDemo = () => {
         'Gestion des utilisateurs et permissions'
       ]}
       screenshots={[
-        { url: '/demos/choworks/choworks-1.png', caption: 'Écran de connexion sécurisé' },
-        { url: '/demos/choworks/choworks-2.png', caption: 'Dashboard principal' },
-        { url: '/demos/choworks/choworks-3.png', caption: 'Gestion des employés' },
-        { url: '/demos/choworks/choworks-4.png', caption: 'Système de permissions' }
+        { url: `${process.env.PUBLIC_URL}/demos/choworks/choworks-1.png`, caption: 'Écran de connexion sécurisé' },
+        { url: `${process.env.PUBLIC_URL}/demos/choworks/choworks-2.png`, caption: 'Dashboard principal' },
+        { url: `${process.env.PUBLIC_URL}/demos/choworks/choworks-3.png`, caption: 'Gestion des employés' },
+        { url: `${process.env.PUBLIC_URL}/demos/choworks/choworks-4.png`, caption: 'Système de permissions' }
       ]}
       github="https://github.com/Remi2222/choworks"
       client="ChoWorks, Marrakech"
