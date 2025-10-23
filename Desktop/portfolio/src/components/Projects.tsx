@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ExternalLink, 
@@ -281,17 +282,16 @@ const Projects = () => {
                     <span>Code</span>
                   </motion.a>
                   
-                  <motion.a
-                    href={project.demo}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className='flex items-center space-x-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors'
-                  >
-                    <ExternalLink size={16} />
-                    <span>Démo</span>
-                  </motion.a>
+                  <Link to={project.demo}>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className='flex items-center space-x-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors'
+                    >
+                      <ExternalLink size={16} />
+                      <span>Démo</span>
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

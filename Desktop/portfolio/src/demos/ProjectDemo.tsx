@@ -65,11 +65,19 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
-        <Link to="/#projects">
+        <Link to="/">
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center space-x-2 text-gray-600 hover:text-primary-600 mb-8 transition-colors"
+            onClick={() => {
+              setTimeout(() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }, 100);
+            }}
           >
             <ArrowLeft size={20} />
             <span>Retour aux projets</span>
