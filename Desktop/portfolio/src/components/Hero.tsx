@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-bg opacity-10"></div>
       
@@ -92,7 +92,7 @@ const Hero = () => {
           {/* Main Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
             <span className="gradient-text">Maryam Fajri</span>
           </motion.h1>

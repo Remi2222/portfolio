@@ -28,7 +28,7 @@ const Projects = () => {
         'Base de données MySQL optimisée'
       ],
       github: 'https://github.com/Remi2222/eliteclick',
-      demo: '#',
+      demo: '/demo/elite-click',
       category: 'Mobile App',
       status: 'En cours',
       date: 'Depuis Juil. 2025',
@@ -49,7 +49,7 @@ const Projects = () => {
         'Gestion des utilisateurs et permissions'
       ],
       github: 'https://github.com/Remi2222/choworks',
-      demo: '#',
+      demo: '/demo/choworks',
       category: 'Mobile App',
       status: 'Terminé',
       date: 'Août-Sept 2024',
@@ -70,7 +70,7 @@ const Projects = () => {
         'Gestion des ressources et équipes'
       ],
       github: 'https://github.com/Remi2222/verna-vert',
-      demo: '#',
+      demo: '/demo/verna-vert',
       category: 'Desktop App',
       status: 'Terminé',
       date: 'Août-Sept 2023',
@@ -91,7 +91,7 @@ const Projects = () => {
         'Base de données MySQL optimisée'
       ],
       github: 'https://github.com/Remi2222/renault-crm',
-      demo: '#',
+      demo: '/demo/renault',
       category: 'Desktop App',
       status: 'Terminé',
       date: 'Mars-Avril 2022',
@@ -112,7 +112,7 @@ const Projects = () => {
         'Interface utilisateur React.js'
       ],
       github: 'https://github.com/Remi2222/fastcube',
-      demo: '#',
+      demo: '/demo/fastcube',
       category: 'Web App + IA',
       status: 'Terminé',
       icon: React.createElement(Globe, { className: 'text-blue-500', size: 24 })
@@ -131,7 +131,7 @@ const Projects = () => {
         'Base de données MySQL relationnelle'
       ],
       github: 'https://github.com/Remi2222/amouch',
-      demo: '#',
+      demo: '/demo/amouch',
       category: 'Web App',
       status: 'Terminé',
       icon: React.createElement(ShoppingCart, { className: 'text-green-500', size: 24 })
@@ -150,7 +150,7 @@ const Projects = () => {
         'Base de données MySQL optimisée'
       ],
       github: 'https://github.com/Remi2222/tickets-bus',
-      demo: '#',
+      demo: '/demo/tickets',
       category: 'Web App',
       status: 'Terminé',
       icon: React.createElement(Globe, { className: 'text-purple-500', size: 24 })
