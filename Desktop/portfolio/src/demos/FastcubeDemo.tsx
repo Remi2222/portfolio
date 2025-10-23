@@ -5,14 +5,14 @@ const FastcubeDemo = () => {
   return (
     <ProjectDemo
       title="FASTCUBE - Plateforme Web IA Multiservice"
-      description="Plateforme web intelligente avec chatbot, moteur de recommandation et résumé automatique"
-      technologies={['React.js', 'Node.js', 'Express.js', 'MySQL', 'OpenAI API']}
+      description="Plateforme web intelligente avec chatbot IA local, moteur de recommandation et résumé automatique"
+      technologies={['React.js', 'Node.js', 'Express.js', 'MySQL', 'Ollama', 'LLaMA']}
       features={[
-        'Chatbot conversationnel intelligent',
+        'Chatbot conversationnel intelligent avec Ollama',
         'Moteur de recommandation avancé',
         'Système de résumé automatique',
         'Architecture full-stack moderne',
-        'Intégration API OpenAI',
+        'IA locale avec Ollama (LLaMA)',
         'Interface utilisateur React.js'
       ]}
       screenshots={[
@@ -32,15 +32,15 @@ const FastcubeDemo = () => {
       status="Terminé"
       category="Web App + IA"
       challenges={[
-        'Intégration de l\'API OpenAI pour le chatbot intelligent',
+        'Intégration d\'Ollama pour un chatbot IA local',
         'Développement d\'un moteur de recommandation personnalisé',
-        'Optimisation des temps de réponse pour l\'IA',
-        'Gestion des tokens et coûts API'
+        'Optimisation des temps de réponse avec LLaMA',
+        'Configuration et déploiement d\'Ollama en local'
       ]}
       outcomes={[
         'Plateforme IA multiservice complète et fonctionnelle',
-        'Chatbot avec taux de satisfaction de 85%',
-        'Recommandations pertinentes avec 78% de précision',
+        'Chatbot local performant avec Ollama',
+        'Solution IA gratuite et respectueuse de la vie privée',
         'Interface utilisateur moderne et responsive'
       ]}
     />
