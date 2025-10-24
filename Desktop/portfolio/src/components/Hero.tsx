@@ -164,6 +164,13 @@ const Hero = () => {
           >
             <motion.a
               href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover-lift"
