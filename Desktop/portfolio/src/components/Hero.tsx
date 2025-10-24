@@ -173,7 +173,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a
-              href="/CV_Maryam_Fajri.pdf"
+              href={`${process.env.PUBLIC_URL}/CV_2025-10-23_Maryam_Fajri.pdf`}
               download="CV_Maryam_Fajri.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
