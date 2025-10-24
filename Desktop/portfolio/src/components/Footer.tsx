@@ -56,27 +56,74 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#home" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#about" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                      aboutSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
                   À propos
                 </a>
               </li>
               <li>
-                <a href="#skills" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#skills" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const skillsSection = document.getElementById('skills');
+                    if (skillsSection) {
+                      skillsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
                   Compétences
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#projects" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const projectsSection = document.getElementById('projects');
+                    if (projectsSection) {
+                      projectsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
                   Projets
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="#contact" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
                   Contact
                 </a>
               </li>
