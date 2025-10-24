@@ -69,11 +69,11 @@ const Hero = () => {
           {/* Profile Image */}
           <motion.div
             variants={itemVariants}
-            className="mb-8"
+            className="mb-12"
           >
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-secondary-400 p-1">
+            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-secondary-400 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center text-white text-4xl font-bold">
+                <div className="w-36 h-36 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center text-white text-5xl font-bold shadow-lg">
                   MF
                 </div>
               </div>
