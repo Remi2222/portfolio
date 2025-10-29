@@ -10,9 +10,25 @@ import {
   ShoppingCart,
   Star,
   Calendar,
-  Code,
-  PawPrint
+  Code
 } from 'lucide-react';
+
+// Icône patte d'animal personnalisée
+const PawPrintIcon = ({ className, size = 24 }: { className?: string; size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+  >
+    <circle cx="12" cy="14" r="3" />
+    <circle cx="7" cy="10" r="2" />
+    <circle cx="17" cy="10" r="2" />
+    <circle cx="9.5" cy="13.5" r="1.5" />
+    <circle cx="14.5" cy="13.5" r="1.5" />
+  </svg>
+);
 
 const Projects = () => {
   const projects = [
@@ -136,7 +152,7 @@ const Projects = () => {
       demo: '/demo/amouch',
       category: 'Web App',
       status: 'Terminé',
-      icon: React.createElement(PawPrint, { className: 'text-green-500', size: 24 })
+      icon: <PawPrintIcon className="text-green-500" size={24} />
     },
     {
       id: 7,
