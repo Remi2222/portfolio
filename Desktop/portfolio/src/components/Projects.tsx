@@ -10,7 +10,8 @@ import {
   ShoppingCart,
   Star,
   Calendar,
-  Code
+  Code,
+  PawPrint
 } from 'lucide-react';
 
 const Projects = () => {
@@ -135,7 +136,7 @@ const Projects = () => {
       demo: '/demo/amouch',
       category: 'Web App',
       status: 'Terminé',
-      icon: React.createElement(ShoppingCart, { className: 'text-green-500', size: 24 })
+      icon: React.createElement(PawPrint, { className: 'text-green-500', size: 24 })
     },
     {
       id: 7,
