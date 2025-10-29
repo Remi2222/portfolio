@@ -16,16 +16,16 @@ const AmouchDemo = () => {
         'Base de données MySQL relationnelle'
       ]}
       screenshots={[
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164227.png`, caption: 'Page d\'accueil - Présentation de l\'animalerie avec navigation intuitive' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164239.png`, caption: 'Catalogue complet des animaux - Affichage avec photos et informations essentielles' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164342.png`, caption: 'Fiche détaillée d\'un animal - Informations complètes, santé et historique' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164354.png`, caption: 'Système de recherche avancée - Filtres par espèce, prix, disponibilité' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164413.png`, caption: 'Formulaire de réservation - Processus de réservation d\'un animal' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164428.png`, caption: 'Liste des réservations - Suivi et gestion des réservations en cours' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164444.png`, caption: 'Gestion des stocks - Inventaire produits alimentaires et accessoires' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164537.png`, caption: 'Interface d\'administration - Dashboard complet pour gestion de l\'animalerie' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164550.png`, caption: 'Analytics et statistiques - Tableau de bord avec métriques et rapports' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 165012.png`, caption: 'Gestion des utilisateurs - Administration des comptes et permissions' }
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/connexion.png`, caption: 'Page de connexion - Authentification sécurisée des utilisateurs' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/inscription.png`, caption: 'Page d\'inscription - Création de compte pour nouveaux utilisateurs' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/annimeauxdispo.png`, caption: 'Animaux disponibles - Catalogue des animaux prêts à l\'adoption' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/adoptions.png`, caption: 'Interface d\'adoptions - Processus d\'adoption et suivi des demandes' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/espace adoptant.png`, caption: 'Espace adoptant - Dashboard personnel pour les adoptants' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/espaceveterinaire.png`, caption: 'Espace vétérinaire - Interface dédiée aux professionnels vétérinaires' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/veterinairecalendrier.png`, caption: 'Calendrier vétérinaire - Gestion des rendez-vous et consultations' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/gestionveterinaire.png`, caption: 'Gestion vétérinaire - Suivi médical et dossiers des animaux' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/convesation.png`, caption: 'Conversation - Système de messagerie et communication' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/sensibilisation et education.png`, caption: 'Sensibilisation et éducation - Contenu informatif et ressources pédagogiques' }
       ]}
       github="https://github.com/Remi2222/amouch"
       status="Terminé"
