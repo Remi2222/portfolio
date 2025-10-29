@@ -16,10 +16,16 @@ const AmouchDemo = () => {
         'Base de données MySQL relationnelle'
       ]}
       screenshots={[
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-1.png`, caption: 'Catalogue des animaux' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-2.png`, caption: 'Système de réservation' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-3.png`, caption: 'Gestion des stocks' },
-        { url: `${process.env.PUBLIC_URL}/demos/amouch/amouch-4.png`, caption: 'Interface d\'administration' }
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164227.png`, caption: 'Page d\'accueil - Interface principale' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164239.png`, caption: 'Catalogue des animaux disponible' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164342.png`, caption: 'Détails d\'un animal' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164354.png`, caption: 'Interface de recherche et filtres' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164413.png`, caption: 'Système de réservation' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164428.png`, caption: 'Gestion des réservations' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164444.png`, caption: 'Gestion des stocks et inventaire' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164537.png`, caption: 'Interface d\'administration' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 164550.png`, caption: 'Tableau de bord - Analytics' },
+        { url: `${process.env.PUBLIC_URL}/demos/amouch/Capture d'écran 2025-10-29 165012.png`, caption: 'Gestion des utilisateurs et permissions' }
       ]}
       github="https://github.com/Remi2222/amouch"
       status="Terminé"
