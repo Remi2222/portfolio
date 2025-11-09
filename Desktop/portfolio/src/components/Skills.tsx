@@ -1,86 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-    Code, 
-    Smartphone, 
-    Database, 
-    Palette, 
-    Globe, 
-    Zap
-  } from 'lucide-react';
+  Code, 
+  Smartphone, 
+  Database, 
+  Palette, 
+  Globe, 
+  Zap
+} from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Skills = () => {
+  const { t } = useLanguage();
+
   const skillCategories = [
     {
-      title: "Langages de Programmation",
+      title: t('skills.categories.programming'),
       icon: <Code className="text-blue-500" size={32} />,
       skills: [
-        { name: "Python", level: 90, icon: "🐍" },
-        { name: "JavaScript", level: 95, icon: "🟨" },
-        { name: "Java", level: 85, icon: "☕" },
-        { name: "C#", level: 88, icon: "🔷" },
-        { name: "C++", level: 80, icon: "⚡" },
-        { name: "C", level: 75, icon: "🔧" },
-        { name: "HTML/CSS", level: 95, icon: "🎨" },
-        { name: "SQL/PL-SQL", level: 90, icon: "🗄️" },
+        { name: "Python", level: 90 },
+        { name: "JavaScript", level: 95 },
+        { name: "Java", level: 85 },
+        { name: "C#", level: 88 },
+        { name: "C++", level: 80 },
+        { name: "C", level: 75 },
+        { name: "HTML/CSS", level: 95 },
+        { name: "SQL/PL-SQL", level: 90 },
       ]
     },
     {
-      title: "Frontend & Mobile",
+      title: t('skills.categories.frontend'),
       icon: <Smartphone className="text-green-500" size={32} />,
       skills: [
-        { name: "React.js", level: 92, icon: "⚛️" },
-        { name: "React Native", level: 90, icon: "📱" },
-        { name: "Flutter", level: 85, icon: "🐦" },
-        { name: "Tailwind CSS", level: 88, icon: "💨" },
-        { name: "Expo", level: 85, icon: "⚡" },
-        { name: "UI/UX Responsive", level: 90, icon: "🎨" },
+        { name: "React.js", level: 92 },
+        { name: "React Native", level: 90 },
+        { name: "Flutter", level: 85 },
+        { name: "Tailwind CSS", level: 88 },
+        { name: "Expo", level: 85 },
+        { name: "UI/UX Responsive", level: 90 },
       ]
     },
     {
-      title: "Backend & Frameworks",
+      title: t('skills.categories.backend'),
       icon: <Database className="text-purple-500" size={32} />,
       skills: [
-        { name: "Django (Python)", level: 88, icon: "🎸" },
-        { name: "Node.js", level: 90, icon: "🟢" },
-        { name: "Express.js", level: 88, icon: "🚀" },
-        { name: ".NET Core (C#)", level: 85, icon: "🔷" },
-        { name: "Spring Boot (Java)", level: 80, icon: "🌱" },
-        { name: "REST APIs", level: 92, icon: "🔗" },
+        { name: "Django (Python)", level: 88 },
+        { name: "Node.js", level: 90 },
+        { name: "Express.js", level: 88 },
+        { name: ".NET Core (C#)", level: 85 },
+        { name: "Spring Boot (Java)", level: 80 },
+        { name: "REST APIs", level: 92 },
       ]
     },
     {
-      title: "Bases de Données & Cloud",
+      title: t('skills.categories.database'),
       icon: <Globe className="text-orange-500" size={32} />,
       skills: [
-        { name: "MySQL", level: 90, icon: "🗄️" },
-        { name: "Firestore (Firebase)", level: 85, icon: "🔥" },
-        { name: "Azure", level: 80, icon: "☁️" },
-        { name: "Architecture Microservices", level: 85, icon: "🏗️" },
-        { name: "Administration Réseau", level: 80, icon: "🌐" },
+        { name: "MySQL", level: 90 },
+        { name: "Firestore (Firebase)", level: 85 },
+        { name: "Azure", level: 80 },
+        { name: "Architecture Microservices", level: 85 },
+        { name: "Administration Réseau", level: 80 },
       ]
     },
     {
-      title: "IA & Machine Learning",
+      title: t('skills.categories.ai'),
       icon: <Zap className="text-yellow-500" size={32} />,
       skills: [
-        { name: "TensorFlow", level: 85, icon: "🧠" },
-        { name: "Scikit-learn", level: 88, icon: "📊" },
-        { name: "Réseaux Neuronaux", level: 80, icon: "🔗" },
-        { name: "NLP", level: 75, icon: "💬" },
-        { name: "OpenAI API", level: 85, icon: "🤖" },
-        { name: "Apprentissage Supervisé", level: 82, icon: "📈" },
+        { name: "TensorFlow", level: 85 },
+        { name: "Scikit-learn", level: 88 },
+        { name: "Réseaux Neuronaux", level: 80 },
+        { name: "NLP", level: 75 },
+        { name: "OpenAI API", level: 85 },
+        { name: "Apprentissage Supervisé", level: 82 },
       ]
     },
     {
-      title: "DevOps & Sécurité",
+      title: t('skills.categories.devops'),
       icon: <Palette className="text-red-500" size={32} />,
       skills: [
-        { name: "Docker", level: 85, icon: "🐳" },
-        { name: "Kubernetes", level: 75, icon: "⚓" },
-        { name: "CI/CD", level: 80, icon: "🔄" },
-        { name: "JWT/OAuth2", level: 88, icon: "🔐" },
-        { name: "Firebase Auth", level: 90, icon: "🔥" },
-        { name: "Chiffrement", level: 80, icon: "🔒" },
+        { name: "Docker", level: 85 },
+        { name: "Kubernetes", level: 75 },
+        { name: "CI/CD", level: 80 },
+        { name: "JWT/OAuth2", level: 88 },
+        { name: "Firebase Auth", level: 90 },
+        { name: "Chiffrement", level: 80 },
       ]
     }
   ];
@@ -122,14 +126,13 @@ const Skills = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6"
           >
-            Mes <span className="gradient-text">compétences</span>
+            {t('skills.title')} <span className="gradient-text">{t('skills.titleHighlight')}</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Un éventail de technologies modernes pour créer des applications 
-            performantes et des expériences utilisateur exceptionnelles.
+            {t('skills.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -159,12 +162,9 @@ const Skills = () => {
                     className="group"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-lg">{skill.icon}</span>
-                        <span className="font-semibold text-gray-800">
-                          {skill.name}
-                        </span>
-                      </div>
+                      <span className="font-semibold text-gray-800">
+                        {skill.name}
+                      </span>
                       <span className="text-sm font-medium text-gray-600">
                         {skill.level}%
                       </span>
@@ -186,20 +186,19 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills */}
         <motion.div
           variants={itemVariants}
           className="mt-16 text-center"
         >
           <h3 className="text-2xl font-bold mb-8 text-gray-800">
-            Technologies & Outils supplémentaires
+            {t('skills.additionalTitle')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "Windows Forms", "Guna Framework", "Architecture MVC", 
               "Agile/Scrum", "Responsive Design", "PWA", "GraphQL", 
-              "GitHub", "Git", "Canva ", "Bootstrap", "Firebase ", 
-              "Ant Design", "Postman", "Figma", "Postman", "VS Code", 
+              "GitHub", "Git", "Canva", "Bootstrap", "Firebase", 
+              "Ant Design", "Postman", "Figma", "VS Code", 
               "IntelliJ", "Monitoring", "Automatisation", "Régression", 
               "Clustering", "CNN", "ANN", "Virtual Networks"
             ].map((skill, index) => (

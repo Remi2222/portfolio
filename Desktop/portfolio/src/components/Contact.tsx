@@ -13,8 +13,10 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,15 +38,11 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Configuration EmailJS avec vos vraies clés
-      const serviceId = 'service_udoxh7q'; // Votre Service ID
-      const templateId = 'template_4z8ufe7'; // Votre Template ID
-      const publicKey = 'M_113sDZ9bNhKys_6'; // Votre Public Key
+      const serviceId = 'service_udoxh7q';
+      const templateId = 'template_4z8ufe7';
+      const publicKey = 'M_113sDZ9bNhKys_6';
       
-      // Initialiser EmailJS avec votre clé publique
       emailjs.init(publicKey);
-      
-      // Envoyer l'email
       await emailjs.send(serviceId, templateId, {
         title: formData.subject,
         from_name: formData.name,
@@ -69,26 +67,26 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="text-blue-500" size={24} />,
-      title: "Email",
+      title: t('contact.email'),
       value: "maryam.fajri02@gmail.com",
       link: "mailto:maryam.fajri02@gmail.com"
     },
     {
       icon: <Phone className="text-green-500" size={24} />,
-      title: "Téléphone",
+      title: t('contact.phone'),
       value: "+212 643776635",
       link: "tel:+2126XXXXXXXX"
     },
     {
       icon: <MapPin className="text-red-500" size={24} />,
-      title: "Localisation",
-      value: "Maroc",
+      title: t('contact.location'),
+      value: t('contact.locationValue'),
       link: "#"
     },
     {
       icon: <Clock className="text-purple-500" size={24} />,
-      title: "Disponibilité",
-      value: "Lun - Ven, 9h - 18h",
+      title: t('contact.availability'),
+      value: t('contact.availabilityValue'),
       link: "#"
     }
   ];
@@ -151,19 +149,17 @@ const Contact = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6"
           >
-            Contactez-<span className="gradient-text">moi</span>
+            {t('contact.title')}<span className="gradient-text">{t('contact.titleHighlight')}</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Une idée de projet ? Une question ? N'hésitez pas à me contacter. 
-            Je réponds généralement dans les 24 heures.
+            {t('contact.subtitle')}
           </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -174,7 +170,7 @@ const Contact = () => {
               variants={itemVariants}
               className="text-2xl font-bold mb-8 text-gray-800"
             >
-              Informations de contact
+              {t('contact.info')}
             </motion.h3>
 
             <div className="space-y-6 mb-8">
@@ -201,12 +197,11 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Links */}
             <motion.div
               variants={itemVariants}
               className="mb-8"
             >
-              <h4 className="font-semibold text-gray-800 mb-4">Suivez-moi</h4>
+              <h4 className="font-semibold text-gray-800 mb-4">{t('contact.followMe')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -223,29 +218,26 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Availability */}
             <motion.div
               variants={itemVariants}
               className="bg-gradient-to-r from-primary-50 to-secondary-50 p-6 rounded-lg"
             >
               <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
                 <MessageCircle className="mr-2 text-primary-600" size={20} />
-                Disponibilité
+                {t('contact.availabilityTitle')}
               </h4>
               <p className="text-gray-600">
-                Je suis disponible pour des projets freelance et des collaborations. 
-                Réponse garantie sous 24h pour toute demande.
+                {t('contact.availabilityText')}
               </p>
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             variants={itemVariants}
             className="bg-gray-50 rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold mb-8 text-gray-800">
-              Envoyez-moi un message
+              {t('contact.form.title')}
             </h3>
 
             {isSubmitted ? (
@@ -256,10 +248,10 @@ const Contact = () => {
               >
                 <CheckCircle className="text-green-500 mx-auto mb-4" size={48} />
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                  Message envoyé !
+                  {t('contact.form.success')}
                 </h4>
                 <p className="text-gray-600">
-                  Merci pour votre message. Je vous répondrai dans les plus brefs délais.
+                  {t('contact.form.successMessage')}
                 </p>
               </motion.div>
             ) : (
@@ -267,7 +259,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nom complet *
+                      {t('contact.form.name')} *
                     </label>
                     <input
                       type="text"
@@ -277,12 +269,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="Votre nom"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
+                      {t('contact.form.email')} *
                     </label>
                     <input
                       type="email"
@@ -292,14 +284,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                      placeholder="votre@email.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Sujet *
+                    {t('contact.form.subject')} *
                   </label>
                   <input
                     type="text"
@@ -309,13 +301,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                    placeholder="Sujet de votre message"
+                    placeholder={t('contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('contact.form.message')} *
                   </label>
                   <textarea
                     id="message"
@@ -325,7 +317,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
-                    placeholder="Décrivez votre projet ou votre demande..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -339,12 +331,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                      <span>Envoi en cours...</span>
+                      <span>{t('contact.form.sending')}</span>
                     </>
                   ) : (
                     <>
                       <Send size={20} />
-                      <span>Envoyer le message</span>
+                      <span>{t('contact.form.send')}</span>
                     </>
                   )}
                 </motion.button>

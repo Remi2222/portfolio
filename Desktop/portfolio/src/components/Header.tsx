@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   const navItems = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'À propos', href: '#about' },
-    { name: 'Compétences', href: '#skills' },
-    { name: 'Projets', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('header.home'), id: 'home' },
+    { name: t('header.about'), id: 'about' },
+    { name: t('header.skills'), id: 'skills' },
+    { name: t('header.projects'), id: 'projects' },
+    { name: t('header.contact'), id: 'contact' },
   ];
 
   return (
@@ -31,30 +31,51 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text"
+            className="text-2xl font-bold gradient-text cursor-pointer"
+            onClick={() => scrollToSection('home')}
           >
             Maryam Fajri
           </motion.div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-6">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
+                onClick={() => scrollToSection(item.id)}
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.name}
-              </motion.a>
+              </motion.button>
             ))}
           </nav>
 
-          {/* Social Links */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center bg-gray-100 rounded-full p-1">
+              <button
+                onClick={() => setLanguage('fr')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                  language === 'fr'
+                    ? 'bg-primary-600 text-white'
+                    : 'text-gray-600 hover:text-primary-600'
+                }`}
+              >
+                FR
+              </button>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                  language === 'en'
+                    ? 'bg-primary-600 text-white'
+                    : 'text-gray-600 hover:text-primary-600'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <motion.a
               href="https://github.com/Remi2222"
               target="_blank"
@@ -82,7 +103,6 @@ const Header = () => {
             </motion.a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -91,7 +111,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -101,15 +120,37 @@ const Header = () => {
           >
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
+              <div className="flex items-center bg-gray-100 rounded-full p-1 mt-4">
+                <button
+                  onClick={() => setLanguage('fr')}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                    language === 'fr'
+                      ? 'bg-primary-600 text-white'
+                      : 'text-gray-600 hover:text-primary-600'
+                  }`}
+                >
+                  FR
+                </button>
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                    language === 'en'
+                      ? 'bg-primary-600 text-white'
+                      : 'text-gray-600 hover:text-primary-600'
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+
               <div className="flex space-x-4 pt-4">
                 <a href="https://github.com/Remi2222" target="_blank" rel="noopener noreferrer">
                   <Github size={24} className="text-gray-600 hover:text-primary-600" />

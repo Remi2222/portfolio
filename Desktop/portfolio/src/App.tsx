@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext.tsx';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
 import About from './components/About.tsx';
@@ -35,6 +36,7 @@ const HomePage = () => {
 
 function App() {
   return (
+    <LanguageProvider>
     <Router>
       <div className="min-h-screen bg-white">
         <Routes>
@@ -49,6 +51,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </LanguageProvider>
   );
 }
 

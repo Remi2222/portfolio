@@ -4,174 +4,91 @@ import { motion } from 'framer-motion';
 import { 
   ExternalLink, 
   Github, 
-  Smartphone, 
-  Globe, 
-  Users, 
-  ShoppingCart,
-  Star,
-  Calendar,
   Code
 } from 'lucide-react';
-
-// Icône patte d'animal personnalisée
-const PawPrintIcon = ({ className, size = 24 }: { className?: string; size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-  >
-    <circle cx="12" cy="14" r="3" />
-    <circle cx="7" cy="10" r="2" />
-    <circle cx="17" cy="10" r="2" />
-    <circle cx="9.5" cy="13.5" r="1.5" />
-    <circle cx="14.5" cy="13.5" r="1.5" />
-  </svg>
-);
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects = () => {
+  const { t } = useLanguage();
+
+  const getFeatures = (key: string): string[] => {
+    const features = t(key);
+    if (Array.isArray(features)) {
+      return features;
+    }
+    return [];
+  };
+
   const projects = [
     {
       id: 1,
-      title: 'Elite Click - Digitalisation Services Publicité',
-      description: 'Application mobile pour la digitalisation des services d\'une agence de publicité',
+      title: t('projects.list.eliteClick.title'),
+      description: t('projects.list.eliteClick.description'),
       technologies: ['React Native', 'TailwindCSS', 'Node.js', 'MySQL'],
-      features: [
-        'Digitalisation complète des services',
-        'Interface mobile moderne',
-        'Gestion des clients et projets',
-        'Système de suivi intégré',
-        'Backend robuste avec Node.js',
-        'Base de données MySQL optimisée'
-      ],
+      features: getFeatures('projects.list.eliteClick.features'),
       github: 'https://github.com/Remi2222/eliteclick',
       demo: '/demo/elite-click',
-      category: 'Mobile App',
-      status: 'En cours',
-      date: 'Depuis Juil. 2025',
-      client: 'Elite Click, Beni Mellal',
-      icon: React.createElement(Smartphone, { className: 'text-blue-500', size: 24 })
+      category: t('projects.categories.mobileApp'),
     },
     {
       id: 2,
-      title: 'ChoWorks - Gestion Interne Entreprise',
-      description: 'Application mobile de gestion interne d\'entreprise avec interface moderne',
+      title: t('projects.list.choworks.title'),
+      description: t('projects.list.choworks.description'),
       technologies: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
-      features: [
-        'Interface utilisateur responsive',
-        'Authentification sécurisée Firebase',
-        'Gestion des données en temps réel',
-        'Synchronisation cloud',
-        'Interface intuitive et moderne',
-        'Gestion des utilisateurs et permissions'
-      ],
+      features: getFeatures('projects.list.choworks.features'),
       github: 'https://github.com/Remi2222/choworks',
       demo: '/demo/choworks',
-      category: 'Mobile App',
-      status: 'Terminé',
-      date: 'Août-Sept 2024',
-      client: 'ChoWorks, Marrakech',
-      icon: React.createElement(Smartphone, { className: 'text-green-500', size: 24 })
+      category: t('projects.categories.mobileApp'),
     },
     {
       id: 3,
-      title: 'Verna Vert - Gestion Espaces Verts',
-      description: 'Application desktop pour la gestion complète des espaces verts',
+      title: t('projects.list.vernaVert.title'),
+      description: t('projects.list.vernaVert.description'),
       technologies: ['.NET Core', 'C#', 'Architecture MVC', 'Guna UI', 'MySQL'],
-      features: [
-        'Architecture MVC moderne',
-        'Interface utilisateur Guna UI',
-        'Gestion relationnelle des données',
-        'Rapports et analytics',
-        'Système de planification',
-        'Gestion des ressources et équipes'
-      ],
+      features: getFeatures('projects.list.vernaVert.features'),
       github: 'https://github.com/Remi2222/verna-vert',
       demo: '/demo/verna-vert',
-      category: 'Desktop App',
-      status: 'Terminé',
-      date: 'Août-Sept 2023',
-      client: 'Verna vert, Rabat',
-      icon: React.createElement(Code, { className: 'text-purple-500', size: 24 })
+      category: t('projects.categories.desktopApp'),
     },
     {
       id: 4,
-      title: 'Renault - Gestion Clientèle',
-      description: 'Modernisation du système de gestion clientèle par application desktop',
+      title: t('projects.list.renault.title'),
+      description: t('projects.list.renault.description'),
       technologies: ['C#', 'Windows Forms', 'GUNA Framework', 'MySQL'],
-      features: [
-        'Interface Windows Forms moderne',
-        'Framework GUNA pour le design',
-        'Gestion complète des clients',
-        'Système de suivi des ventes',
-        'Rapports détaillés',
-        'Base de données MySQL optimisée'
-      ],
+      features: getFeatures('projects.list.renault.features'),
       github: 'https://github.com/Remi2222/renault-crm',
       demo: '/demo/renault',
-      category: 'Desktop App',
-      status: 'Terminé',
-      date: 'Mars-Avril 2022',
-      client: 'Renault, El Jadida',
-      icon: React.createElement(Users, { className: 'text-orange-500', size: 24 })
+      category: t('projects.categories.desktopApp'),
     },
     {
       id: 5,
-      title: 'FASTCUBE - Plateforme Web IA Multiservice',
-      description: 'Plateforme web intelligente avec chatbot, moteur de recommandation et résumé automatique',
+      title: t('projects.list.fastcube.title'),
+      description: t('projects.list.fastcube.description'),
       technologies: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'OpenAI API'],
-      features: [
-        'Chatbot conversationnel intelligent',
-        'Moteur de recommandation avancé',
-        'Système de résumé automatique',
-        'Architecture full-stack moderne',
-        'Intégration API OpenAI',
-        'Interface utilisateur React.js'
-      ],
+      features: getFeatures('projects.list.fastcube.features'),
       github: 'https://github.com/Remi2222/fastcube',
       demo: '/demo/fastcube',
-      category: 'Web App + IA',
-      status: 'Terminé',
-      icon: React.createElement(Globe, { className: 'text-blue-500', size: 24 })
+      category: t('projects.categories.webAi'),
     },
     {
       id: 6,
-      title: 'AMOUCH - Application Web Animalerie',
-      description: 'Application web pour animalerie avec architecture microservices',
+      title: t('projects.list.amouch.title'),
+      description: t('projects.list.amouch.description'),
       technologies: ['React.js', 'Architecture Microservices', 'MySQL'],
-      features: [
-        'Architecture microservices scalable',
-        'Interface React.js moderne',
-        'Gestion complète des animaux',
-        'Système de réservation',
-        'Gestion des stocks',
-        'Base de données MySQL relationnelle'
-      ],
+      features: getFeatures('projects.list.amouch.features'),
       github: 'https://github.com/Remi2222/amouch',
       demo: '/demo/amouch',
-      category: 'Web App',
-      status: 'Terminé',
-      icon: <PawPrintIcon className="text-green-500" size={24} />
+      category: t('projects.categories.webApp'),
     },
     {
       id: 7,
-      title: 'TICKETS - Plateforme Réservation Bus',
-      description: 'Application web de réservation et achat de tickets de bus',
+      title: t('projects.list.tickets.title'),
+      description: t('projects.list.tickets.description'),
       technologies: ['Python', 'Django', 'MySQL'],
-      features: [
-        'Réservation de tickets en ligne',
-        'Gestion des trajets et horaires',
-        'Système de paiement sécurisé',
-        'Gestion des comptes utilisateurs',
-        'Interface Django responsive',
-        'Base de données MySQL optimisée'
-      ],
+      features: getFeatures('projects.list.tickets.features'),
       github: 'https://github.com/Remi2222/tickets-bus',
       demo: '/demo/tickets',
-      category: 'Web App',
-      status: 'Terminé',
-      icon: React.createElement(Globe, { className: 'text-purple-500', size: 24 })
+      category: t('projects.categories.webApp'),
     }
   ];
 
@@ -212,19 +129,18 @@ const Projects = () => {
             variants={itemVariants}
             className='text-4xl md:text-5xl font-bold mb-6'
           >
-            Mes <span className='gradient-text'>projets</span>
+            {t('projects.title')} <span className='gradient-text'>{t('projects.titleHighlight')}</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className='text-xl text-gray-600 max-w-3xl mx-auto'
           >
-            Découvrez une sélection de mes projets récents, allant des applications 
-            mobiles aux plateformes web modernes.
+            {t('projects.subtitle')}
           </motion.p>
         </motion.div>
 
         <div className='grid lg:grid-cols-2 gap-8'>
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
@@ -232,21 +148,11 @@ const Projects = () => {
               className='bg-white rounded-2xl shadow-lg overflow-hidden hover-lift group'
             >
               <div className='p-6 border-b border-gray-100'>
-                <div className='flex items-center justify-between mb-4'>
-                  <div className='flex items-center space-x-3'>
-                    {project.icon}
-                    <div>
-                      <h3 className='text-xl font-bold text-gray-800'>
-                        {project.title}
-                      </h3>
-                      <div className='flex items-center space-x-2 mt-1'>
-                        <span className='text-sm text-gray-500'>{project.category}</span>
-                        <span className='text-sm bg-green-100 text-green-800 px-2 py-1 rounded-full'>
-                          {project.status}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                <div className='mb-4'>
+                  <h3 className='text-xl font-bold text-gray-800 mb-2'>
+                    {project.title}
+                  </h3>
+                  <span className='text-sm text-gray-500'>{project.category}</span>
                 </div>
                 
                 <p className='text-gray-600 leading-relaxed'>
@@ -257,7 +163,7 @@ const Projects = () => {
               <div className='p-6 border-b border-gray-100'>
                 <h4 className='font-semibold text-gray-800 mb-3 flex items-center'>
                   <Code className='mr-2' size={16} />
-                  Technologies utilisées
+                  {t('projects.technologies')}
                 </h4>
                 <div className='flex flex-wrap gap-2'>
                   {project.technologies?.map((tech, techIndex) => (
@@ -271,20 +177,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className='p-6 border-b border-gray-100'>
-                <h4 className='font-semibold text-gray-800 mb-3'>
-                  Fonctionnalités principales
-                </h4>
-                <ul className='space-y-2'>
-                  {project.features?.map((feature, featureIndex) => (
-                    <li key={featureIndex} className='flex items-center text-sm text-gray-600'>
-                      <Star className='text-yellow-500 mr-2' size={14} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <div className='p-6'>
                 <div className='flex space-x-4'>
                   <motion.a
@@ -296,7 +188,7 @@ const Projects = () => {
                     className='flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors'
                   >
                     <Github size={16} />
-                    <span>Code</span>
+                    <span>{t('projects.code')}</span>
                   </motion.a>
                   
                   <Link to={project.demo}>
@@ -306,7 +198,7 @@ const Projects = () => {
                       className='flex items-center space-x-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors'
                     >
                       <ExternalLink size={16} />
-                      <span>Démo</span>
+                      <span>{t('projects.demo')}</span>
                     </motion.button>
                   </Link>
                 </div>
@@ -321,21 +213,25 @@ const Projects = () => {
         >
           <div className='bg-white rounded-2xl p-8 shadow-lg'>
             <h3 className='text-2xl font-bold mb-4 text-gray-800'>
-              Intéressé par une collaboration ?
+              {t('projects.cta.title')}
             </h3>
             <p className='text-gray-600 mb-6'>
-              Je suis toujours ouvert à de nouveaux projets passionnants. 
-              N'hésitez pas à me contacter pour discuter de vos besoins.
+              {t('projects.cta.description')}
             </p>
-            <motion.a
-              href='#contact'
+            <motion.button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className='bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 hover-lift'
             >
-              <span>Discutons de votre projet</span>
+              <span>{t('projects.cta.button')}</span>
               <ExternalLink size={20} />
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -51,3 +51,4 @@ Pour chaque projet, ajoutez 4 captures d'écran :
 ## Note
 Si une capture d'écran n'est pas trouvée, un placeholder automatique sera affiché avec le texte "Capture d'écran à venir".
 
+

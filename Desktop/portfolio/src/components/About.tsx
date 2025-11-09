@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, MapPin, Calendar, Award, Heart } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,17 +30,17 @@ const About = () => {
   };
 
   const stats = [
-    { number: "8+", label: "Langages maîtrisés" },
-    { number: "7+", label: "Projets réalisés" },
-    { number: "15+", label: "Frameworks & Outils" },
-    { number: "100%", label: "Motivation" },
+    { number: "8+", label: t('about.stats.languages') },
+    { number: "7+", label: t('about.stats.projects') },
+    { number: "15+", label: t('about.stats.tools') },
+    { number: "100%", label: t('about.stats.motivation') },
   ];
 
   const interests = [
-    { icon: "💻", title: "Développement", description: "Création d'applications modernes" },
-    { icon: "🎨", title: "Design UI/UX", description: "Interfaces utilisateur attrayantes" },
-    { icon: "📱", title: "Mobile First", description: "Applications mobiles performantes" },
-    { icon: "🚀", title: "Innovation", description: "Technologies émergentes" },
+    { icon: "💻", title: t('about.interests.development.title'), description: t('about.interests.development.description') },
+    { icon: "🎨", title: t('about.interests.design.title'), description: t('about.interests.design.description') },
+    { icon: "📱", title: t('about.interests.mobile.title'), description: t('about.interests.mobile.description') },
+    { icon: "🚀", title: t('about.interests.innovation.title'), description: t('about.interests.innovation.description') },
   ];
 
   return (
@@ -54,20 +57,17 @@ const About = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6"
           >
-            À propos de <span className="gradient-text">moi</span>
+            {t('about.title')} <span className="gradient-text">{t('about.titleHighlight')}</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Développeuse Full-Stack passionnée avec une expertise en développement web, 
-            mobile et IA. Spécialisée dans React Native, React.js, Python, .NET Core 
-            et les technologies modernes.
+            {t('about.subtitle')}
           </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Story */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -78,32 +78,15 @@ const About = () => {
               variants={itemVariants}
               className="bg-white rounded-2xl p-8 shadow-lg hover-lift"
             >
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Mon parcours</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-800">{t('about.myJourney')}</h3>
               <div className="space-y-4 text-gray-600">
-                <p>
-                  Diplômée en Informatique et Réseaux, je suis une développeuse Full-Stack 
-                  passionnée par l'innovation technologique. J'ai acquis mes compétences 
-                  à travers ma formation académique et mes projets personnels.
-                </p>
-                <p>
-                  Mes compétences couvrent React Native et React.js pour le frontend, 
-                  Python/Django et .NET Core pour le backend, ainsi que TensorFlow 
-                  pour l'IA/ML. J'ai développé des projets variés comme l'application 
-                  mobile Elite Click et des solutions web avec intégration IA.
-                </p>
-                <p>
-                  Je maîtrise les architectures modernes, les bases de données relationnelles, 
-                  et les technologies de sécurité. Mon approche se concentre sur la création 
-                  d'applications performantes et bien structurées.
-                </p>
-                <p>
-                  Toujours en veille technologique, j'aime relever des défis complexes 
-                  et créer des solutions innovantes qui allient performance, sécurité et scalabilité.
-                </p>
+                <p>{t('about.paragraph1')}</p>
+                <p>{t('about.paragraph2')}</p>
+                <p>{t('about.paragraph3')}</p>
+                <p>{t('about.paragraph4')}</p>
               </div>
             </motion.div>
 
-            {/* Personal Info */}
             <motion.div
               variants={itemVariants}
               className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4"
@@ -111,42 +94,40 @@ const About = () => {
               <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
                 <User className="text-primary-600" size={20} />
                 <div>
-                  <p className="font-semibold text-gray-800">Maryam Fajri</p>
-                  <p className="text-sm text-gray-600">Développeuse Full Stack</p>
+                  <p className="font-semibold text-gray-800">{t('about.name')}</p>
+                  <p className="text-sm text-gray-600">{t('about.role')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
                 <MapPin className="text-primary-600" size={20} />
                 <div>
-                  <p className="font-semibold text-gray-800">Localisation</p>
-                  <p className="text-sm text-gray-600">Disponible en remote</p>
+                  <p className="font-semibold text-gray-800">{t('about.location')}</p>
+                  <p className="text-sm text-gray-600">{t('about.remote')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
                 <Calendar className="text-primary-600" size={20} />
                 <div>
-                  <p className="font-semibold text-gray-800">Disponibilité</p>
-                  <p className="text-sm text-gray-600">Immédiate</p>
+                  <p className="font-semibold text-gray-800">{t('about.availability')}</p>
+                  <p className="text-sm text-gray-600">{t('about.immediate')}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
                 <Award className="text-primary-600" size={20} />
                 <div>
-                  <p className="font-semibold text-gray-800">Spécialisation</p>
-                  <p className="text-sm text-gray-600">Full-Stack & IA/ML</p>
+                  <p className="font-semibold text-gray-800">{t('about.specialization')}</p>
+                  <p className="text-sm text-gray-600">{t('about.specializationValue')}</p>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Stats & Interests */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Stats */}
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-2 gap-6 mb-12"
@@ -167,14 +148,13 @@ const About = () => {
               ))}
             </motion.div>
 
-            {/* Interests */}
             <motion.div
               variants={itemVariants}
               className="space-y-4"
             >
               <h3 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
                 <Heart className="text-red-500 mr-2" size={24} />
-                Mes passions
+                {t('about.passions')}
               </h3>
               {interests.map((interest, index) => (
                 <motion.div

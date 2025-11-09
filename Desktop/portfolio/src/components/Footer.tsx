@@ -1,10 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const currentYear = new Date().getFullYear();
@@ -13,14 +23,12 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">
               Maryam Fajri
             </h3>
             <p className="text-gray-400 mb-4">
-              Développeuse Full Stack passionnée par la création d'applications 
-              modernes et d'expériences utilisateur exceptionnelles.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <motion.a
@@ -51,100 +59,65 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.navigation')}</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#home" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
+                <button 
+                  onClick={() => scrollToTop()}
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Accueil
-                </a>
+                  {t('footer.home')}
+                </button>
               </li>
               <li>
-                <a 
-                  href="#about" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const aboutSection = document.getElementById('about');
-                    if (aboutSection) {
-                      aboutSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <button 
+                  onClick={() => scrollToSection('about')}
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  À propos
-                </a>
+                  {t('footer.about')}
+                </button>
               </li>
               <li>
-                <a 
-                  href="#skills" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const skillsSection = document.getElementById('skills');
-                    if (skillsSection) {
-                      skillsSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <button 
+                  onClick={() => scrollToSection('skills')}
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Compétences
-                </a>
+                  {t('footer.skills')}
+                </button>
               </li>
               <li>
-                <a 
-                  href="#projects" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const projectsSection = document.getElementById('projects');
-                    if (projectsSection) {
-                      projectsSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <button 
+                  onClick={() => scrollToSection('projects')}
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Projets
-                </a>
+                  {t('footer.projects')}
+                </button>
               </li>
               <li>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <button 
+                  onClick={() => scrollToSection('contact')}
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Contact
-                </a>
+                  {t('footer.contactLink')}
+                </button>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
             <div className="space-y-2 text-gray-400">
               <p>maryam.fajri02@gmail.com</p>
               <p>+212 643776635 </p>
-              <p>Maroc</p>
+              <p>{t('contact.locationValue')}</p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center text-gray-400 mb-4 md:mb-0">
-            <span>© {currentYear} Maryam Fajri. Fait avec</span>
+            <span>© {currentYear} Maryam Fajri. {t('footer.madeWith')}</span>
             <Heart className="text-red-500 mx-1" size={16} />
             
           </div>
@@ -154,7 +127,7 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full transition-colors"
-            aria-label="Retour en haut"
+            aria-label={t('footer.backToTop')}
           >
             <ArrowUp size={20} />
           </motion.button>
