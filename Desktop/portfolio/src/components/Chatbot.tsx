@@ -150,6 +150,25 @@ const Chatbot = () => {
         )}
       </button>
 
+      {/* Backdrop pour mobile */}
+      {isOpen && isMobile && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setIsOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 2147483646,
+          }}
+        />
+      )}
+
       {/* Chatbot Window */}
       {isOpen && (
         <motion.div
@@ -158,17 +177,18 @@ const Chatbot = () => {
           exit={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
           transition={{ duration: 0.3 }}
           style={{
-            position: isMobile ? 'fixed' : 'absolute',
-            top: isMobile ? '0' : '80px',
-            right: isMobile ? '0' : '0',
-            left: isMobile ? '0' : 'auto',
-            bottom: isMobile ? '0' : 'auto',
-            width: isMobile ? '100vw' : '450px',
-            height: isMobile ? '100vh' : '600px',
-            maxWidth: '100vw',
-            maxHeight: isMobile ? '100vh' : '80vh',
+            position: 'fixed',
+            top: isMobile ? '50%' : 'auto',
+            right: isMobile ? 'auto' : '0',
+            left: isMobile ? '50%' : 'auto',
+            bottom: isMobile ? 'auto' : 'auto',
+            transform: isMobile ? 'translate(-50%, -50%)' : 'none',
+            width: isMobile ? '95vw' : '450px',
+            height: isMobile ? '90vh' : '600px',
+            maxWidth: '95vw',
+            maxHeight: isMobile ? '90vh' : '80vh',
             backgroundColor: 'white',
-            borderRadius: isMobile ? '0' : '20px',
+            borderRadius: isMobile ? '20px' : '20px',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05)',
             border: 'none',
             display: 'flex',
