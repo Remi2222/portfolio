@@ -172,11 +172,7 @@ const Chatbot = () => {
       </div>
 
       {isOpen && createPortal(
-        <motion.div
-          initial={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
-          transition={{ duration: 0.3 }}
+        <div
           style={{
             position: 'fixed',
             top: '0',
@@ -185,16 +181,34 @@ const Chatbot = () => {
             bottom: '0',
             width: '100vw',
             height: '100vh',
-            backgroundColor: 'white',
-            borderRadius: '0',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05)',
-            border: 'none',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 999999,
             display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            zIndex: 2147483647,
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
+          onClick={() => setIsOpen(false)}
         >
+          <motion.div
+            initial={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              width: isMobile ? '100vw' : '450px',
+              height: isMobile ? '100vh' : '600px',
+              maxHeight: isMobile ? '100vh' : '85vh',
+              backgroundColor: 'white',
+              borderRadius: isMobile ? '0' : '20px',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              border: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden',
+            }}
+          >
             {/* Header */}
             <div style={{
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -478,7 +492,8 @@ const Chatbot = () => {
                 </motion.button>
               </div>
             </div>
-          </motion.div>,
+          </motion.div>
+        </div>,
         document.body
       )}
     </>
