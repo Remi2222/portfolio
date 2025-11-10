@@ -170,25 +170,6 @@ const Chatbot = () => {
         </button>
       </div>
 
-      {isOpen && isMobile && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setIsOpen(false)}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 2147483646,
-          }}
-        />
-      )}
-
-      {/* Chatbot Window */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
@@ -197,17 +178,14 @@ const Chatbot = () => {
           transition={{ duration: 0.3 }}
           style={{
             position: 'fixed',
-            top: isMobile ? '0' : '50%',
-            right: isMobile ? '0' : '24px',
-            left: isMobile ? '0' : 'auto',
-            bottom: isMobile ? '0' : 'auto',
-            transform: isMobile ? 'none' : 'translateY(-50%)',
-            width: isMobile ? '100vw' : '450px',
-            height: isMobile ? '100vh' : '600px',
-            maxWidth: isMobile ? '100vw' : '95vw',
-            maxHeight: isMobile ? '100vh' : '85vh',
+            top: '0',
+            right: '0',
+            left: '0',
+            bottom: '0',
+            width: '100vw',
+            height: '100vh',
             backgroundColor: 'white',
-            borderRadius: isMobile ? '0' : '20px',
+            borderRadius: '0',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05)',
             border: 'none',
             display: 'flex',
