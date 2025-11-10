@@ -44,6 +44,17 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const quickQuestions = language === 'fr' ? [
     "Quelles sont vos compétences ?",
     "Parlez-moi de vos projets",
@@ -178,17 +189,17 @@ const Chatbot = () => {
           transition={{ duration: 0.3 }}
           style={{
             position: 'fixed',
-            top: isMobile ? '50%' : 'auto',
-            right: isMobile ? 'auto' : '0',
-            left: isMobile ? '50%' : 'auto',
-            bottom: isMobile ? 'auto' : 'auto',
-            transform: isMobile ? 'translate(-50%, -50%)' : 'none',
-            width: isMobile ? '95vw' : '450px',
-            height: isMobile ? '90vh' : '600px',
-            maxWidth: '95vw',
-            maxHeight: isMobile ? '90vh' : '80vh',
+            top: isMobile ? '0' : '50%',
+            right: isMobile ? '0' : '24px',
+            left: isMobile ? '0' : 'auto',
+            bottom: isMobile ? '0' : 'auto',
+            transform: isMobile ? 'none' : 'translateY(-50%)',
+            width: isMobile ? '100vw' : '450px',
+            height: isMobile ? '100vh' : '600px',
+            maxWidth: isMobile ? '100vw' : '95vw',
+            maxHeight: isMobile ? '100vh' : '85vh',
             backgroundColor: 'white',
-            borderRadius: isMobile ? '20px' : '20px',
+            borderRadius: isMobile ? '0' : '20px',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05)',
             border: 'none',
             display: 'flex',
