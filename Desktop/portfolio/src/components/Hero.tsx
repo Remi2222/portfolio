@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20 md:py-0" style={{ paddingTop: '80px' }}>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
       
       <div className="absolute inset-0 overflow-hidden">
@@ -153,67 +153,184 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center"
+          className="grid lg:grid-cols-2 gap-16 items-center"
         >
+          {/* Photo Section - Left */}
           <motion.div
             variants={itemVariants}
-            className="mb-12"
+            className="order-2 lg:order-1"
           >
-            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-secondary-400 p-1 shadow-2xl">
-              <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                <div className="w-36 h-36 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center text-white text-5xl font-bold shadow-lg">
-                  MF
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Multi-Layer Glow Effect */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.15, 1],
+                  rotate: [0, 360],
+                }}
+                transition={{
+                  scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                  rotate: { duration: 25, repeat: Infinity, ease: "linear" },
+                }}
+                className="absolute -inset-8 bg-gradient-to-r from-primary-400 via-secondary-400 to-primary-400 rounded-full blur-3xl opacity-40"
+              />
+              
+              <motion.div
+                animate={{
+                  scale: [1.1, 1, 1.1],
+                  rotate: [360, 0],
+                }}
+                transition={{
+                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                }}
+                className="absolute -inset-6 bg-gradient-to-l from-blue-400 via-purple-400 to-pink-400 rounded-full blur-2xl opacity-30"
+              />
+              
+              {/* Photo Container - Large Rounded Square */}
+              <motion.div
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.4, type: "spring", stiffness: 300 }}
+                className="relative w-full aspect-square rounded-3xl overflow-hidden border-4 border-white shadow-2xl"
+                style={{
+                  boxShadow: '0 30px 80px rgba(102, 126, 234, 0.5), 0 0 60px rgba(217, 70, 239, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 relative">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/me.jpg`}
+                    alt="Maryam Fajri"
+                    className="w-full h-full object-cover"
+                    style={{
+                      objectPosition: '60% center',
+                      transform: 'scale(1.15)',
+                    }}
+                  />
+                  {/* Subtle Gradient Overlay - Reduced opacity */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-600/5 via-transparent to-transparent"></div>
                 </div>
-              </div>
+              </motion.div>
+
+              {/* Animated Corner Accents */}
+              <motion.div
+                animate={{
+                  opacity: [0.3, 0.8, 0.3],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-primary-500 rounded-tl-2xl"
+              />
+              <motion.div
+                animate={{
+                  opacity: [0.3, 0.8, 0.3],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
+                className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary-500 rounded-br-2xl"
+              />
+
+              {/* Floating Particles Around Photo */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    y: [0, -20, 0],
+                    x: [0, Math.sin(i) * 10, 0],
+                    opacity: [0.4, 0.8, 0.4],
+                  }}
+                  transition={{
+                    duration: 3 + i * 0.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.3,
+                  }}
+                  className="absolute w-2 h-2 rounded-full"
+                  style={{
+                    background: ['#0ea5e9', '#a78bfa', '#d946ef'][i % 3],
+                    boxShadow: `0 0 10px ${['#0ea5e9', '#a78bfa', '#d946ef'][i % 3]}`,
+                    left: `${15 + i * 15}%`,
+                    top: i % 2 === 0 ? '10%' : '90%',
+                  }}
+                />
+              ))}
+              
+              {/* Floating Badge */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-4 rounded-full shadow-xl border-2 border-primary-200"
+                style={{
+                  boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)',
+                }}
+              >
+                <p className="text-base font-bold gradient-text whitespace-nowrap">Full Stack Developer</p>
+              </motion.div>
             </div>
           </motion.div>
 
+          {/* Text Content - Right */}
           <motion.div
-            variants={itemVariants}
-            className="mb-6"
+            variants={containerVariants}
+            className="order-1 lg:order-2 text-center lg:text-left"
           >
-            <p className="text-lg text-gray-600 font-medium">
-              {t('hero.greeting')}
-            </p>
-          </motion.div>
+            <motion.div
+              variants={itemVariants}
+              className="mb-6"
+            >
+              <p className="text-lg text-gray-600 font-medium">
+                {t('hero.greeting')}
+              </p>
+            </motion.div>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-          >
-            <span className="gradient-text">{t('hero.name')}</span>
-          </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+            >
+              <span className="gradient-text">{t('hero.name')}</span>
+            </motion.h1>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 mb-2"
-          >
-            {t('hero.title')}
-          </motion.p>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 mb-4"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-xl md:text-2xl text-gray-600 mb-2"
+            >
+              {t('hero.title')}
+            </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-lg md:text-xl text-gray-600 mb-6"
+            >
+              {t('hero.subtitle')}
+            </motion.p>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-gray-500 max-w-2xl mx-auto mb-8"
-          >
-            {t('hero.description')}
-          </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-base text-gray-500 mb-6"
+            >
+              {t('hero.description')}
+            </motion.p>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-base text-gray-500 max-w-3xl mx-auto mb-8"
-          >
-            {t('hero.details')}
-          </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-sm text-gray-500 mb-8"
+            >
+              {t('hero.details')}
+            </motion.p>
           
           <motion.div
             variants={itemVariants}
-            className="flex justify-center space-x-8 mb-12"
+            className="flex justify-center lg:justify-start space-x-6 mb-10"
           >
             <motion.div
               whileHover={{ scale: 1.2, rotate: 10 }}
@@ -247,7 +364,7 @@ const Hero = () => {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start"
           >
             <motion.button
               onClick={() => {
@@ -274,6 +391,7 @@ const Hero = () => {
               {t('hero.downloadCV')}
               <Download size={20} />
             </motion.a>
+          </motion.div>
           </motion.div>
         </motion.div>
       </div>

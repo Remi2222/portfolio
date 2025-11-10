@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Code, 
-  Smartphone, 
-  Database, 
-  Palette, 
-  Globe, 
-  Zap
-} from 'lucide-react';
+    Code, 
+    Smartphone, 
+    Database, 
+    Palette, 
+    Globe, 
+    Zap
+  } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Skills = () => {
@@ -113,7 +113,9 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-32 bg-white relative">
+      {/* Section Divider */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary-500 to-transparent opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -162,9 +164,9 @@ const Skills = () => {
                     className="group"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-semibold text-gray-800">
-                        {skill.name}
-                      </span>
+                        <span className="font-semibold text-gray-800">
+                          {skill.name}
+                        </span>
                       <span className="text-sm font-medium text-gray-600">
                         {skill.level}%
                       </span>

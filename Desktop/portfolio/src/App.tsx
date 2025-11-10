@@ -8,6 +8,8 @@ import Skills from './components/Skills.tsx';
 import Projects from './components/Projects.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
+import Chatbot from './components/Chatbot.tsx';
+import LikeButton from './components/LikeButton.tsx';
 
 // Import demo pages
 import EliteClickDemo from './demos/EliteClickDemo.tsx';
@@ -20,8 +22,10 @@ import TicketsDemo from './demos/TicketsDemo.tsx';
 
 const HomePage = () => {
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <Header />
+      <Chatbot />
+      <LikeButton />
       <main>
         <Hero />
         <About />
@@ -30,7 +34,7 @@ const HomePage = () => {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

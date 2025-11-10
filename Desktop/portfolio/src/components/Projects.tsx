@@ -116,7 +116,9 @@ const Projects = () => {
   };
 
   return (
-    <section id='projects' className='py-20 bg-gray-50'>
+    <section id='projects' className='py-32 bg-gray-50 relative'>
+      {/* Section Divider */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent opacity-30"></div>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <motion.div
           variants={containerVariants}
@@ -150,9 +152,9 @@ const Projects = () => {
               <div className='p-6 border-b border-gray-100'>
                 <div className='mb-4'>
                   <h3 className='text-xl font-bold text-gray-800 mb-2'>
-                    {project.title}
-                  </h3>
-                  <span className='text-sm text-gray-500'>{project.category}</span>
+                        {project.title}
+                      </h3>
+                        <span className='text-sm text-gray-500'>{project.category}</span>
                 </div>
                 
                 <p className='text-gray-600 leading-relaxed'>

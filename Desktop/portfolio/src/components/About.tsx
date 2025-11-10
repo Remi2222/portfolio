@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Calendar, Award, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About = () => {
@@ -44,7 +44,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-32 bg-gray-50 relative">
+      {/* Section Divider */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -84,40 +86,6 @@ const About = () => {
                 <p>{t('about.paragraph2')}</p>
                 <p>{t('about.paragraph3')}</p>
                 <p>{t('about.paragraph4')}</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
-                <User className="text-primary-600" size={20} />
-                <div>
-                  <p className="font-semibold text-gray-800">{t('about.name')}</p>
-                  <p className="text-sm text-gray-600">{t('about.role')}</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
-                <MapPin className="text-primary-600" size={20} />
-                <div>
-                  <p className="font-semibold text-gray-800">{t('about.location')}</p>
-                  <p className="text-sm text-gray-600">{t('about.remote')}</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
-                <Calendar className="text-primary-600" size={20} />
-                <div>
-                  <p className="font-semibold text-gray-800">{t('about.availability')}</p>
-                  <p className="text-sm text-gray-600">{t('about.immediate')}</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-md">
-                <Award className="text-primary-600" size={20} />
-                <div>
-                  <p className="font-semibold text-gray-800">{t('about.specialization')}</p>
-                  <p className="text-sm text-gray-600">{t('about.specializationValue')}</p>
-                </div>
               </div>
             </motion.div>
           </motion.div>

@@ -107,3 +107,18 @@ html {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+
+/* Chatbot - Scrolls with page */
+.chatbot-button {
+  animation: chatbot-pulse 2s ease-in-out infinite;
+}
+
+/* Pulse animation for chatbot - using box-shadow instead of transform */
+@keyframes chatbot-pulse {
+  0%, 100% { 
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5), 0 0 20px rgba(217, 70, 239, 0.4);
+  }
+  50% { 
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.7), 0 0 30px rgba(217, 70, 239, 0.6);
+  }
+}
