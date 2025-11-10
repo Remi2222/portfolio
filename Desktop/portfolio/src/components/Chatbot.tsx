@@ -113,19 +113,18 @@ const Chatbot = () => {
     }
   };
 
-  // Render chatbot wrapper
-  const chatbotUI = (
-    <div style={{
-      position: 'sticky',
-      top: '100px',
-      right: 0,
-      zIndex: 2147483647,
-      width: 0,
-      height: 0,
-      float: 'right',
-    }}>
-      {/* Chatbot Toggle Button - COLLÉ au like button */}
-      <button
+  return (
+    <>
+      <div style={{
+        position: 'sticky',
+        top: '100px',
+        right: 0,
+        zIndex: 2147483647,
+        width: 0,
+        height: 0,
+        float: 'right',
+      }}>
+        <button
         onClick={() => setIsOpen(!isOpen)}
         className="chatbot-button"
         style={{
@@ -168,9 +167,9 @@ const Chatbot = () => {
             <span className="hidden sm:inline">Besoin d'aide ?</span>
           </>
         )}
-      </button>
+        </button>
+      </div>
 
-      {/* Backdrop pour mobile */}
       {isOpen && isMobile && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -502,11 +501,8 @@ const Chatbot = () => {
             </div>
           </motion.div>
       )}
-    </div>
+    </>
   );
-
-  // Render normally in DOM to follow scroll
-  return chatbotUI;
 };
 
 export default Chatbot;
