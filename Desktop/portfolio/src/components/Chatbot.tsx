@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User as UserIcon } from 'lucide-react';
 import { searchKnowledge } from '../data/portfolioKnowledge';
@@ -170,7 +171,7 @@ const Chatbot = () => {
         </button>
       </div>
 
-      {isOpen && (
+      {isOpen && createPortal(
         <motion.div
           initial={{ opacity: 0, scale: isMobile ? 1 : 0.8, y: isMobile ? '100%' : 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -477,7 +478,8 @@ const Chatbot = () => {
                 </motion.button>
               </div>
             </div>
-          </motion.div>
+          </motion.div>,
+        document.body
       )}
     </>
   );
