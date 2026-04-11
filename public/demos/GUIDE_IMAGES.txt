@@ -1,0 +1,95 @@
+═══════════════════════════════════════════════════════════════════
+   GUIDE : STRUCTURE ORGANISÉE DES IMAGES PAR PROJET
+═══════════════════════════════════════════════════════════════════
+
+📁 STRUCTURE DES DOSSIERS : Chaque projet a son propre dossier
+
+C:\Users\HP\Desktop\portfolio\public\demos\
+  ├── fastcube\          ✅ (11 images déjà ajoutées)
+  ├── elite-click\       ⏳ (à ajouter)
+  ├── choworks\          ⏳ (à ajouter)
+  ├── verna-vert\        ⏳ (à ajouter)
+  ├── renault\           ⏳ (à ajouter)
+  ├── amouch\            ⏳ (à ajouter)
+  └── tickets\           ⏳ (à ajouter)
+
+═══════════════════════════════════════════════════════════════════
+📸 IMAGES PAR PROJET
+═══════════════════════════════════════════════════════════════════
+
+✅ FASTCUBE (11 images - DÉJÀ AJOUTÉES)
+   📂 public/demos/fastcube/
+   ✓ homeweb.png
+   ✓ acceuil2.png
+   ✓ home2.png
+   ✓ chatbot.png
+   ✓ recommondation.png
+   ✓ service.png
+   ✓ dashboard.png
+   ✓ blog.png
+   ✓ ticketpage.png
+   ✓ newslatterpage.png
+   ✓ contactus.png
+
+⏳ ELITE CLICK (4 images nécessaires)
+   📂 public/demos/elite-click/
+   📄 eliteclick-1.png → Écran d'accueil et navigation
+   📄 eliteclick-2.png → Gestion des projets publicitaires
+   📄 eliteclick-3.png → Interface de gestion des clients
+   📄 eliteclick-4.png → Tableau de bord analytique
+
+⏳ CHOWORKS (4 images nécessaires)
+   📂 public/demos/choworks/
+   📄 choworks-1.png → Écran de connexion sécurisé
+   📄 choworks-2.png → Dashboard principal
+   📄 choworks-3.png → Gestion des employés
+   📄 choworks-4.png → Système de permissions
+
+⏳ VERNA VERT (4 images nécessaires)
+   📂 public/demos/verna-vert/
+   📄 vernavert-1.png → Interface principale de gestion
+   📄 vernavert-2.png → Planification des interventions
+   📄 vernavert-3.png → Gestion des équipes et ressources
+   📄 vernavert-4.png → Rapports et statistiques
+
+⏳ RENAULT (4 images nécessaires)
+   📂 public/demos/renault/
+   📄 renault-1.png → Dashboard principal
+   📄 renault-2.png → Gestion des clients
+   📄 renault-3.png → Suivi des ventes
+   📄 renault-4.png → Rapports et analyses
+
+⏳ AMOUCH (4 images nécessaires)
+   📂 public/demos/amouch/
+   📄 amouch-1.png → Catalogue des animaux
+   📄 amouch-2.png → Système de réservation
+   📄 amouch-3.png → Gestion des stocks
+   📄 amouch-4.png → Interface d'administration
+
+⏳ TICKETS (4 images nécessaires)
+   📂 public/demos/tickets/
+   📄 tickets-1.png → Page de recherche de trajets
+   📄 tickets-2.png → Sélection des places
+   📄 tickets-3.png → Processus de paiement
+   📄 tickets-4.png → Historique des réservations
+
+═══════════════════════════════════════════════════════════════════
+⚙️ FORMATS RECOMMANDÉS
+═══════════════════════════════════════════════════════════════════
+
+✓ Format    : PNG ou JPG
+✓ Largeur   : 1200px - 1920px (optimal)
+✓ Qualité   : Haute résolution
+✓ Nommage   : EXACTEMENT comme indiqué (minuscules)
+
+═══════════════════════════════════════════════════════════════════
+📝 IMPORTANT
+═══════════════════════════════════════════════════════════════════
+
+1. Chaque projet a maintenant son propre dossier
+2. Placez les images dans le bon dossier selon le projet
+3. Si une image manque, un placeholder s'affichera
+4. Noms sensibles à la casse (tout en minuscules)
+5. Après ajout : redémarrez le serveur (npm start)
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,138 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+
+const Footer = () => {
+  const { t } = useLanguage();
+  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-[#111827] border-t border-[#374151] text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-2xl font-bold gradient-text mb-4">
+              Maryam Fajri
+            </h3>
+            <p className="text-[#D1D5DB] mb-4">
+              {t('footer.description')}
+            </p>
+            <div className="flex space-x-4">
+              <motion.a
+                href="https://github.com/Remi2222"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+              >
+                <Github size={24} />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/maryam-fajri"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+              >
+                <Linkedin size={24} />
+              </motion.a>
+              <motion.a
+                href="mailto:maryam.fajri02@gmail.com"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+              >
+                <Mail size={24} />
+              </motion.a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.navigation')}</h4>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={() => scrollToTop()}
+                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                >
+                  {t('footer.home')}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                >
+                  {t('footer.about')}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('skills')}
+                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                >
+                  {t('footer.skills')}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('projects')}
+                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                >
+                  {t('footer.projects')}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                >
+                  {t('footer.contactLink')}
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
+            <div className="space-y-2 text-[#D1D5DB]">
+              <p>maryam.fajri02@gmail.com</p>
+              <p>+212 643776635 </p>
+              <p>{t('contact.locationValue')}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-[#374151] pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center text-[#D1D5DB] mb-4 md:mb-0">
+            <span>© {currentYear} Maryam Fajri</span>
+          </div>
+          
+          <motion.button
+            onClick={scrollToTop}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="bg-[#10B981] hover:bg-[#059669] text-white p-3 rounded-full transition-colors hover:shadow-lg hover:shadow-[#10B981]/30"
+            aria-label={t('footer.backToTop')}
+          >
+            <ArrowUp size={20} />
+          </motion.button>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

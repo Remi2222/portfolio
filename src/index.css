@@ -1,0 +1,146 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Couleurs principales */
+  --primary-green: #10B981;
+  --primary-dark: #059669;
+  --secondary-dark: #1F2937;
+  --background-dark: #111827;
+  
+  /* Couleurs d'accentuation */
+  --accent-light: #34D399;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  
+  /* Bordures et surfaces */
+  --border-color: #374151;
+  --card-bg: #1F2937;
+  --card-hover: #374151;
+  
+  /* Dégradés */
+  --gradient-primary: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-dark: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background-dark);
+  overflow-x: hidden;
+  zoom: 1;
+  transform: scale(1);
+}
+
+
+/* Force exact sizes - prevent GitHub Pages from changing design */
+.force-original-size {
+  zoom: 1 !important;
+  transform: scale(1) !important;
+  font-size: inherit !important;
+}
+
+/* Ensure exact pixel sizes */
+h1 {
+  font-size: inherit !important;
+}
+
+h2 {
+  font-size: inherit !important;
+}
+
+/* Prevent any scaling on GitHub Pages */
+html {
+  zoom: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Responsive fixes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: var(--gradient-primary);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Chatbot - Scrolls with page */
+.chatbot-button {
+  animation: chatbot-pulse 2s ease-in-out infinite;
+}
+
+/* Pulse animation for chatbot - using box-shadow instead of transform */
+@keyframes chatbot-pulse {
+  0%, 100% { 
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5), 0 0 20px rgba(52, 211, 153, 0.4);
+  }
+  50% { 
+    box-shadow: 0 15px 50px rgba(16, 185, 129, 0.7), 0 0 30px rgba(52, 211, 153, 0.6);
+  }
+}
