@@ -64,7 +64,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Button */}
         <Link to="/">
           <motion.button
             initial={{ opacity: 0, x: -20 }}
@@ -84,7 +83,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
           </motion.button>
         </Link>
 
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -162,7 +160,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
           </div>
         </motion.div>
 
-        {/* Screenshots Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -201,7 +198,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
           </div>
         </motion.div>
 
-        {/* Features Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -219,7 +215,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
           </div>
         </motion.div>
 
-        {/* Challenges & Outcomes */}
         {(challenges || outcomes) && (
           <div className="grid md:grid-cols-2 gap-8">
             {challenges && (
@@ -263,7 +258,6 @@ const ProjectDemo: React.FC<ProjectDemoProps> = ({
         )}
       </div>
 
-      {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div

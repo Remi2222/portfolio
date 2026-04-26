@@ -23,7 +23,6 @@ const LikeButton = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Générer ou récupérer l'UUID du navigateur
   useEffect(() => {
     let id = localStorage.getItem('portfolio-browser-id');
     if (!id) {
@@ -33,22 +32,18 @@ const LikeButton = () => {
     setBrowserId(id);
   }, []);
 
-  // Charger les données de likes
   useEffect(() => {
     if (!browserId) return;
 
     const loadLikes = async () => {
       try {
-        // Vérifier si cet utilisateur a déjà liké
         const userLikeDoc = await getDoc(doc(db, 'likes', browserId));
         setHasLiked(userLikeDoc.exists());
 
-        // Compter le total de likes
         const likesSnapshot = await getDocs(collection(db, 'likes'));
         setTotalLikes(likesSnapshot.size);
       } catch (error) {
         console.log('Erreur lors du chargement des likes:', error);
-        // En cas d'erreur, on utilise localStorage comme fallback
         const localLiked = localStorage.getItem('portfolio-has-liked') === 'true';
         setHasLiked(localLiked);
         const localCount = parseInt(localStorage.getItem('portfolio-like-count') || '0');
@@ -61,7 +56,6 @@ const LikeButton = () => {
     loadLikes();
   }, [browserId]);
 
-  // Créer des particules d'animation
   const createParticles = () => {
     const newParticles = Array.from({ length: 8 }, (_, i) => ({
       id: Date.now() + i,
@@ -80,13 +74,11 @@ const LikeButton = () => {
 
     try {
       if (hasLiked) {
-        // Unliker
         await deleteDoc(doc(db, 'likes', browserId));
         setHasLiked(false);
         setTotalLikes(prev => Math.max(0, prev - 1));
         localStorage.setItem('portfolio-has-liked', 'false');
       } else {
-        // Liker
         await setDoc(doc(db, 'likes', browserId), {
           timestamp: new Date().toISOString(),
           browserId: browserId,
@@ -95,11 +87,9 @@ const LikeButton = () => {
         setTotalLikes(prev => prev + 1);
         localStorage.setItem('portfolio-has-liked', 'true');
       }
-      // Sauvegarder le compteur localement
       localStorage.setItem('portfolio-like-count', totalLikes.toString());
     } catch (error) {
       console.log('Erreur lors du like:', error);
-      // Fallback sur localStorage uniquement
       const newLikedState = !hasLiked;
       setHasLiked(newLikedState);
       setTotalLikes(prev => newLikedState ? prev + 1 : Math.max(0, prev - 1));
@@ -126,7 +116,6 @@ const LikeButton = () => {
         float: 'right',
       }}
     >
-      {/* Particules d'animation */}
       <AnimatePresence>
         {particles.map((particle) => (
           <motion.div
@@ -156,7 +145,6 @@ const LikeButton = () => {
         ))}
       </AnimatePresence>
 
-      {/* Bouton avec gradient violet/bleu - À DROITE */}
       <button
         onClick={handleLike}
         className="like-button"

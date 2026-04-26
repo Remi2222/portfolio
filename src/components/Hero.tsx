@@ -155,13 +155,11 @@ const Hero = () => {
           animate="visible"
           className="grid lg:grid-cols-2 gap-16 items-center"
         >
-          {/* Photo Section - Left */}
           <motion.div
             variants={itemVariants}
             className="order-2 lg:order-1"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Multi-Layer Glow Effect */}
               <motion.div
                 animate={{
                   scale: [1, 1.15, 1],
@@ -186,7 +184,6 @@ const Hero = () => {
                 className="absolute -inset-6 bg-gradient-to-l from-[#10B981] via-[#34D399] to-[#059669] rounded-full blur-2xl opacity-30"
               />
               
-              {/* Photo Container - Large Rounded Square */}
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.4, type: "spring", stiffness: 300 }}
@@ -205,12 +202,10 @@ const Hero = () => {
                       transform: 'scale(1.15)',
                     }}
                   />
-                  {/* Subtle Gradient Overlay - Reduced opacity */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-600/5 via-transparent to-transparent"></div>
                 </div>
               </motion.div>
 
-              {/* Animated Corner Accents */}
               <motion.div
                 animate={{
                   opacity: [0.3, 0.8, 0.3],
@@ -235,7 +230,6 @@ const Hero = () => {
                 className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-[#34D399] rounded-br-2xl"
               />
 
-              {/* Floating Particles Around Photo */}
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
@@ -260,7 +254,6 @@ const Hero = () => {
                 />
               ))}
               
-              {/* Floating Badge */}
               <motion.div
                 animate={{
                   y: [0, -10, 0],
@@ -280,7 +273,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Text Content - Right */}
           <motion.div
             variants={containerVariants}
             className="order-1 lg:order-2 text-center lg:text-left"
@@ -382,8 +374,8 @@ const Hero = () => {
             </motion.button>
             
             <motion.a
-              href={`${process.env.PUBLIC_URL}/Mon_cv.pdf`}
-              download="Mon_cv.pdf"
+              href={`${process.env.PUBLIC_URL}/Mon_CV.pdf`}
+              download="CV_Maryam_Fajri.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-[#10B981] text-[#10B981] px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover-lift hover:bg-[#10B981] hover:text-white transition-all duration-300"

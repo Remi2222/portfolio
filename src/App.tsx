@@ -1,26 +1,27 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './contexts/LanguageContext.tsx';
-import Header from './components/Header.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Skills from './components/Skills.tsx';
-import Certificates from './components/Certificates.tsx';
-import Projects from './components/Projects.tsx';
-import Contact from './components/Contact.tsx';
-import Footer from './components/Footer.tsx';
-import Chatbot from './components/Chatbot.tsx';
+import { LanguageProvider } from './contexts/LanguageContext';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Certificates from './components/Certificates';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 
-// Import demo pages
-import EliteClickDemo from './demos/EliteClickDemo.tsx';
-import ChoWorksDemo from './demos/ChoWorksDemo.tsx';
-import VernaVertDemo from './demos/VernaVertDemo.tsx';
-import RenaultDemo from './demos/RenaultDemo.tsx';
-import FastcubeDemo from './demos/FastcubeDemo.tsx';
-import AmouchDemo from './demos/AmouchDemo.tsx';
-import TicketsDemo from './demos/TicketsDemo.tsx';
-import PersonalAnalyticsDemo from './demos/PersonalAnalyticsDemo.tsx';
+import EliteClickDemo from './demos/EliteClickDemo';
+import ChoWorksDemo from './demos/ChoWorksDemo';
+import VernaVertDemo from './demos/VernaVertDemo';
+import RenaultDemo from './demos/RenaultDemo';
+import FastcubeDemo from './demos/FastcubeDemo';
+import AmouchDemo from './demos/AmouchDemo';
+import TicketsDemo from './demos/TicketsDemo';
+import InvoiceDemo from './demos/InvoiceDemo';
+
+import PersonalAnalyticsDemo from './demos/PersonalAnalyticsDemo';
 
 const HomePage = () => {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/demo/fastcube" element={<FastcubeDemo />} />
           <Route path="/demo/amouch" element={<AmouchDemo />} />
           <Route path="/demo/tickets" element={<TicketsDemo />} />
+          <Route path="/demo/invoice" element={<InvoiceDemo />} />
           <Route path="/demo/personal-analytics" element={<PersonalAnalyticsDemo />} />
         </Routes>
       </div>

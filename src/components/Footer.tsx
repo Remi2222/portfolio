@@ -120,15 +120,7 @@ const Footer = () => {
             <span>© {currentYear} Maryam Fajri</span>
           </div>
           
-          <motion.button
-            onClick={scrollToTop}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-[#10B981] hover:bg-[#059669] text-white p-3 rounded-full transition-colors hover:shadow-lg hover:shadow-[#10B981]/30"
-            aria-label={t('footer.backToTop')}
-          >
-            <ArrowUp size={20} />
-          </motion.button>
+         
         </div>
       </div>
     </footer>

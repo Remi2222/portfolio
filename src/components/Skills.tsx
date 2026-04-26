@@ -121,7 +121,6 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-32 bg-[#111827] relative">
-      {/* Section Divider */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#10B981] to-transparent opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

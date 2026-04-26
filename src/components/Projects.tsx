@@ -22,6 +22,17 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: t('projects.list.factureAuto.title'),
+      description: t('projects.list.factureAuto.description'),
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MySQL'],
+      features: getFeatures('projects.list.factureAuto.features'),
+      github: 'https://github.com/Remi2222/Invoice-',
+      demo: '/demo/invoice',
+      category: t('projects.categories.webApp'),
+     
+    },
+    {
+      id: 2,
       title: t('projects.list.eliteClick.title'),
       description: t('projects.list.eliteClick.description'),
       technologies: ['React Native', 'TailwindCSS', 'Node.js', 'MySQL'],
@@ -29,16 +40,7 @@ const Projects = () => {
       github: 'https://github.com/Remi2222/eliteclick',
       demo: '/demo/elite-click',
       category: t('projects.categories.mobileApp'),
-    },
-    {
-      id: 2,
-      title: t('projects.list.choworks.title'),
-      description: t('projects.list.choworks.description'),
-      technologies: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
-      features: getFeatures('projects.list.choworks.features'),
-      github: 'https://github.com/Remi2222/choworks',
-      demo: '/demo/choworks',
-      category: t('projects.categories.mobileApp'),
+      
     },
     {
       id: 3,
@@ -52,13 +54,13 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: t('projects.list.renault.title'),
-      description: t('projects.list.renault.description'),
-      technologies: ['C#', 'Windows Forms', 'GUNA Framework', 'MySQL'],
-      features: getFeatures('projects.list.renault.features'),
-      github: 'https://github.com/Remi2222/renault-crm',
-      demo: '/demo/renault',
-      category: t('projects.categories.desktopApp'),
+      title: t('projects.list.personalAnalytics.title'),
+      description: t('projects.list.personalAnalytics.description'),
+      technologies: ['Python', 'Dash', 'SQLite', 'Pandas', 'Machine Learning'],
+      features: getFeatures('projects.list.personalAnalytics.features'),
+      github: 'https://github.com/Remi2222/dashboard_analytic',
+      demo: '/demo/personal-analytics',
+      category: t('projects.categories.webApp'),
     },
     {
       id: 5,
@@ -66,7 +68,7 @@ const Projects = () => {
       description: t('projects.list.fastcube.description'),
       technologies: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'OpenAI API'],
       features: getFeatures('projects.list.fastcube.features'),
-      github: 'https://github.com/Remi2222/fastcube',
+      github: 'https://github.com/Remi2222/platforme-web',
       demo: '/demo/fastcube',
       category: t('projects.categories.webAi'),
     },
@@ -76,7 +78,7 @@ const Projects = () => {
       description: t('projects.list.amouch.description'),
       technologies: ['React.js', 'Architecture Microservices', 'MySQL'],
       features: getFeatures('projects.list.amouch.features'),
-      github: 'https://github.com/Remi2222/amouch',
+      github: 'https://github.com/Remi2222/AMOUCH',
       demo: '/demo/amouch',
       category: t('projects.categories.webApp'),
     },
@@ -92,13 +94,25 @@ const Projects = () => {
     },
     {
       id: 8,
-      title: t('projects.list.personalAnalytics.title'),
-      description: t('projects.list.personalAnalytics.description'),
-      technologies: ['Python', 'Plotly', 'SQLite', 'Pandas', 'Machine Learning'],
-      features: getFeatures('projects.list.personalAnalytics.features'),
-      github: 'https://github.com/Remi2222/personal-analytics-dashboard',
-      demo: '/demo/personal-analytics',
-      category: t('projects.categories.webApp'),
+      title: t('projects.list.renault.title'),
+      description: t('projects.list.renault.description'),
+      technologies: ['C#', 'Windows Forms', 'GUNA Framework', 'MySQL'],
+      features: getFeatures('projects.list.renault.features'),
+      github: 'https://github.com/Remi2222/renault-crm',
+      demo: '/demo/renault',
+      category: t('projects.categories.desktopApp'),
+      
+    },
+    {
+      id: 9,
+      title: t('projects.list.choworks.title'),
+      description: t('projects.list.choworks.description'),
+      technologies: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
+      features: getFeatures('projects.list.choworks.features'),
+      github: 'https://github.com/Remi2222/choworks',
+      demo: '/demo/choworks',
+      category: t('projects.categories.mobileApp'),
+  
     }
   ];
 
@@ -127,7 +141,6 @@ const Projects = () => {
 
   return (
     <section id='projects' className='py-32 bg-[#1F2937] relative'>
-      {/* Section Divider */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#10B981] to-transparent opacity-30"></div>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <motion.div

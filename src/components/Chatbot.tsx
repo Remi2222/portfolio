@@ -95,7 +95,6 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Bouton sticky flottant en haut */}
       <div style={{
         position: 'sticky',
         top: '100px',
@@ -157,7 +156,6 @@ const Chatbot = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Overlay avec backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -178,7 +176,6 @@ const Chatbot = () => {
               onClick={() => setIsOpen(false)}
             />
             
-            {/* Fenêtre du chatbot */}
             <motion.div
               initial={{ opacity: 0, x: 400 }}
               animate={{ opacity: 1, x: 0 }}
@@ -209,7 +206,6 @@ const Chatbot = () => {
                 zIndex: 9999,
               }}
             >
-            {/* Header */}
             <div style={{
               background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
               padding: isMobile ? '20px 16px' : '24px',
@@ -240,7 +236,6 @@ const Chatbot = () => {
                 </p>
               </div>
 
-              {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
                 style={{
@@ -270,7 +265,6 @@ const Chatbot = () => {
               </button>
             </div>
 
-            {/* Messages */}
             <div style={{
               flex: 1,
               overflowY: 'auto',
@@ -389,7 +383,6 @@ const Chatbot = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Quick Questions */}
             {messages.length <= 1 && (
               <div style={{ 
                 padding: isMobile ? '0 16px 12px' : '0 24px 16px', 
@@ -427,7 +420,6 @@ const Chatbot = () => {
               </div>
             )}
 
-            {/* Input */}
             <div style={{ 
               padding: isMobile ? '16px' : '20px 24px', 
               backgroundColor: '#1F2937', 

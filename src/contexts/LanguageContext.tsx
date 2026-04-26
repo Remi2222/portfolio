@@ -248,6 +248,18 @@ const translations: Record<Language, any> = {
             "KPIs personnalisés avec comparaisons hebdomadaires",
           ],
         },
+        factureAuto: {
+          title: "Invoice - Facture Auto",
+          description: "Application web de gestion et génération automatique de factures pour simplifier le suivi client et la facturation",
+          features: [
+            "Création automatique de factures",
+            "Gestion des clients et des produits",
+            "Calcul des totaux et taxes",
+            "Historique des factures générées",
+            "Interface simple et rapide",
+            "Export et impression de facture",
+          ],
+        },
       },
     },
     contact: {
@@ -520,6 +532,18 @@ const translations: Record<Language, any> = {
             "Visualizations: correlation heatmaps, trend analysis",
             "Data export to CSV and Excel",
             "Custom KPIs with weekly comparisons",
+          ],
+        },
+        factureAuto: {
+          title: "Invoice - Facture Auto",
+          description: "Web application for automatic invoice generation to streamline client tracking and billing workflows",
+          features: [
+            "Automatic invoice generation",
+            "Client and product management",
+            "Totals and tax calculation",
+            "Generated invoice history",
+            "Simple and fast interface",
+            "Invoice export and printing",
           ],
         },
       },
