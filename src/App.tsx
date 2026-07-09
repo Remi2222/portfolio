@@ -45,7 +45,7 @@ function App() {
   return (
     <LanguageProvider>
     <Router>
-      <div className="min-h-screen bg-[#111827]">
+      <div className="min-h-screen bg-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/demo/elite-click" element={<EliteClickDemo />} />

@@ -7,6 +7,7 @@ import {
   Code
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { containerVariants, itemVariants } from '../constants/animations';
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -116,32 +117,9 @@ const Projects = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-  };
-
   return (
-    <section id='projects' className='py-32 bg-[#1F2937] relative'>
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#10B981] to-transparent opacity-30"></div>
+    <section id='projects' className='py-32 bg-[#1A0033] relative'>
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-40"></div>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <motion.div
           variants={containerVariants}
@@ -158,91 +136,120 @@ const Projects = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className='text-xl text-[#D1D5DB] max-w-3xl mx-auto'
+            className='text-xl text-secondary max-w-3xl mx-auto'
           >
             {t('projects.subtitle')}
           </motion.p>
         </motion.div>
 
         <div className='grid lg:grid-cols-2 gap-8'>
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className='bg-[#111827] border border-[#374151] rounded-2xl shadow-lg overflow-hidden hover-lift group hover:border-[#10B981] transition-all duration-300'
-            >
-              <div className='p-6 border-b border-[#374151]'>
-                <div className='mb-4'>
-                  <h3 className='text-xl font-bold text-[#F9FAFB] mb-2'>
-                        {project.title}
-                      </h3>
-                        <span className='text-sm text-[#34D399]'>{project.category}</span>
-                </div>
-                
-                <p className='text-[#D1D5DB] leading-relaxed'>
-                  {project.description}
-                </p>
-              </div>
+          {projects.map((project, index) => {
+            const isViolet = index % 2 === 1;
+            const accent = isViolet ? '#C084FC' : '#FFD700';
 
-              <div className='p-6 border-b border-[#374151]'>
-                <h4 className='font-semibold text-[#F9FAFB] mb-3 flex items-center'>
-                  <Code className='mr-2 text-[#10B981]' size={16} />
-                  {t('projects.technologies')}
-                </h4>
-                <div className='flex flex-wrap gap-2'>
-                  {project.technologies?.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className='bg-[#10B981]/10 text-[#34D399] border border-[#10B981]/30 px-3 py-1 rounded-full text-sm font-medium hover:bg-[#10B981]/20 hover:border-[#10B981] transition-all duration-300'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className='p-6'>
-                <div className='flex space-x-4'>
-                  <motion.a
-                    href={project.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className='flex items-center space-x-2 bg-[#374151] text-white px-4 py-2 rounded-lg hover:bg-[#1F2937] border border-[#374151] hover:border-[#10B981] transition-all duration-300'
-                  >
-                    <Github size={16} />
-                    <span>{t('projects.code')}</span>
-                  </motion.a>
+            return (
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                whileHover={{ y: -10 }}
+                className='bg-[#0F0015] border border-[#4A2566] rounded-2xl shadow-lg overflow-hidden hover-lift group transition-all duration-300'
+                style={{ borderColor: '#4A2566' }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = accent)}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#4A2566')}
+              >
+                <div className='p-6 border-b border-[#4A2566]'>
+                  <div className='mb-4'>
+                    <h3 className='text-xl font-bold text-white mb-2'>
+                          {project.title}
+                        </h3>
+                          <span className='text-sm font-medium' style={{ color: accent }}>
+                            {project.category}
+                          </span>
+                  </div>
                   
-                  {project.demo !== '#' && (
-                    <Link to={project.demo}>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className='flex items-center space-x-2 bg-gradient-to-r from-[#10B981] to-[#059669] text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-[#10B981]/30 transition-all duration-300'
-                      >
-                        <ExternalLink size={16} />
-                        <span>{t('projects.demo')}</span>
-                      </motion.button>
-                    </Link>
-                  )}
+                  <p className='text-secondary leading-relaxed'>
+                    {project.description}
+                  </p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                <div className='p-6 border-b border-[#4A2566]'>
+                  <h4 className='font-semibold text-white mb-3 flex items-center'>
+                    <Code className='mr-2' size={16} style={{ color: accent }} />
+                    {t('projects.technologies')}
+                  </h4>
+                  <div className='flex flex-wrap gap-2'>
+                    {project.technologies?.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className='px-3 py-1 rounded-full text-sm font-medium border transition-all duration-300'
+                        style={{
+                          backgroundColor: `${accent}1A`,
+                          color: accent,
+                          borderColor: `${accent}4D`,
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className='p-6'>
+                  <div className='flex space-x-4'>
+                    <motion.a
+                      href={project.github}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className='flex items-center space-x-2 bg-[#4A2566] text-white px-4 py-2 rounded-lg hover:bg-[#2D0052] border border-[#4A2566] transition-all duration-300'
+                      onMouseEnter={(e) => (e.currentTarget.style.borderColor = accent)}
+                      onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#4A2566')}
+                    >
+                      <Github size={16} />
+                      <span>{t('projects.code')}</span>
+                    </motion.a>
+                    
+                    {project.demo !== '#' && (
+                      <Link to={project.demo}>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className='flex items-center space-x-2 text-[#1A0033] px-4 py-2 rounded-lg transition-all duration-300 font-semibold'
+                          style={{
+                            background: isViolet
+                              ? 'linear-gradient(to right, #C084FC, #A855F7)'
+                              : 'linear-gradient(to right, #FFD700, #FFA500)',
+                            boxShadow: `0 0 0 rgba(0,0,0,0)`,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.boxShadow = `0 10px 25px -5px ${accent}66`;
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.boxShadow = 'none';
+                          }}
+                        >
+                          <ExternalLink size={16} />
+                          <span>{t('projects.demo')}</span>
+                        </motion.button>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
           variants={itemVariants}
           className='text-center mt-16'
         >
-          <div className='bg-[#111827] border border-[#374151] rounded-2xl p-8 shadow-lg hover:border-[#10B981] transition-all duration-300'>
-            <h3 className='text-2xl font-bold mb-4 text-[#F9FAFB]'>
+          <div className='bg-gradient-to-r from-[#2D0052] to-[#1A0033] border border-[#4A2566] rounded-2xl p-8 shadow-lg hover:border-[#C084FC] transition-all duration-300'>
+            <h3 className='text-2xl font-bold mb-4 text-white'>
               {t('projects.cta.title')}
             </h3>
-            <p className='text-[#D1D5DB] mb-6'>
+            <p className='text-secondary mb-6'>
               {t('projects.cta.description')}
             </p>
             <motion.button
@@ -254,7 +261,7 @@ const Projects = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='bg-gradient-to-r from-[#10B981] to-[#059669] text-white px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 hover-lift hover:shadow-lg hover:shadow-[#10B981]/30 transition-all duration-300'
+              className='bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#C084FC] text-[#1A0033] px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 hover-lift hover:shadow-lg hover:shadow-[#C084FC]/40 transition-all duration-300'
             >
               <span>{t('projects.cta.button')}</span>
               <ExternalLink size={20} />

@@ -116,12 +116,12 @@ const Chatbot = () => {
             right: isMobile ? '16px' : '24px',
             top: 0,
             padding: isMobile ? '12px 16px' : '16px 24px',
-            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(5, 150, 105, 0.95))',
+            background: 'linear-gradient(135deg, #FFD700 0%, #C084FC 100%)',
             color: 'white',
             border: 'none',
             borderRadius: '50px',
             cursor: 'pointer',
-            boxShadow: '0 10px 40px rgba(16, 185, 129, 0.5), 0 0 20px rgba(52, 211, 153, 0.4)',
+            boxShadow: '0 12px 40px rgba(255,215,0,.35),0 0 25px rgba(192,132,252,.30)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -133,10 +133,10 @@ const Chatbot = () => {
             backdropFilter: 'blur(10px)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 15px 50px rgba(16, 185, 129, 0.7), 0 0 30px rgba(52, 211, 153, 0.6)';
+            e.currentTarget.style.boxShadow ='0 18px 55px rgba(255,215,0,.45),0 0 35px rgba(192,132,252,.45)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = '0 10px 40px rgba(16, 185, 129, 0.5), 0 0 20px rgba(52, 211, 153, 0.4)';
+            e.currentTarget.style.boxShadow = '0 12px 40px rgba(255,215,0,.35),0 0 25px rgba(192,132,252,.30  )';
           }}
         >
           {isOpen ? (
@@ -196,10 +196,10 @@ const Chatbot = () => {
                 maxWidth: isMobile ? 'none' : 'calc(100vw - 60px)',
                 height: isMobile ? 'calc(100vh - 80px)' : 'calc(100vh - 160px)',
                 maxHeight: isMobile ? 'none' : '85vh',
-                backgroundColor: '#1F2937',
+                background: 'linear-gradient(180deg,#2D1B4E,#140021)',
                 borderRadius: isMobile ? '20px' : '24px',
-                boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(16, 185, 129, 0.2)',
-                border: '1px solid #374151',
+                boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(174, 185, 16, 0.2)',
+                border: '1px solid rgba(192,132,252,.35)',
                 display: 'flex',
                 flexDirection: 'column',
                 overflow: 'hidden',
@@ -207,7 +207,7 @@ const Chatbot = () => {
               }}
             >
             <div style={{
-              background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+              background:'linear-gradient(135deg,#FFD700,#F59E0B,#C084FC)',
               padding: isMobile ? '20px 16px' : '24px',
               color: 'white',
               display: 'flex',
@@ -242,7 +242,7 @@ const Chatbot = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '12px',
-                  background: 'rgba(255, 255, 255, 0.15)',
+                 background:'linear-gradient(135deg,#2D1B4E,#140021)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   color: 'white',
                   cursor: 'pointer',
@@ -311,14 +311,14 @@ const Chatbot = () => {
                       {message.sender === 'user' ? (
                         <UserIcon size={18} style={{ color: 'white' }} />
                       ) : (
-                        <Bot size={18} style={{ color: '#10B981' }} />
+                       <Bot size={18} style={{ color: '#FFD700' }} />
                       )}
                     </div>
                     <div style={{
                       padding: '14px 18px',
                       borderRadius: '18px',
                       background: message.sender === 'user'
-                        ? 'linear-gradient(135deg, #10B981, #059669)'
+                        ? 'linear-gradient(135deg, #C084FC, #7C3AED)'
                         : '#1F2937',
                       color: message.sender === 'user' ? 'white' : '#F9FAFB',
                       boxShadow: message.sender === 'user' 
@@ -349,7 +349,7 @@ const Chatbot = () => {
                       justifyContent: 'center',
                       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
                     }}>
-                      <Bot size={18} style={{ color: '#10B981' }} />
+                      <Bot size={18} style={{ color: '#a0b910' }} />
                     </div>
                     <div style={{
                       padding: '12px 16px',
@@ -363,17 +363,17 @@ const Chatbot = () => {
                       <motion.div
                         animate={{ y: [0, -5, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
-                        style={{ width: '8px', height: '8px', backgroundColor: '#10B981', borderRadius: '50%' }}
+                        style={{ width: '8px', height: '8px', backgroundColor: '#a0b910', borderRadius: '50%' }}
                       />
                       <motion.div
                         animate={{ y: [0, -5, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
-                        style={{ width: '8px', height: '8px', backgroundColor: '#10B981', borderRadius: '50%' }}
+                        style={{ width: '8px', height: '8px', backgroundColor: '#a0b910', borderRadius: '50%' }}
                       />
                       <motion.div
                         animate={{ y: [0, -5, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
-                        style={{ width: '8px', height: '8px', backgroundColor: '#10B981', borderRadius: '50%' }}
+                        style={{ width: '8px', height: '8px', backgroundColor: '#a0b910', borderRadius: '50%' }}
                       />
                     </div>
                   </div>
@@ -408,7 +408,7 @@ const Chatbot = () => {
                         padding: isMobile ? '6px 10px' : '8px 12px',
                         backgroundColor: '#1F2937',
                         border: '1px solid #374151',
-                        color: '#34D399',
+                        color: '#cbd334',
                         borderRadius: '9999px',
                         cursor: 'pointer',
                       }}

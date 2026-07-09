@@ -319,7 +319,18 @@ const translations: Record<Language, any> = {
       },
       gitGithub: {
         description: "Maîtrise de Git et GitHub pour le contrôle de version, collaboration sur projets, gestion de branches et workflows professionnels."
-      }
+      },
+      awsBasics: {
+        description: "Fundamentals of AWS cloud services, compute, storage, networking, and core cloud concepts."
+      },
+      dockerKubernetes: {
+        description: "Learned containerization with Docker, Kubernetes orchestration, and OpenShift deployment."
+      },
+      reactBasics: {
+        description: "Built interactive user interfaces using React components, hooks, and modern JavaScript."
+      },
+      
+    
     },
     footer: {
       description: "Développeuse Full Stack passionnée par la création d'applications modernes et d'expériences utilisateur exceptionnelles.",

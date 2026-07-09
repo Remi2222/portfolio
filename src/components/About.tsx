@@ -44,8 +44,8 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-32 bg-[#1F2937] relative">
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#10B981] to-transparent opacity-30"></div>
+    <section id="about" className="py-32 bg-[#1A0033] relative">
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-40"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -62,7 +62,7 @@ const About = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-[#D1D5DB] max-w-3xl mx-auto"
+            className="text-xl text-secondary max-w-3xl mx-auto"
           >
             {t('about.subtitle')}
           </motion.p>
@@ -77,10 +77,10 @@ const About = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="bg-[#111827] border border-[#374151] rounded-2xl p-8 shadow-lg hover-lift hover:border-[#10B981] transition-all duration-300"
+              className="bg-[#0F0015] border border-[#4A2566] rounded-2xl p-8 shadow-lg hover-lift hover:border-[#FFD700] transition-all duration-300"
             >
-              <h3 className="text-2xl font-bold mb-6 text-[#F9FAFB]">{t('about.myJourney')}</h3>
-              <div className="space-y-4 text-[#D1D5DB]">
+              <h3 className="text-2xl font-bold mb-6 text-white">{t('about.myJourney')}</h3>
+              <div className="space-y-4 text-secondary">
                 <p>{t('about.paragraph1')}</p>
                 <p>{t('about.paragraph2')}</p>
                 <p>{t('about.paragraph3')}</p>
@@ -103,9 +103,9 @@ const About = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#111827] border border-[#374151] p-6 rounded-xl shadow-lg text-center hover-lift hover:border-[#10B981] transition-all duration-300"
+                  className="bg-[#2D1B4E] border border-[#4A2566] p-6 rounded-xl shadow-lg text-center hover-lift hover:border-[#C084FC] transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold text-[#10B981] mb-2">
+                  <div className="text-3xl font-bold text-[#FFD700] mb-2">
                     {stat.number}
                   </div>
                   <div className="text-[#D1D5DB] font-medium">
@@ -120,19 +120,19 @@ const About = () => {
               className="space-y-4"
             >
               <h3 className="text-2xl font-bold mb-6 text-[#F9FAFB] flex items-center">
-                <Heart className="text-[#10B981] mr-2" size={24} />
+                <Heart className="text-[#C084FC] mr-2" size={24} />
                 {t('about.passions')}
               </h3>
               {interests.map((interest, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ x: 10 }}
-                  className="bg-[#111827] border border-[#374151] p-4 rounded-lg shadow-md flex items-center space-x-4 hover-lift hover:border-[#10B981] transition-all duration-300"
+                  className="bg-[#2D1B4E] border border-[#4A2566] p-4 rounded-lg shadow-md flex items-center space-x-4 hover-lift hover:border-[#C084FC] transition-all duration-300"
                 >
                   <div className="text-2xl">{interest.icon}</div>
                   <div>
                     <h4 className="font-semibold text-[#F9FAFB]">{interest.title}</h4>
-                    <p className="text-sm text-[#D1D5DB]">{interest.description}</p>
+                    <p className="text-sm text-[#FFD700]">{interest.description}</p>
                   </div>
                 </motion.div>
               ))}

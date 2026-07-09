@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /demo/
+
+# Disallow private/admin pages (adjust as needed)
+Disallow: /admin
+Disallow: /private
+
+# Crawl delay to prevent overloading server
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://maryam-fajri.com/sitemap.xml

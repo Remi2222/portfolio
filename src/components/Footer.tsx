@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { rotateHoverVariant } from '../constants/animations';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -20,14 +21,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#111827] border-t border-[#374151] text-white py-12">
+    <footer className="bg-[#0F0015] border-t border-[#4A2566] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">
               Maryam Fajri
             </h3>
-            <p className="text-[#D1D5DB] mb-4">
+            <p className="text-secondary mb-4">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
@@ -36,7 +37,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+                className="text-secondary hover:text-[#FFD700] transition-colors"
               >
                 <Github size={24} />
               </motion.a>
@@ -45,14 +46,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+                className="text-secondary hover:text-[#C084FC] transition-colors"
               >
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
                 href="mailto:maryam.fajri02@gmail.com"
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-[#D1D5DB] hover:text-[#10B981] transition-colors"
+                className="text-secondary hover:text-[#FFD700] transition-colors"
               >
                 <Mail size={24} />
               </motion.a>
@@ -65,7 +66,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToTop()}
-                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                  className="text-secondary hover:text-[#FFD700] transition-colors cursor-pointer"
                 >
                   {t('footer.home')}
                 </button>
@@ -73,7 +74,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('about')}
-                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                  className="text-secondary hover:text-[#FFD700] transition-colors cursor-pointer"
                 >
                   {t('footer.about')}
                 </button>
@@ -81,7 +82,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('skills')}
-                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                  className="text-secondary hover:text-[#C084FC] transition-colors cursor-pointer"
                 >
                   {t('footer.skills')}
                 </button>
@@ -89,7 +90,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('projects')}
-                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                  className="text-secondary hover:text-[#C084FC] transition-colors cursor-pointer"
                 >
                   {t('footer.projects')}
                 </button>
@@ -97,7 +98,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="text-[#D1D5DB] hover:text-[#10B981] transition-colors cursor-pointer"
+                  className="text-[#D1D5DB] hover:text-[#FFD700] transition-colors cursor-pointer"
                 >
                   {t('footer.contactLink')}
                 </button>
@@ -115,7 +116,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[#374151] pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#4A2566] pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center text-[#D1D5DB] mb-4 md:mb-0">
             <span>© {currentYear} Maryam Fajri</span>
           </div>

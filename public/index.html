@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
     <link rel="alternate icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Portfolio de Maryam Fajri - Développeuse Full Stack" />
-    <title>Maryam Fajri - Portfolio</title>
+    <meta name="theme-color" content="#111827" />
+    <meta name="description" content="Maryam Fajri - Full Stack Developer. Experienced in React, Node.js, Python, and mobile development. Check out my projects and skills." />
+    <meta name="keywords" content="Full Stack Developer, React, Node.js, Python, Mobile Development, Web Development" />
+    <meta name="author" content="Maryam Fajri" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Maryam Fajri - Full Stack Developer" />
+    <meta property="og:description" content="Experienced Full Stack Developer specializing in web and mobile applications. Explore my projects and expertise." />
+    <meta property="og:image" content="%PUBLIC_URL%/me.jpeg" />
+    <meta property="og:url" content="https://maryam-fajri.com" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maryam Fajri - Full Stack Developer" />
+    <meta name="twitter:description" content="Full Stack Developer specializing in React, Node.js, and Python" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/me.jpeg" />
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://maryam-fajri.com" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <title>Maryam Fajri - Full Stack Developer Portfolio</title>
+    
     <script>
-      // Force exact sizes - prevent GitHub Pages from scaling
       document.addEventListener('DOMContentLoaded', function() {
         document.body.style.zoom = '1';
         document.documentElement.style.zoom = '1';
@@ -19,7 +42,23 @@
     </script>
   </head>
   <body>
-    <noscript>Vous devez activer JavaScript pour utiliser cette application.</noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <!-- Schema.org JSON-LD for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Maryam Fajri",
+      "url": "https://maryam-fajri.com",
+      "jobTitle": "Full Stack Developer",
+      "sameAs": [
+        "https://github.com/Remi2222",
+        "https://linkedin.com/in/maryam-fajri"
+      ],
+      "image": "%PUBLIC_URL%/me.jpeg"
+    }
+    </script>
   </body>
 </html>

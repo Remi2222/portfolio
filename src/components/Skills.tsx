@@ -9,6 +9,7 @@ import {
     Zap
   } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { containerVariants, itemVariants } from '../constants/animations';
 
 const Skills = () => {
   const { t } = useLanguage();
@@ -16,7 +17,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: t('skills.categories.programming'),
-      icon: <Code className="text-[#10B981]" size={32} />,
+      icon: <Code className="text-[#FFD700]" size={32} />,
       skills: [
         { name: "Python", level: 90 },
         { name: "JavaScript", level: 95 },
@@ -30,7 +31,7 @@ const Skills = () => {
     },
     {
       title: t('skills.categories.frontend'),
-      icon: <Smartphone className="text-[#34D399]" size={32} />,
+      icon: <Smartphone className="text-[#C084FC]" size={32} />,
       skills: [
         { name: "React.js", level: 92 },
         { name: "React Native", level: 90 },
@@ -43,7 +44,7 @@ const Skills = () => {
     },
     {
       title: t('skills.categories.backend'),
-      icon: <Database className="text-[#10B981]" size={32} />,
+      icon: <Database className="text-[#FFD700]" size={32} />,
       skills: [
         { name: "Django (Python)", level: 88 },
         { name: "Node.js", level: 90 },
@@ -55,7 +56,7 @@ const Skills = () => {
     },
     {
       title: t('skills.categories.database'),
-      icon: <Globe className="text-[#34D399]" size={32} />,
+      icon: <Globe className="text-[#C084FC]" size={32} />,
       skills: [
         { name: "MySQL", level: 90 },
         { name: "SQLite", level: 88 },
@@ -67,7 +68,7 @@ const Skills = () => {
     },
     {
       title: t('skills.categories.ai'),
-      icon: <Zap className="text-[#34D399]" size={32} />,
+      icon: <Zap className="text-[#FFD700]" size={32} />,
       skills: [
         { name: "TensorFlow", level: 85 },
         { name: "Scikit-learn", level: 88 },
@@ -81,7 +82,7 @@ const Skills = () => {
     },
     {
       title: t('skills.categories.devops'),
-      icon: <Palette className="text-[#10B981]" size={32} />,
+      icon: <Palette className="text-[#C084FC]" size={32} />,
       skills: [
         { name: "Git", level: 92 },
         { name: "GitHub", level: 90 },
@@ -91,37 +92,13 @@ const Skills = () => {
         { name: "Azure Virtual Networks", level: 80 },
         { name: "JWT/OAuth2", level: 88 },
         { name: "Firebase Auth", level: 90 },
-       
       ]
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <section id="skills" className="py-32 bg-[#111827] relative">
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#10B981] to-transparent opacity-30"></div>
+    <section id="skills" className="py-32 bg-[#1A0033] relative">
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-40"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -150,11 +127,11 @@ const Skills = () => {
               key={categoryIndex}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-[#1F2937] border border-[#374151] rounded-2xl p-8 hover-lift hover:border-[#10B981] transition-all duration-300"
+              className="bg-[#2D1B4E] border border-[#4C1D95] rounded-2xl p-8 hover-lift hover:border-[#FFD700] transition-all duration-300"
             >
               <div className="flex items-center mb-6">
                 {category.icon}
-                <h3 className="text-2xl font-bold ml-3 text-[#F9FAFB]">
+                <h3 className="text-2xl font-bold ml-3 text-[#f7f7f7]">
                   {category.title}
                 </h3>
               </div>
@@ -169,6 +146,18 @@ const Skills = () => {
                       <span className="font-semibold text-[#F9FAFB]">
                         {skill.name}
                       </span>
+                      <span className="text-sm text-[#C084FC]">
+                        {skill.level}%
+                      </span>
+                    </div>
+                    <div className="w-full h-2 bg-[#4C1D95] rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="h-full bg-gradient-to-r from-[#FFD700] to-[#C084FC] rounded-full"
+                      />
                     </div>
                   </div>
                 ))}
@@ -181,7 +170,7 @@ const Skills = () => {
           variants={itemVariants}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold mb-8 text-[#F9FAFB]">
+          <h3 className="text-2xl font-bold mb-8 text-[#FFD700]">
             {t('skills.additionalTitle')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -197,7 +186,7 @@ const Skills = () => {
               <motion.span
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                className="bg-[#1F2937] border border-[#374151] px-4 py-2 rounded-full text-[#34D399] font-medium hover-lift hover:border-[#10B981] hover:bg-[#374151] transition-all duration-300"
+                className="bg-[#2D1B4E] border border-[#4C1D95] px-4 py-2 rounded-full text-[#f7f7f7] font-medium hover-lift hover:border-[#FFD700] hover:bg-[#4C1D95] transition-all duration-300"
               >
                 {skill}
               </motion.span>
