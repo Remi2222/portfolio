@@ -119,9 +119,11 @@ const Hero = () => {
           </motion.div>
 
           <motion.div variants={containerVariants} className="order-1 lg:order-2 text-center lg:text-left">
-            <motion.div variants={itemVariants} className="mb-6">
-              <p className="text-lg text-secondary font-medium">{t('hero.greeting')}</p>
-            </motion.div>
+           <motion.div variants={itemVariants} className="mb-6 mt-8 md:mt-0">
+              <p className="text-sm md:text-base text-secondary font-medium">
+                {t('hero.greeting')}
+              </p>
+           </motion.div>
 
             <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl md:text-2xl lg:text-[110px] xl:text-[120px] font-black mb-6 tracking-tighter leading-none">
               <span className="gradient-text">{t('hero.name')}</span>
