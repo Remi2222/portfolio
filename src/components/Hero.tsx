@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Download, ArrowRight, Code, Smartphone, Database, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { containerVariants, itemVariants } from '../constants/animations';
+import process from 'process';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -92,8 +93,8 @@ const Hero = () => {
               >
                 <div className="w-full h-full bg-gradient-to-br from-[#102A43] via-[#163B56] to-[#102A43] relative">
                   <img
-                    src="/me.jpeg"
-                    alt={t('hero.photoAlt')}
+                    src={`${process.env.PUBLIC_URL}/me.jpeg`}
+                    alt="Maryam Fajri"
                     className="w-full h-full object-cover"
                     style={{ objectPosition: '60% center' }}
                     loading="lazy"
@@ -180,7 +181,9 @@ const Hero = () => {
               </motion.button>
 
               <motion.a
-                href="/Mon_cv.pdf"
+                href={`${process.env.PUBLIC_URL}/Mon_cv.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
