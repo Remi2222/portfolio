@@ -4,16 +4,14 @@ import ProjectDemo from './ProjectDemo';
 const RenaultDemo = () => {
   return (
     <ProjectDemo
-      title="Renault - Gestion Clientèle"
-      description="Modernisation du système de gestion clientèle par application desktop"
-      technologies={['C#', 'Windows Forms', 'GUNA Framework', 'MySQL']}
+      title="Renault Riva Dacia - Stage Desktop"
+      description="Application pour centraliser les données clients (mars - avril 2022)"
+      technologies={['C#', 'ASP.NET', 'Entity Framework', 'SQL Server', 'MySQL']}
       features={[
-        'Interface Windows Forms moderne',
-        'Framework GUNA pour le design',
-        'Gestion complète des clients',
-        'Système de suivi des ventes',
-        'Rapports détaillés',
-        'Base de données MySQL optimisée'
+        'Application C# / ASP.NET avec Entity Framework',
+        'Bases de données SQL Server et MySQL',
+        'Centralisation des données clients',
+        'Meilleure communication entre clientèle et après-vente'
       ]}
       screenshots={[
         { url: `${process.env.PUBLIC_URL}/demos/renault/renault-1.png`, caption: 'Dashboard principal' },
@@ -27,16 +25,12 @@ const RenaultDemo = () => {
       status="Terminé"
       category="Desktop App"
       challenges={[
-        'Modernisation d\'un ancien système de gestion',
-        'Migration des données existantes vers MySQL',
-        'Création d\'une interface moderne avec GUNA Framework',
-        'Formation du personnel à la nouvelle solution'
+        'Centraliser des données clients dispersées',
+        'Faciliter la communication entre les services clientèle et après-vente'
       ]}
       outcomes={[
-        'Système CRM moderne et efficace',
-        'Amélioration de 50% de la productivité des équipes',
-        'Migration réussie de toutes les données historiques',
-        'Interface intuitive adoptée rapidement par les utilisateurs'
+        'Données clients centralisées dans une même application',
+        'Communication améliorée entre les deux services'
       ]}
     />
   );

@@ -116,7 +116,7 @@ const Chatbot = () => {
             right: isMobile ? '16px' : '24px',
             top: 0,
             padding: isMobile ? '12px 16px' : '16px 24px',
-            background: 'linear-gradient(135deg, #FFD700 0%, #C084FC 100%)',
+            background: 'linear-gradient(135deg, #490f1a 0%, #C084FC 100%)',
             color: 'white',
             border: 'none',
             borderRadius: '50px',

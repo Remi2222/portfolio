@@ -4,16 +4,14 @@ import ProjectDemo from './ProjectDemo';
 const ChoWorksDemo = () => {
   return (
     <ProjectDemo
-      title="ChoWorks - Gestion Interne Entreprise"
-      description="Application mobile de gestion interne d'entreprise avec interface moderne"
-      technologies={['Flutter', 'Firebase', 'Firestore', 'Authentication']}
+      title="ChoWorks - Stage Mobile"
+      description="Application mobile pour centraliser la communication entre les équipes (août - septembre 2024)"
+      technologies={['React Native', 'API REST', 'Firebase', 'Docker', 'Git/GitHub']}
       features={[
-        'Interface utilisateur responsive',
-        'Authentification sécurisée Firebase',
-        'Gestion des données en temps réel',
-        'Synchronisation cloud',
-        'Interface intuitive et moderne',
-        'Gestion des utilisateurs et permissions'
+        'Application mobile React Native',
+        'API REST et Firebase',
+        'Communication centralisée entre les équipes',
+        'Travail en Agile Scrum avec Docker et Git/GitHub'
       ]}
       screenshots={[
         { url: `${process.env.PUBLIC_URL}/demos/choworks/choworks-1.png`, caption: 'Écran de connexion sécurisé' },
@@ -27,16 +25,14 @@ const ChoWorksDemo = () => {
       status="Terminé"
       category="Mobile App"
       challenges={[
-        'Développement cross-platform avec Flutter pour iOS et Android',
-        'Implémentation de l\'authentification Firebase sécurisée',
-        'Gestion des permissions et rôles utilisateurs complexes',
-        'Synchronisation en temps réel avec Firestore'
+        'Centraliser la communication entre plusieurs équipes',
+        'Intégrer Firebase avec une API REST',
+        'Travailler en Agile Scrum avec Docker et Git/GitHub'
       ]}
       outcomes={[
-        'Application déployée avec succès sur iOS et Android',
-        'Temps de développement réduit grâce à Flutter',
-        'Système de permissions granulaires opérationnel',
-        'Synchronisation temps réel sans latence notable'
+        'Application mobile centralisant la communication interne',
+        'Données synchronisées via Firebase',
+        'Environnement reproductible avec Docker'
       ]}
     />
   );

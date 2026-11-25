@@ -1,11 +1,11 @@
-// Base de connaissances du portfolio pour le chatbot RAG
+// Base de connaissances du portfolio pour le chatbot (alignée sur le CV)
 export const portfolioKnowledge = {
   personalInfo: {
     name: "Maryam Fajri",
-    title: "Ingénieure Full-Stack Freelance",
-    education: "Diplômée en Informatique et Réseaux",
-    location: "Maroc",
-    availability: "Disponible en remote",
+    title: "Ingénieure Full Stack & DevOps",
+    education: "Diplôme d'Ingénieur en Informatique et Réseaux, option MIAGE (EMSI Casablanca, 2022 - 2025)",
+    location: "Casablanca, Maroc",
+    lookingFor: "Un poste d'ingénieure au Maroc",
     email: "maryam.fajri02@gmail.com",
     phone: "+212 643776635",
     github: "https://github.com/Remi2222",
@@ -13,256 +13,94 @@ export const portfolioKnowledge = {
   },
 
   skills: {
-    programmingLanguages: [
-      { name: "Python", level: 90, description: "Développement backend, IA/ML, Django" },
-      { name: "JavaScript", level: 95, description: "React.js, React Native, Node.js" },
-      { name: "Java", level: 85, description: "Spring Boot, applications enterprise" },
-      { name: "C#", level: 88, description: ".NET Core, Windows Forms, GUNA Framework" },
-      { name: "C++", level: 80, description: "Programmation système" },
-      { name: "C", level: 75, description: "Programmation bas niveau" },
-      { name: "HTML/CSS", level: 95, description: "Design web moderne" },
-      { name: "SQL/PL-SQL", level: 90, description: "MySQL, bases de données relationnelles" },
-    ],
-    
-    frontendMobile: [
-      { name: "React.js", level: 92, description: "Applications web modernes" },
-      { name: "React Native", level: 90, description: "Applications mobiles cross-platform" },
-      { name: "Flutter", level: 85, description: "Applications mobiles natives" },
-      { name: "Tailwind CSS", level: 88, description: "Framework CSS utility-first" },
-      { name: "Expo", level: 85, description: "Développement React Native rapide" },
-      { name: "UI/UX Responsive", level: 90, description: "Design adaptatif et accessible" },
-    ],
-    
-    backendFrameworks: [
-      { name: "Django (Python)", level: 88, description: "Framework web Python" },
-      { name: "Node.js", level: 90, description: "Backend JavaScript" },
-      { name: "Express.js", level: 88, description: "Framework Node.js" },
-      { name: ".NET Core (C#)", level: 85, description: "Applications enterprise" },
-      { name: "Spring Boot (Java)", level: 80, description: "Microservices Java" },
-      { name: "REST APIs", level: 92, description: "Architecture API RESTful" },
-    ],
-    
-    databases: [
-      { name: "MySQL", level: 90, description: "Base de données relationnelle" },
-      { name: "Firestore (Firebase)", level: 85, description: "Base de données NoSQL temps réel" },
-      { name: "Azure", level: 80, description: "Cloud Microsoft" },
-    ],
-    
-    aiML: [
-      { name: "TensorFlow", level: 85, description: "Deep Learning" },
-      { name: "Scikit-learn", level: 88, description: "Machine Learning" },
-      { name: "Réseaux Neuronaux", level: 80, description: "CNN, ANN" },
-      { name: "NLP", level: 75, description: "Traitement du langage naturel" },
-      { name: "OpenAI API", level: 85, description: "Intégration GPT" },
-      { name: "Apprentissage Supervisé", level: 82, description: "Classification, Régression" },
-    ],
-    
-    devops: [
-      { name: "Docker", level: 85, description: "Conteneurisation" },
-      { name: "Kubernetes", level: 75, description: "Orchestration" },
-      { name: "CI/CD", level: 80, description: "Intégration continue" },
-      { name: "JWT/OAuth2", level: 88, description: "Authentification sécurisée" },
-    ],
+    languages: ["TypeScript", "JavaScript", "Java", "Python", "C#", "Dart", "Bash"],
+    webMobile: ["React", "Next.js", "NestJS", "Spring Boot", "Flutter", "React Native"],
+    data: ["PostgreSQL", "MySQL", "Prisma", "Firebase"],
+    devopsCloud: ["Docker", "GitHub Actions (CI/CD)", "AWS (EC2, Lightsail)", "Git"],
+    qualitySecurity: ["Jest", "JWT", "OpenAPI", "Agile Scrum"],
   },
 
   projects: [
-    {
-      name: "Elite Click",
-      type: "Mobile App",
-      description: "Application mobile pour la digitalisation des services d'une agence de publicité",
-      technologies: ["React Native", "TailwindCSS", "Node.js", "MySQL"],
-      status: "En cours",
-      date: "Depuis Juillet 2025",
-      client: "Elite Click, Beni Mellal",
-      features: [
-        "Digitalisation complète des services",
-        "Interface mobile moderne",
-        "Gestion des clients et projets",
-        "Backend Node.js robuste",
-      ]
-    },
-    {
-      name: "ChoWorks",
-      type: "Mobile App",
-      description: "Application mobile de gestion interne d'entreprise",
-      technologies: ["Flutter", "Firebase", "Firestore"],
-      status: "Terminé",
-      date: "Août-Sept 2024",
-      client: "ChoWorks, Marrakech",
-      features: [
-        "Interface responsive",
-        "Authentification Firebase",
-        "Gestion temps réel",
-        "Synchronisation cloud",
-      ]
-    },
-    {
-      name: "Verna Vert",
-      type: "Desktop App",
-      description: "Application desktop pour la gestion des espaces verts",
-      technologies: [".NET Core", "C#", "Architecture MVC", "Guna UI", "MySQL"],
-      status: "Terminé",
-      date: "Août-Sept 2023",
-      client: "Verna vert, Rabat",
-      features: [
-        "Architecture MVC moderne",
-        "Interface Guna UI",
-        "Gestion relationnelle",
-        "Rapports et analytics",
-      ]
-    },
-    {
-      name: "Renault - Gestion Clientèle",
-      type: "Desktop App",
-      description: "Modernisation du système de gestion clientèle",
-      technologies: ["C#", "Windows Forms", "GUNA Framework", "MySQL"],
-      status: "Terminé",
-      date: "Mars-Avril 2022",
-      client: "Renault, El Jadida",
-      features: [
-        "Interface Windows Forms",
-        "Gestion clients complète",
-        "Suivi des ventes",
-        "Rapports détaillés",
-      ]
-    },
-    {
-      name: "FASTCUBE",
-      type: "Web App + IA",
-      description: "Plateforme web intelligente avec chatbot et recommandation",
-      technologies: ["React.js", "Node.js", "Express.js", "MySQL", "OpenAI API"],
-      status: "Terminé",
-      features: [
-        "Chatbot conversationnel",
-        "Moteur de recommandation",
-        "Résumé automatique",
-        "Intégration OpenAI",
-      ]
-    },
-    {
-      name: "AMOUCH",
-      type: "Web App",
-      description: "Application web pour animalerie avec architecture microservices",
-      technologies: ["React.js", "Architecture Microservices", "MySQL"],
-      status: "Terminé",
-      features: [
-        "Architecture microservices",
-        "Interface React.js",
-        "Gestion des animaux",
-        "Système de réservation",
-      ]
-    },
-    {
-      name: "TICKETS",
-      type: "Web App",
-      description: "Plateforme de réservation de tickets de bus",
-      technologies: ["Python", "Django", "MySQL"],
-      status: "Terminé",
-      features: [
-        "Réservation en ligne",
-        "Gestion trajets",
-        "Paiement sécurisé",
-        "Interface Django",
-      ]
-    }
+    { name: "Syndic Pro Maroc", period: "Depuis mars 2026 (en cours)", description: "SaaS multi-tenant de gestion de syndic de copropriété avec comptabilité en partie double", tech: "Next.js, NestJS, PostgreSQL, Prisma, Flutter" },
+    { name: "Facturly", period: "2025 - 2026", description: "Plateforme de gestion et de suivi de factures", tech: "React, NestJS, PostgreSQL, Docker" },
+    { name: "AMOUCH", period: "2024 - 2025", description: "Plateforme vétérinaire et d'adoption d'animaux en microservices", tech: "React, Node.js, MySQL, Docker, Microservices" },
   ],
 
-  services: [
-    "Développement d'applications mobiles (React Native, Flutter)",
-    "Développement web (React.js, Node.js, Django)",
-    "Applications desktop (.NET Core, C#, Windows Forms)",
-    "Intégration IA/ML (TensorFlow, OpenAI API)",
-    "Architecture microservices",
-    "Bases de données (MySQL, Firebase)",
-    "API REST",
-    "UI/UX Design responsive",
-    "Sécurité (JWT, OAuth2)",
-    "DevOps (Docker, CI/CD)",
+  experience: [
+    { company: "Elite Click (Beni Mellal)", role: "Stagiaire Développeuse Mobile", period: "août - oct. 2025", summary: "Application mobile Flutter pour les clients et agents de l'agence (API REST, MySQL), déployée en production sur AWS Lightsail, code géré avec Git/GitHub." },
+    { company: "FastCube (Casablanca)", role: "Stagiaire Développeuse Full Stack", period: "mars - juil. 2025", summary: "9 fonctionnalités et 7 API REST (React, NestJS, MySQL) en Agile Scrum (Jira). Sécurisation (JWT, hachage, validation), tests Jest, documentation OpenAPI. Temps de réponse réduit de 30 %. Déploiement avec Docker Compose et CI/CD GitHub Actions sur AWS EC2." },
+    { company: "ChoWorks (Marrakech)", role: "Stagiaire Développeuse Mobile", period: "août - sept. 2024", summary: "Application mobile React Native avec API REST et Firebase pour centraliser la communication entre les équipes. Agile Scrum, Docker, Git/GitHub." },
+    { company: "Renault Riva Dacia (El Jadida)", role: "Stagiaire Développeuse Desktop", period: "mars - avr. 2022", summary: "Application C# / ASP.NET (Entity Framework) avec SQL Server / MySQL pour centraliser les données clients et améliorer la communication entre clientèle et après-vente." },
   ],
 
-  experience: {
-    years: "3+ ans d'expérience en développement",
-    projectsCount: "7+ projets réalisés",
-    languagesCount: "8+ langages maîtrisés",
-    toolsCount: "15+ frameworks et outils",
-    specialization: "Full-Stack & IA/ML",
-    workMode: "Freelance, disponible en remote",
-  },
+  certifications: [
+    "AWS Cloud Practitioner Essentials (2026)",
+    "Machine Learning with Python - IBM (2025)",
+    "Virtual Networks - Azure (2025)",
+    "Full Stack Software Developer (Cloud, React, Node.js, Docker, Kubernetes) - IBM (2024)",
+  ],
 
-  approach: "Je crée des applications performantes qui allient design moderne, sécurité robuste et scalabilité. Mon approche se concentre sur la création de solutions innovantes et bien structurées.",
-
-  contact: {
-    responseTime: "Je réponds généralement dans les 24 heures",
-    availability: "Lundi - Vendredi, 9h - 18h",
-    openToCollaboration: "Toujours ouverte à de nouveaux projets passionnants",
-  }
+  languagesSpoken: "Français (courant), Anglais (courant), Arabe (langue maternelle)",
+  interests: "Neurosciences et psychologie cognitive, équitation",
 };
 
-// Fonction de recherche RAG simple
-export function searchKnowledge(query: string): string {
-  const lowerQuery = query.toLowerCase();
-  
-  // Compétences
-  if (lowerQuery.includes('compétence') || lowerQuery.includes('skill') || lowerQuery.includes('technologie') || lowerQuery.includes('langage')) {
-    if (lowerQuery.includes('python')) {
-      return "Maryam maîtrise Python à 90%. Elle l'utilise pour le développement backend avec Django, ainsi que pour l'IA/ML avec TensorFlow et Scikit-learn.";
-    }
-    if (lowerQuery.includes('javascript') || lowerQuery.includes('js') || lowerQuery.includes('react')) {
-      return "Maryam maîtrise JavaScript à 95%, notamment React.js (92%) pour le web et React Native (90%) pour le mobile. Elle utilise également Node.js (90%) et Express.js (88%) pour le backend.";
-    }
-    if (lowerQuery.includes('mobile')) {
-      return "Pour le développement mobile, Maryam utilise React Native (90%), Flutter (85%), et Expo (85%). Elle a réalisé plusieurs applications mobiles comme Elite Click et ChoWorks.";
-    }
-    if (lowerQuery.includes('ia') || lowerQuery.includes('ai') || lowerQuery.includes('machine learning') || lowerQuery.includes('ml')) {
-      return "Les compétences de Maryam en IA/ML incluent TensorFlow (85%), Scikit-learn (88%), les Réseaux Neuronaux (80%), le NLP (75%), et l'OpenAI API (85%). Elle a créé FASTCUBE, une plateforme avec chatbot et recommandation intelligente.";
-    }
-    return `Maryam maîtrise ${portfolioKnowledge.skills.programmingLanguages.length} langages de programmation principaux dont Python (90%), JavaScript (95%), Java (85%), et C# (88%). Ses frameworks incluent React.js, React Native, Django, Node.js, .NET Core et Spring Boot.`;
-  }
-  
-  // Projets
-  if (lowerQuery.includes('projet') || lowerQuery.includes('project') || lowerQuery.includes('réalisation') || lowerQuery.includes('travail')) {
-    if (lowerQuery.includes('elite') || lowerQuery.includes('publicité')) {
-      return `Elite Click est le projet en cours de Maryam - une application mobile React Native pour digitaliser les services d'une agence de publicité à Beni Mellal. Technologies: React Native, TailwindCSS, Node.js, MySQL.`;
-    }
-    if (lowerQuery.includes('choworks')) {
-      return `ChoWorks est une application mobile Flutter développée par Maryam pour la gestion interne d'entreprise à Marrakech. Elle utilise Firebase pour l'authentification et la gestion temps réel. Projet terminé en Août-Sept 2024.`;
-    }
-    if (lowerQuery.includes('fastcube') || lowerQuery.includes('chatbot')) {
-      return `FASTCUBE est une plateforme web avec IA développée par Maryam. Elle intègre un chatbot conversationnel intelligent, un moteur de recommandation et un système de résumé automatique grâce à l'OpenAI API. Technologies: React.js, Node.js, Express.js, MySQL.`;
-    }
-    return `Maryam a réalisé 7+ projets variés : Elite Click (mobile, en cours), ChoWorks (mobile Flutter), Verna Vert (desktop .NET), Renault CRM (desktop C#), FASTCUBE (web + IA), AMOUCH (web microservices), et TICKETS (web Django).`;
-  }
-  
-  // Contact / Disponibilité
-  if (lowerQuery.includes('contact') || lowerQuery.includes('email') || lowerQuery.includes('téléphone') || lowerQuery.includes('joindre')) {
-    return `Vous pouvez contacter Maryam par email à maryam.fajri02@gmail.com ou par téléphone au +212 643776635. Elle répond généralement dans les 24 heures. Disponibilité: Lundi-Vendredi, 9h-18h.`;
-  }
-  
-  if (lowerQuery.includes('disponible') || lowerQuery.includes('disponibilité') || lowerQuery.includes('available')) {
-    return "Maryam est disponible immédiatement pour des projets freelance et des collaborations en remote. Son temps de réponse est généralement de 24h. Elle travaille du lundi au vendredi, 9h-18h.";
-  }
-  
-  // Services
-  if (lowerQuery.includes('service') || lowerQuery.includes('proposer') || lowerQuery.includes('faire')) {
-    return `Maryam propose plusieurs services : développement d'applications mobiles (React Native, Flutter), développement web (React.js, Node.js, Django), applications desktop (.NET, C#), intégration IA/ML, architecture microservices, et conception UI/UX responsive.`;
-  }
-  
-  // Expérience
-  if (lowerQuery.includes('expérience') || lowerQuery.includes('experience') || lowerQuery.includes('parcours')) {
-    return `Maryam a 3+ ans d'expérience en développement Full-Stack. Elle a réalisé 7+ projets pour des clients au Maroc (Beni Mellal, Marrakech, Rabat, El Jadida), allant d'applications mobiles à des plateformes web avec IA.`;
-  }
-  
-  // Tarifs / Collaboration
-  if (lowerQuery.includes('tarif') || lowerQuery.includes('prix') || lowerQuery.includes('coût') || lowerQuery.includes('budget')) {
-    return "Pour discuter des tarifs et du budget de votre projet, vous pouvez contacter Maryam directement par email (maryam.fajri02@gmail.com) ou via le formulaire de contact. Elle propose des devis personnalisés selon vos besoins.";
-  }
-  
-  // Spécialisation
-  if (lowerQuery.includes('spécialis') || lowerQuery.includes('expert') || lowerQuery.includes('fort')) {
-    return "La spécialisation principale de Maryam est le développement Full-Stack & IA/ML. Elle est particulièrement forte en React Native/React.js (95%), Python (90%), Node.js (90%), et intégration d'IA avec OpenAI API (85%).";
-  }
-  
-  // Réponse générale
-  return `Maryam Fajri est une Ingénieure Full-Stack Freelance diplômée en Informatique et Réseaux. Elle maîtrise 8+ langages de programmation et a réalisé 7+ projets variés (mobile, web, desktop, IA). Elle est disponible en remote pour de nouveaux projets. N'hésitez pas à poser des questions spécifiques sur ses compétences, projets ou services !`;
-}
+const k = portfolioKnowledge;
 
+// Recherche simple par mots-clés
+export function searchKnowledge(query: string): string {
+  const q = query.toLowerCase();
+  const has = (...words: string[]) => words.some((w) => q.includes(w));
+
+  if (has('contact', 'email', 'mail', 'téléphone', 'telephone', 'joindre', 'phone')) {
+    return `Vous pouvez contacter Maryam par email à ${k.personalInfo.email} ou par téléphone au ${k.personalInfo.phone}. Elle est basée à Casablanca.`;
+  }
+
+  if (has('disponible', 'disponibilité', 'available', 'recherche', 'looking', 'poste', 'freelance', 'embauche', 'recrut')) {
+    return "Maryam recherche un poste d'ingénieure Full Stack & DevOps au Maroc. N'hésitez pas à la contacter par email ou via le formulaire de contact.";
+  }
+
+  if (has('stage', 'internship', 'expérience', 'experience', 'parcours', 'elite', 'fastcube', 'choworks', 'renault')) {
+    if (has('fastcube')) return k.experience[1].summary;
+    if (has('elite')) return k.experience[0].summary;
+    if (has('choworks')) return k.experience[2].summary;
+    if (has('renault')) return k.experience[3].summary;
+    return "Maryam a effectué 4 stages : Elite Click (mobile Flutter, AWS Lightsail, 2025), FastCube (full stack React/NestJS, Docker, CI/CD, AWS EC2, 2025), ChoWorks (mobile React Native/Firebase, 2024) et Renault Riva Dacia (desktop C#/ASP.NET, 2022).";
+  }
+
+  if (has('projet', 'project', 'réalisation', 'syndic', 'facturly', 'amouch')) {
+    if (has('syndic')) return `${k.projects[0].name} : ${k.projects[0].description}. Technologies : ${k.projects[0].tech}. Projet en cours depuis mars 2026.`;
+    if (has('facturly')) return `${k.projects[1].name} : ${k.projects[1].description}. Technologies : ${k.projects[1].tech}.`;
+    if (has('amouch')) return `${k.projects[2].name} : ${k.projects[2].description}. Technologies : ${k.projects[2].tech}.`;
+    return "Projets principaux : Syndic Pro Maroc (SaaS multi-tenant de gestion de syndic avec comptabilité en partie double, en cours), Facturly (gestion et suivi de factures) et AMOUCH (plateforme vétérinaire et d'adoption d'animaux). Elle a aussi réalisé des applications pendant ses 4 stages.";
+  }
+
+  if (has('certif', 'certificat', 'aws', 'ibm', 'azure')) {
+    return `Certifications : ${k.certifications.join(' ; ')}.`;
+  }
+
+  if (has('devops', 'docker', 'ci/cd', 'cloud', 'déploiement', 'deploiement')) {
+    return "Côté DevOps & cloud, Maryam utilise Docker (et Docker Compose), GitHub Actions pour le CI/CD, AWS (EC2, Lightsail) et Git. Elle a déployé des applications en production chez FastCube (AWS EC2) et Elite Click (AWS Lightsail).";
+  }
+
+  if (has('mobile', 'flutter', 'react native')) {
+    return "Pour le mobile, Maryam utilise Flutter (Elite Click, Syndic Pro Maroc) et React Native (ChoWorks).";
+  }
+
+  if (has('compétence', 'competence', 'skill', 'technologie', 'langage', 'stack', 'react', 'nest', 'python', 'typescript')) {
+    return `Langages : ${k.skills.languages.join(', ')}. Web & mobile : ${k.skills.webMobile.join(', ')}. Données : ${k.skills.data.join(', ')}. DevOps & cloud : ${k.skills.devopsCloud.join(', ')}. Qualité & sécurité : ${k.skills.qualitySecurity.join(', ')}.`;
+  }
+
+  if (has('formation', 'diplôme', 'diplome', 'étude', 'etude', 'école', 'ecole', 'emsi', 'education')) {
+    return "Maryam est diplômée ingénieure en Informatique et Réseaux, option MIAGE (EMSI Casablanca, 2022 - 2025), après un diplôme de Technicien Spécialisé en Développement Informatique (OFPPT, El Jadida, 2020 - 2022).";
+  }
+
+  if (has('langue', 'language', 'parle', 'anglais', 'arabe')) {
+    return `Langues : ${k.languagesSpoken}.`;
+  }
+
+  if (has('intérêt', 'interet', 'passion', 'hobby', 'loisir')) {
+    return `Centres d'intérêt : ${k.interests}.`;
+  }
+
+  return "Maryam Fajri est ingénieure Full Stack & DevOps (Bac+5, MIAGE). Elle conçoit et déploie des applications SaaS en production et recherche un poste d'ingénieure au Maroc. Posez-moi une question sur ses compétences, ses stages, ses projets ou ses certifications !";
+}

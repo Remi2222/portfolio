@@ -1,3 +1,4 @@
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -10,26 +11,26 @@
 }
 
 :root {
-  /* Dark Purple + Gold Theme */
-  --primary-gold: #FFD700;
-  --primary-purple: #1A0033;
-  --secondary-purple: #2D0052;
-  --accent-purple: #C084FC;
-  --background-dark: #0F0015;
-  --accent-gold: #FFD700;
-  --text-primary: #FFFFFF;
-  --text-secondary: #D4D4D8;
+  /* Dark Navy + Teal Theme */
+  --primary-gold: #14B8A6;
+  --primary-purple: #071426;
+  --secondary-purple: #102A43;
+  --accent-purple: #38BDF8;
+  --background-dark: #071426;
+  --accent-gold: #14B8A6;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
 
   /* Surfaces */
-  --border-color: #4A2566;
-  --card-bg: #1A0033;
-  --card-hover: #2D0052;
+  --border-color: #23445E;
+  --card-bg: #102A43;
+  --card-hover: #163B56;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #1A0033 0%, #2D0052 100%);
-  --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  --gradient-dark: linear-gradient(135deg, #0F0015 0%, #1A0033 100%);
-  --gradient-accent: linear-gradient(135deg, #FFD700 0%, #C084FC 100%);
+  --gradient-primary: linear-gradient(135deg, #071426 0%, #102A43 100%);
+  --gradient-gold: linear-gradient(135deg, #14B8A6 0%, #0EA5E9 100%);
+  --gradient-dark: linear-gradient(135deg, #071426 0%, #102A43 100%);
+  --gradient-accent: linear-gradient(135deg, #14B8A6 0%, #38BDF8 100%);
 }
 
 body {
@@ -42,53 +43,40 @@ body {
   transform: scale(1);
 }
 
-/* Selection color matching the theme */
 ::selection {
-  background: rgba(255, 215, 0, 0.3);
+  background: rgba(20, 184, 166, 0.3);
   color: var(--text-primary);
 }
 
-/* Force exact sizes - prevent GitHub Pages from changing design */
 .force-original-size {
   zoom: 1 !important;
   transform: scale(1) !important;
   font-size: inherit !important;
 }
 
-/* Ensure exact pixel sizes */
-h1 {
+h1, h2 {
   font-size: inherit !important;
 }
 
-h2 {
-  font-size: inherit !important;
-}
-
-/* Prevent any scaling on GitHub Pages */
 html {
   zoom: 1 !important;
   transform: scale(1) !important;
+  scroll-behavior: smooth;
 }
 
-/* Responsive fixes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Mobile-specific fixes */
 @media (max-width: 768px) {
   .container {
     padding: 0 0.5rem;
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -103,262 +91,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-gold);
+  background: var(--accent-gold);
 }
 
-/* Gradient backgrounds */
-.gradient-bg {
-  background: var(--gradient-primary);
-}
-
-.gradient-text {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color:bisque;
-  background-clip: text;
-}
-
-/* Theme helper classes */
-.bg-main {
-  background-color: var(--background-dark) !important;
-}
-.bg-card {
-  background-color: var(--card-bg) !important;
-}
-.text-secondary {
-  color: var(--text-secondary) !important;
-}
-.text-accent {
-  color: var(--primary-gold) !important;
-}
-.text-accent-purple {
-  color: var(--accent-purple) !important;
-}
-.border-main {
-  border-color: var(--border-color) !important;
-}
-.bg-accent-soft {
-  background-color: rgba(255, 215, 0, 0.08) !important;
-}
-.bg-accent-purple-soft {
-  background-color: rgba(192, 132, 252, 0.08) !important;
-}
-.btn-primary {
-  background: var(--gradient-gold);
-  color: #1A0033;
-  font-weight: 600;
-}
-.btn-primary:hover {
-  background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-}
-.btn-secondary {
-  color: var(--accent-purple);
-  border-color: var(--accent-purple);
-  background: transparent;
-}
-.btn-secondary:hover {
-  background: rgba(192, 132, 252, 0.1);
-  box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
-}
-.shadow-accent {
-  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-}
-.shadow-accent-purple {
-  box-shadow: 0 20px 40px rgba(192, 132, 252, 0.2);
-}
-
-/* Glass morphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Hover effects */
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Chatbot - Scrolls with page */
-.chatbot-button {
-  animation: chatbot-pulse 2s ease-in-out infinite;
-}
-
-/* Pulse animation for chatbot - using box-shadow instead of transform */
-@keyframes chatbot-pulse {
-  0%, 100% {
-    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.3);
-  }
-  50% {
-    box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.5);
-  }
-}
-
-/* Accessibility: Focus indicators for keyboard navigation */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #FFD700;
-  outline-offset: 2px;
-}
-
-/* Remove default outline and apply custom focus styles */
-button:focus,
-a:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: more) {
-  :root {
-    --primary-gold: #FFF700;
-    --text-secondary: #F0F0F0;
-  }
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Screen reader only class for skip links */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  /* Dark Purple + Gold Theme */
-  --primary-gold: #FFD700;
-  --primary-purple: #1A0033;
-  --secondary-purple: #2D0052;
-  --accent-purple: #C084FC;
-  --background-dark: #0F0015;
-  --accent-gold: #FFD700;
-  --text-primary: #FFFFFF;
-  --text-secondary: #D4D4D8;
-
-  /* Surfaces */
-  --border-color: #4A2566;
-  --card-bg: #1A0033;
-  --card-hover: #2D0052;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #1A0033 0%, #2D0052 100%);
-  --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  --gradient-dark: linear-gradient(135deg, #0F0015 0%, #1A0033 100%);
-  --gradient-accent: linear-gradient(135deg, #FFD700 0%, #C084FC 100%);
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--background-dark);
-  overflow-x: hidden;
-  zoom: 1;
-  transform: scale(1);
-}
-
-/* Selection color matching the theme */
-::selection {
-  background: rgba(255, 215, 0, 0.3);
-  color: var(--text-primary);
-}
-
-/* Force exact sizes - prevent GitHub Pages from changing design */
-.force-original-size {
-  zoom: 1 !important;
-  transform: scale(1) !important;
-  font-size: inherit !important;
-}
-
-/* Ensure exact pixel sizes */
-h1 {
-  font-size: inherit !important;
-}
-
-h2 {
-  font-size: inherit !important;
-}
-
-/* Prevent any scaling on GitHub Pages */
-html {
-  zoom: 1 !important;
-  transform: scale(1) !important;
-}
-
-/* Responsive fixes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Mobile-specific fixes */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-gold);
-}
-
-/* Gradient backgrounds */
+/* Gradients */
 .gradient-bg {
   background: var(--gradient-primary);
 }
@@ -374,57 +110,72 @@ html {
 .bg-main {
   background-color: var(--background-dark) !important;
 }
+
 .bg-card {
   background-color: var(--card-bg) !important;
 }
+
 .text-secondary {
   color: var(--text-secondary) !important;
 }
+
 .text-accent {
   color: var(--primary-gold) !important;
 }
+
 .text-accent-purple {
   color: var(--accent-purple) !important;
 }
+
 .border-main {
   border-color: var(--border-color) !important;
 }
+
 .bg-accent-soft {
-  background-color: rgba(255, 215, 0, 0.08) !important;
+  background-color: rgba(20, 184, 166, 0.08) !important;
 }
+
 .bg-accent-purple-soft {
-  background-color: rgba(192, 132, 252, 0.08) !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
 }
+
+/* Buttons */
 .btn-primary {
   background: var(--gradient-gold);
-  color: #1A0033;
+  color: #071426;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
-  background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
 }
+
 .btn-secondary {
   color: var(--accent-purple);
   border-color: var(--accent-purple);
   background: transparent;
 }
+
 .btn-secondary:hover {
-  background: rgba(192, 132, 252, 0.1);
-  box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
-}
-.shadow-accent {
-  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-}
-.shadow-accent-purple {
-  box-shadow: 0 20px 40px rgba(192, 132, 252, 0.2);
+  background: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
-/* Glass morphism effect */
+.shadow-accent {
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.2);
+}
+
+.shadow-accent-purple {
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+}
+
+/* Glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 /* Hover effects */
@@ -437,32 +188,32 @@ html {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Chatbot - Scrolls with page */
+/* Chatbot */
 .chatbot-button {
   animation: chatbot-pulse 2s ease-in-out infinite;
 }
 
-/* Pulse animation for chatbot - using box-shadow instead of transform */
 @keyframes chatbot-pulse {
   0%, 100% {
-    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(20, 184, 166, 0.4),
+                0 0 20px rgba(20, 184, 166, 0.3);
   }
   50% {
-    box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 15px 50px rgba(20, 184, 166, 0.6),
+                0 0 30px rgba(20, 184, 166, 0.5);
   }
 }
 
-/* Accessibility: Focus indicators for keyboard navigation */
+/* Accessibility */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #FFD700;
+  outline: 2px solid #14B8A6;
   outline-offset: 2px;
 }
 
-/* Remove default outline and apply custom focus styles */
 button:focus,
 a:focus,
 input:focus,
@@ -471,15 +222,13 @@ select:focus {
   outline: none;
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: more) {
   :root {
-    --primary-gold: #FFF700;
+    --primary-gold: #2DD4BF;
     --text-secondary: #F0F0F0;
   }
 }
 
-/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -491,7 +240,7 @@ select:focus {
   }
 }
 
-/* Screen reader only class for skip links */
+/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;

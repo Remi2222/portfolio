@@ -6,16 +6,16 @@ import ProjectDemo from './ProjectDemo';
 const AmouchDemo = () => {
   return (
     <ProjectDemo
-      title="AMOUCH - Application Web Animalerie"
-      description="Application web pour animalerie avec architecture microservices"
-      technologies={['React.js', 'Architecture Microservices', 'MySQL']}
+      title="AMOUCH - Plateforme vétérinaire et d'adoption"
+      description="Plateforme vétérinaire et d'adoption d'animaux en architecture microservices (2024 - 2025)"
+      technologies={['React', 'Node.js', 'MySQL', 'Docker', 'Microservices']}
       features={[
-        'Architecture microservices scalable',
-        'Interface React.js moderne',
-        'Gestion complète des animaux',
-        'Système de réservation',
-        'Gestion des stocks',
-        'Base de données MySQL relationnelle'
+        'Architecture microservices',
+        'Catalogue d\'animaux et suivi des demandes d\'adoption',
+        'Espaces dédiés aux adoptants et aux vétérinaires',
+        'Calendrier de rendez-vous et suivi médical',
+        'Messagerie entre utilisateurs',
+        'Contenus de sensibilisation et d\'éducation'
       ]}
       screenshots={[
         { url: `${process.env.PUBLIC_URL}/demos/amouch/connexion.png`, caption: 'Page de connexion - Authentification sécurisée des utilisateurs' },
@@ -34,15 +34,13 @@ const AmouchDemo = () => {
       category="Web App"
       challenges={[
         'Mise en place d\'une architecture microservices',
-        'Gestion des stocks en temps réel',
-        'Système de réservation avec disponibilité dynamique',
-        'Optimisation des performances pour le catalogue'
+        'Gestion de plusieurs profils (adoptants, vétérinaires)',
+        'Planification des rendez-vous vétérinaires'
       ]}
       outcomes={[
-        'Architecture microservices scalable et maintenable',
-        'Système de gestion complet opérationnel',
-        'Interface web moderne et intuitive',
-        'Réduction de 40% du temps de gestion des stocks'
+        'Architecture microservices conteneurisée avec Docker',
+        'Parcours complet d\'adoption et de suivi vétérinaire',
+        'Interface web moderne et intuitive'
       ]}
     />
   );

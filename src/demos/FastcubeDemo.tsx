@@ -4,16 +4,16 @@ import ProjectDemo from './ProjectDemo';
 const FastcubeDemo = () => {
   return (
     <ProjectDemo
-      title="FASTCUBE - Plateforme Web IA Multiservice"
-      description="Plateforme web intelligente avec chatbot IA local, moteur de recommandation et résumé automatique"
-      technologies={['React.js', 'Node.js', 'Express.js', 'MySQL', 'Ollama', 'LLaMA']}
+      title="FastCube - Stage Full Stack"
+      description="Développement full stack de 9 fonctionnalités et 7 API REST en Agile Scrum (mars - juillet 2025)"
+      technologies={['React', 'NestJS', 'MySQL', 'Jest', 'OpenAPI', 'Docker Compose', 'GitHub Actions', 'AWS EC2']}
       features={[
-        'Chatbot conversationnel intelligent avec Ollama',
-        'Moteur de recommandation avancé',
-        'Système de résumé automatique',
-        'Architecture full-stack moderne',
-        'IA locale avec Ollama (LLaMA)',
-        'Interface utilisateur React.js'
+        '9 fonctionnalités full stack (React, NestJS, MySQL)',
+        '7 API REST documentées avec OpenAPI',
+        'Sécurisation : JWT, hachage, validation des données',
+        'Tests unitaires avec Jest',
+        'Déploiement avec Docker Compose sur AWS EC2',
+        'CI/CD avec GitHub Actions'
       ]}
       screenshots={[
         { url: `${process.env.PUBLIC_URL}/demos/fastcube/homeweb.png`, caption: 'Page d\'accueil de la plateforme FASTCUBE' },
@@ -30,18 +30,16 @@ const FastcubeDemo = () => {
       ]}
       github="https://github.com/Remi2222/fastcube"
       status="Terminé"
-      category="Web App + IA"
+      category="Stage Full Stack"
       challenges={[
-        'Intégration d\'Ollama pour un chatbot IA local',
-        'Développement d\'un moteur de recommandation personnalisé',
-        'Optimisation des temps de réponse avec LLaMA',
-        'Configuration et déploiement d\'Ollama en local'
+        'Livrer plusieurs fonctionnalités en sprints Agile Scrum (Jira)',
+        'Sécuriser les API (JWT, hachage, validation)',
+        'Optimiser les requêtes pour réduire les temps de réponse'
       ]}
       outcomes={[
-        'Plateforme IA multiservice complète et fonctionnelle',
-        'Chatbot local performant avec Ollama',
-        'Solution IA gratuite et respectueuse de la vie privée',
-        'Interface utilisateur moderne et responsive'
+        'Temps de réponse réduit de 30 %',
+        'Pipeline CI/CD et déploiement automatisé sur AWS EC2',
+        'API testées (Jest) et documentées (OpenAPI)'
       ]}
     />
   );

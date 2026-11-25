@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  ExternalLink, 
-  Github, 
+import {
+  ExternalLink,
+  Github,
   Code
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -14,178 +15,221 @@ const Projects = () => {
 
   const getFeatures = (key: string): string[] => {
     const features = t(key);
-    if (Array.isArray(features)) {
-      return features;
-    }
-    return [];
+    return Array.isArray(features) ? features : [];
   };
 
-  const projects = [
+  const projects: {
+    id: number;
+    title: string;
+    description: string;
+    technologies: string[];
+    features: string[];
+    github?: string;
+    demo?: string;
+    category: string;
+  }[] = [
     {
       id: 1,
+      title: t('projects.list.syndic.title'),
+      description: t('projects.list.syndic.description'),
+      technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'Prisma', 'Flutter'],
+      features: getFeatures('projects.list.syndic.features'),
+      category: t('projects.categories.saas'),
+    },
+    {
+      id: 2,
       title: t('projects.list.factureAuto.title'),
       description: t('projects.list.factureAuto.description'),
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MySQL'],
+      technologies: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'Prisma', 'Docker'],
       features: getFeatures('projects.list.factureAuto.features'),
       github: 'https://github.com/Remi2222/Invoice-',
       demo: '/demo/invoice',
       category: t('projects.categories.webApp'),
-     
-    },
-    {
-      id: 2,
-      title: t('projects.list.eliteClick.title'),
-      description: t('projects.list.eliteClick.description'),
-      technologies: ['React Native', 'TailwindCSS', 'Node.js', 'MySQL'],
-      features: getFeatures('projects.list.eliteClick.features'),
-      github: 'https://github.com/Remi2222/eliteclick',
-      demo: '/demo/elite-click',
-      category: t('projects.categories.mobileApp'),
-      
     },
     {
       id: 3,
-      title: t('projects.list.vernaVert.title'),
-      description: t('projects.list.vernaVert.description'),
-      technologies: ['.NET Core', 'C#', 'Architecture MVC', 'Guna UI', 'MySQL'],
-      features: getFeatures('projects.list.vernaVert.features'),
-      github: 'https://github.com/Remi2222/verna-vert',
-      demo: '/demo/verna-vert',
-      category: t('projects.categories.desktopApp'),
-    },
-    {
-      id: 4,
-      title: t('projects.list.personalAnalytics.title'),
-      description: t('projects.list.personalAnalytics.description'),
-      technologies: ['Python', 'Dash', 'SQLite', 'Pandas', 'Machine Learning'],
-      features: getFeatures('projects.list.personalAnalytics.features'),
-      github: 'https://github.com/Remi2222/dashboard_analytic',
-      demo: '/demo/personal-analytics',
-      category: t('projects.categories.webApp'),
-    },
-    {
-      id: 5,
-      title: t('projects.list.fastcube.title'),
-      description: t('projects.list.fastcube.description'),
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'OpenAI API'],
-      features: getFeatures('projects.list.fastcube.features'),
-      github: 'https://github.com/Remi2222/platforme-web',
-      demo: '/demo/fastcube',
-      category: t('projects.categories.webAi'),
-    },
-    {
-      id: 6,
       title: t('projects.list.amouch.title'),
       description: t('projects.list.amouch.description'),
-      technologies: ['React.js', 'Architecture Microservices', 'MySQL'],
+      technologies: ['React', 'Node.js', 'MySQL', 'Docker', 'Microservices'],
       features: getFeatures('projects.list.amouch.features'),
       github: 'https://github.com/Remi2222/AMOUCH',
       demo: '/demo/amouch',
       category: t('projects.categories.webApp'),
     },
     {
-      id: 7,
-      title: t('projects.list.tickets.title'),
-      description: t('projects.list.tickets.description'),
-      technologies: ['Python', 'Django', 'MySQL'],
-      features: getFeatures('projects.list.tickets.features'),
-      github: 'https://github.com/Remi2222/tickets-bus',
-      demo: '/demo/tickets',
-      category: t('projects.categories.webApp'),
+      id: 4,
+      title: t('projects.list.fastcube.title'),
+      description: t('projects.list.fastcube.description'),
+      technologies: ['React', 'NestJS', 'MySQL', 'Docker Compose', 'GitHub Actions', 'AWS EC2'],
+      features: getFeatures('projects.list.fastcube.features'),
+      github: 'https://github.com/Remi2222/platforme-web',
+      demo: '/demo/fastcube',
+      category: t('projects.categories.internshipWeb'),
     },
     {
-      id: 8,
-      title: t('projects.list.renault.title'),
-      description: t('projects.list.renault.description'),
-      technologies: ['C#', 'Windows Forms', 'GUNA Framework', 'MySQL'],
-      features: getFeatures('projects.list.renault.features'),
-      github: 'https://github.com/Remi2222/renault-crm',
-      demo: '/demo/renault',
-      category: t('projects.categories.desktopApp'),
-      
+      id: 5,
+      title: t('projects.list.eliteClick.title'),
+      description: t('projects.list.eliteClick.description'),
+      technologies: ['Flutter', 'Dart', 'API REST', 'MySQL', 'AWS Lightsail'],
+      features: getFeatures('projects.list.eliteClick.features'),
+      github: 'https://github.com/Remi2222/eliteclick',
+      demo: '/demo/elite-click',
+      category: t('projects.categories.internshipMobile'),
     },
     {
-      id: 9,
+      id: 6,
       title: t('projects.list.choworks.title'),
       description: t('projects.list.choworks.description'),
-      technologies: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
+      technologies: ['React Native', 'API REST', 'Firebase', 'Docker'],
       features: getFeatures('projects.list.choworks.features'),
       github: 'https://github.com/Remi2222/choworks',
       demo: '/demo/choworks',
-      category: t('projects.categories.mobileApp'),
-  
-    }
+      category: t('projects.categories.internshipMobile'),
+    },
+    {
+      id: 7,
+      title: t('projects.list.renault.title'),
+      description: t('projects.list.renault.description'),
+      technologies: ['C#', 'ASP.NET', 'Entity Framework', 'SQL Server', 'MySQL'],
+      features: getFeatures('projects.list.renault.features'),
+      github: 'https://github.com/Remi2222/renault-crm',
+      demo: '/demo/renault',
+      category: t('projects.categories.internshipDesktop'),
+    },
   ];
 
+  const colors = {
+    navy: '#071426',
+    card: '#10243E',
+    teal: '#14B8A6',
+    cyan: '#22D3EE',
+    silver: '#CBD5E1',
+    border: '#263D56',
+  };
+
   return (
-    <section id='projects' className='py-32 bg-[#1A0033] relative'>
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-40"></div>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <section
+      id="projects"
+      className="py-32 relative"
+      style={{ backgroundColor: colors.navy }}
+    >
+      <div
+        className="absolute top-0 left-0 right-0 h-1"
+        style={{
+          background: `linear-gradient(to right, transparent, ${colors.teal}, ${colors.cyan}, transparent)`,
+          opacity: 0.7,
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
           <motion.h2
             variants={itemVariants}
-            className='text-4xl md:text-5xl font-bold mb-6'
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
           >
-            {t('projects.title')} <span className='gradient-text'>{t('projects.titleHighlight')}</span>
+            {t('projects.title')}{' '}
+            <span
+              style={{
+                background: `linear-gradient(90deg, ${colors.teal}, ${colors.cyan})`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              {t('projects.titleHighlight')}
+            </span>
           </motion.h2>
+
           <motion.p
             variants={itemVariants}
-            className='text-xl text-secondary max-w-3xl mx-auto'
+            className="text-xl max-w-3xl mx-auto"
+            style={{ color: colors.silver }}
           >
             {t('projects.subtitle')}
           </motion.p>
         </motion.div>
 
-        <div className='grid lg:grid-cols-2 gap-8'>
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => {
-            const isViolet = index % 2 === 1;
-            const accent = isViolet ? '#C084FC' : '#FFD700';
+            const accent = index % 2 === 0
+              ? colors.teal
+              : colors.cyan;
 
             return (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
-                whileHover={{ y: -10 }}
-                className='bg-[#0F0015] border border-[#4A2566] rounded-2xl shadow-lg overflow-hidden hover-lift group transition-all duration-300'
-                style={{ borderColor: '#4A2566' }}
-                onMouseEnter={(e) => (e.currentTarget.style.borderColor = accent)}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#4A2566')}
+                whileHover={{ y: -8 }}
+                className="rounded-2xl overflow-hidden group transition-all duration-300"
+                style={{
+                  backgroundColor: colors.card,
+                  border: `1px solid ${colors.border}`,
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = accent;
+                  e.currentTarget.style.boxShadow =
+                    `0 12px 35px ${accent}20`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = colors.border;
+                  e.currentTarget.style.boxShadow =
+                    '0 10px 30px rgba(0,0,0,0.15)';
+                }}
               >
-                <div className='p-6 border-b border-[#4A2566]'>
-                  <div className='mb-4'>
-                    <h3 className='text-xl font-bold text-white mb-2'>
-                          {project.title}
-                        </h3>
-                          <span className='text-sm font-medium' style={{ color: accent }}>
-                            {project.category}
-                          </span>
+                <div
+                  className="p-6 border-b"
+                  style={{ borderColor: colors.border }}
+                >
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+
+                    <span
+                      className="text-sm font-semibold"
+                      style={{ color: accent }}
+                    >
+                      {project.category}
+                    </span>
                   </div>
-                  
-                  <p className='text-secondary leading-relaxed'>
+
+                  <p
+                    className="leading-relaxed"
+                    style={{ color: colors.silver }}
+                  >
                     {project.description}
                   </p>
                 </div>
 
-                <div className='p-6 border-b border-[#4A2566]'>
-                  <h4 className='font-semibold text-white mb-3 flex items-center'>
-                    <Code className='mr-2' size={16} style={{ color: accent }} />
+                <div
+                  className="p-6 border-b"
+                  style={{ borderColor: colors.border }}
+                >
+                  <h4 className="font-semibold text-white mb-3 flex items-center">
+                    <Code
+                      className="mr-2"
+                      size={16}
+                      style={{ color: accent }}
+                    />
                     {t('projects.technologies')}
                   </h4>
-                  <div className='flex flex-wrap gap-2'>
-                    {project.technologies?.map((tech, techIndex) => (
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className='px-3 py-1 rounded-full text-sm font-medium border transition-all duration-300'
+                        className="px-3 py-1 rounded-full text-sm font-medium border transition-all duration-300"
                         style={{
-                          backgroundColor: `${accent}1A`,
+                          backgroundColor: `${accent}12`,
                           color: accent,
-                          borderColor: `${accent}4D`,
+                          borderColor: `${accent}50`,
                         }}
                       >
                         {tech}
@@ -194,36 +238,45 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className='p-6'>
-                  <div className='flex space-x-4'>
-                    <motion.a
-                      href={project.github}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className='flex items-center space-x-2 bg-[#4A2566] text-white px-4 py-2 rounded-lg hover:bg-[#2D0052] border border-[#4A2566] transition-all duration-300'
-                      onMouseEnter={(e) => (e.currentTarget.style.borderColor = accent)}
-                      onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#4A2566')}
-                    >
-                      <Github size={16} />
-                      <span>{t('projects.code')}</span>
-                    </motion.a>
-                    
-                    {project.demo !== '#' && (
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-4">
+
+                    {project.github && (
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center space-x-2 px-4 py-2 rounded-lg text-white border transition-all duration-300"
+                        style={{
+                          backgroundColor: '#193451',
+                          borderColor: colors.border,
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = accent;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = colors.border;
+                        }}
+                      >
+                        <Github size={16} />
+                        <span>{t('projects.code')}</span>
+                      </motion.a>
+                    )}
+
+                    {project.demo && (
                       <Link to={project.demo}>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className='flex items-center space-x-2 text-[#1A0033] px-4 py-2 rounded-lg transition-all duration-300 font-semibold'
+                          className="flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold text-[#071426] transition-all duration-300"
                           style={{
-                            background: isViolet
-                              ? 'linear-gradient(to right, #C084FC, #A855F7)'
-                              : 'linear-gradient(to right, #FFD700, #FFA500)',
-                            boxShadow: `0 0 0 rgba(0,0,0,0)`,
+                            background: `linear-gradient(90deg, ${accent}, ${index % 2 === 0 ? colors.cyan : colors.teal})`,
                           }}
                           onMouseEnter={(e) => {
-                            e.currentTarget.style.boxShadow = `0 10px 25px -5px ${accent}66`;
+                            e.currentTarget.style.boxShadow =
+                              `0 8px 25px ${accent}45`;
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.boxShadow = 'none';
@@ -234,6 +287,7 @@ const Projects = () => {
                         </motion.button>
                       </Link>
                     )}
+
                   </div>
                 </div>
               </motion.div>
@@ -243,31 +297,53 @@ const Projects = () => {
 
         <motion.div
           variants={itemVariants}
-          className='text-center mt-16'
+          className="text-center mt-16"
         >
-          <div className='bg-gradient-to-r from-[#2D0052] to-[#1A0033] border border-[#4A2566] rounded-2xl p-8 shadow-lg hover:border-[#C084FC] transition-all duration-300'>
-            <h3 className='text-2xl font-bold mb-4 text-white'>
+          <div
+            className="rounded-2xl p-8 border transition-all duration-300"
+            style={{
+              background: `linear-gradient(135deg, ${colors.card}, ${colors.navy})`,
+              borderColor: colors.border,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = colors.teal;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = colors.border;
+            }}
+          >
+            <h3 className="text-2xl font-bold mb-4 text-white">
               {t('projects.cta.title')}
             </h3>
-            <p className='text-secondary mb-6'>
+
+            <p
+              className="mb-6"
+              style={{ color: colors.silver }}
+            >
               {t('projects.cta.description')}
             </p>
+
             <motion.button
               onClick={() => {
                 const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                contactSection?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#C084FC] text-[#1A0033] px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 hover-lift hover:shadow-lg hover:shadow-[#C084FC]/40 transition-all duration-300'
+              className="px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 text-[#071426] transition-all duration-300"
+              style={{
+                background: `linear-gradient(90deg, ${colors.teal}, ${colors.cyan})`,
+              }}
             >
               <span>{t('projects.cta.button')}</span>
               <ExternalLink size={20} />
             </motion.button>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

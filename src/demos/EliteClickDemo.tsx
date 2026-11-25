@@ -4,16 +4,14 @@ import ProjectDemo from './ProjectDemo';
 const EliteClickDemo = () => {
   return (
     <ProjectDemo
-      title="Elite Click - Digitalisation Services Publicité"
-      description="Application mobile pour la digitalisation des services d'une agence de publicité"
-      technologies={['React Native', 'TailwindCSS', 'Node.js', 'MySQL']}
+      title="Elite Click - Stage Mobile"
+      description="Application mobile Flutter pour les clients et les agents de l'agence (août - octobre 2025)"
+      technologies={['Flutter', 'Dart', 'API REST', 'MySQL', 'AWS Lightsail']}
       features={[
-        'Digitalisation complète des services',
-        'Interface mobile moderne',
-        'Gestion des clients et projets',
-        'Système de suivi intégré',
-        'Backend robuste avec Node.js',
-        'Base de données MySQL optimisée'
+        'Application mobile Flutter pour clients et agents',
+        'API REST et base de données MySQL',
+        'Déploiement en production sur AWS Lightsail',
+        'Code géré avec Git/GitHub'
       ]}
       screenshots={[
         { url: `${process.env.PUBLIC_URL}/demos/elite-click/login.jpg`, caption: 'Écran de connexion sécurisé' },
@@ -27,20 +25,18 @@ const EliteClickDemo = () => {
       ]}
       github="https://github.com/Remi2222/eliteclick"
       client="Elite Click, Beni Mellal"
-      date="Depuis Juil. 2025"
-      status="En cours"
+      date="Août - Oct. 2025"
+      status="Terminé"
       category="Mobile App"
       challenges={[
-        'Création d\'une interface mobile intuitive pour gérer des processus complexes',
-        'Optimisation des performances pour une utilisation fluide sur mobile',
-        'Synchronisation en temps réel entre l\'app mobile et le backend',
-        'Gestion sécurisée des données clients et projets'
+        'Concevoir une application mobile adaptée à deux profils : clients et agents',
+        'Exposer et consommer une API REST connectée à MySQL',
+        'Déployer l\'application en production sur AWS Lightsail'
       ]}
       outcomes={[
-        'Réduction de 60% du temps de traitement des demandes clients',
-        'Interface mobile responsive et performante',
-        'Système de notifications en temps réel opérationnel',
-        'Dashboard analytique complet pour le suivi des projets'
+        'Application mobile livrée et déployée en production',
+        'Interfaces dédiées aux clients et aux agents',
+        'Code versionné avec Git/GitHub'
       ]}
     />
   );

@@ -6,9 +6,9 @@ import ProjectDemo from './ProjectDemo';
 const InvoiceDemo = () => {
   return (
     <ProjectDemo
-      title="Facturly - Plateforme de Facturation en Ligne"
-      description="Plateforme de facturation en ligne — création, gestion et suivi de factures simplifié"
-      technologies={['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'JWT']}
+      title="Facturly - Gestion et suivi de factures"
+      description="Plateforme de gestion et de suivi de factures"
+      technologies={['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'Prisma', 'Docker', 'JWT']}
       features={[
         'Création et gestion de factures',
         'Génération de factures en PDF',
@@ -28,8 +28,8 @@ const InvoiceDemo = () => {
         { url: `${process.env.PUBLIC_URL}/demos/invoice/pdf.png`, caption: 'Aperçu PDF de la facture' },
       ]}
       github="https://github.com/Remi2222/Invoice-"
-      date="2026"
-      status="Términé"
+      date="2025 - 2026"
+      status="Terminé"
       category="Web App"
       challenges={[
         'Génération dynamique de PDF avec Puppeteer',

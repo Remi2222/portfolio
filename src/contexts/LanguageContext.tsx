@@ -54,19 +54,21 @@ const translations: Record<Language, any> = {
       about: 'À propos',
       skills: 'Compétences',
       projects: 'Projets',
-      certificates: 'Certificats',
+      certificates: 'Certifications',
       contact: 'Contact',
     },
     hero: {
-      greeting: "Salut, je suis Maryam ",
+      greeting: "Salut, je suis Maryam 👋",
       name: "Maryam Fajri",
-      title: "Ingénieure Full-Stack ",
-      subtitle: "Diplômée en Informatique et Réseaux Option(MIAGE)",
-      description: "Formation à double compétence alliant ingénierie logicielle, infrastructure réseau et systèmes d'information d'entreprise",
-      details: "Forte d'une expérience pratique à travers 5 stages en entreprise, j'ai livré des solutions complètes en développement web, mobile, desktop et intégration de l'IA.",
-      fullStack: "Full-Stack",
+      title: "Ingénieure Full Stack & DevOps",
+      subtitle: "Diplômée en Informatique et Réseaux, option MIAGE (Bac+5) · EMSI Casablanca",
+      description: "Je conçois et déploie des applications SaaS en production.",
+      details: "4 stages en développement web, mobile et déploiement cloud (React, NestJS, Flutter, Docker, AWS). Je recherche un poste d'ingénieure au Maroc.",
+      label: "Ingénieure Full Stack & DevOps",
+      photoAlt: "Maryam Fajri, ingénieure Full Stack & DevOps",
+      fullStack: "Full Stack",
       mobile: "Mobile",
-      aiMl: "IA/ML",
+      cloud: "Cloud",
       devOps: "DevOps",
       viewProjects: "Voir mes projets",
       downloadCV: "Télécharger CV",
@@ -74,64 +76,61 @@ const translations: Record<Language, any> = {
     about: {
       title: "À propos de",
       titleHighlight: "moi",
-      subtitle: "Développeuse Full-Stack passionnée avec une expertise en développement web, mobile et IA. Spécialisée dans React Native, React.js, Python, .NET Core et les technologies modernes.",
+      subtitle: "Ingénieure Full Stack & DevOps, je conçois et déploie des applications SaaS en production, du back-end à l'infrastructure cloud.",
       myJourney: "Mon parcours",
-      paragraph1: "Diplômée en Informatique et Réseaux, je suis une ingénieure Full-Stack passionnée par l'innovation technologique. J'ai acquis mes compétences à travers ma formation académique et mes projets personnels.",
-      paragraph2: "Mes compétences couvrent React Native et React.js pour le frontend, Python/Django et .NET Core pour le backend, ainsi que TensorFlow pour l'IA/ML. J'ai développé des projets variés comme l'application mobile Elite Click et des solutions web avec intégration IA.",
-      paragraph3: "Je maîtrise les architectures modernes, les bases de données relationnelles, et les technologies de sécurité. Mon approche se concentre sur la création d'applications performantes et bien structurées.",
-      paragraph4: "Toujours en veille technologique, j'aime relever des défis complexes et créer des solutions innovantes qui allient performance, sécurité et scalabilité.",
+      paragraph1: "Diplômée ingénieure en Informatique et Réseaux, option MIAGE (EMSI Casablanca, Bac+5), après un diplôme de Technicien Spécialisé en Développement Informatique (OFPPT, El Jadida).",
+      paragraph2: "À travers 4 stages en développement web, mobile et desktop, j'ai réalisé des applications avec React, NestJS, Flutter et React Native, sur des bases de données MySQL, PostgreSQL et Firebase.",
+      paragraph3: "Chez FastCube, j'ai développé 9 fonctionnalités et 7 API REST sécurisées (JWT, validation des données, tests Jest, documentation OpenAPI), réduit de 30 % le temps de réponse en optimisant les requêtes, et déployé avec Docker Compose et GitHub Actions sur AWS EC2.",
+      paragraph4: "Je développe actuellement Syndic Pro Maroc, un SaaS multi-tenant de gestion de syndic de copropriété avec comptabilité en partie double. Je recherche un poste d'ingénieure au Maroc.",
       name: "Maryam Fajri",
-      role: "Inégnieure informatique et réseaux option(MIAGE)",
+      role: "Ingénieure Informatique et Réseaux, option MIAGE",
       location: "Localisation",
-      remote: "Disponible en remote",
-      availability: "Disponibilité",
-      immediate: "Immédiate",
+      availability: "Recherche",
       specialization: "Spécialisation",
-      specializationValue: "Full-Stack & IA/ML",
+      specializationValue: "Full Stack & DevOps",
       stats: {
-        languages: "Langages maîtrisés",
-        projects: "Projets réalisés",
-        tools: "Frameworks & Outils",
-        motivation: "Motivation",
+        internships: "Stages en entreprise",
+        languages: "Langages de programmation",
+        saas: "Projets SaaS / plateformes",
+        degree: "Diplôme d'ingénieur",
       },
-      passions: "Mes passions",
+      passions: "Centres d'intérêt",
       interests: {
-        development: {
-          title: "Développement",
-          description: "Création d'applications modernes",
+        saas: {
+          title: "SaaS & Full Stack",
+          description: "Concevoir des applications de bout en bout",
         },
-        design: {
-          title: "Design UI/UX",
-          description: "Interfaces utilisateur attrayantes",
+        cloud: {
+          title: "DevOps & Cloud",
+          description: "Docker, CI/CD, AWS",
         },
-        mobile: {
-          title: "Mobile ",
-          description: "Applications mobiles performantes",
+        neuro: {
+          title: "Neurosciences",
+          description: "Psychologie cognitive",
         },
-        innovation: {
-          title: "Innovation",
-          description: "Technologies émergentes",
+        riding: {
+          title: "Équitation",
+          description: "Discipline, patience et concentration",
         },
       },
     },
     skills: {
       title: "Mes",
       titleHighlight: "compétences",
-      subtitle: "Un éventail de technologies modernes pour créer des applications performantes et des expériences utilisateur exceptionnelles.",
+      subtitle: "Les technologies que j'utilise pour concevoir, sécuriser et déployer des applications web et mobiles.",
       categories: {
-        programming: "Langages de Programmation",
-        frontend: "Frontend & Mobile",
-        backend: "Backend & Frameworks",
-        database: "Bases de Données & Cloud",
-        ai: "IA & Machine Learning",
-        devops: "DevOps & Sécurité",
+        programming: "Langages",
+        frontend: "Web & Mobile",
+        database: "Données",
+        devops: "DevOps & Cloud",
+        quality: "Qualité & Sécurité",
       },
-      additionalTitle: "Technologies & Outils supplémentaires",
+      additionalTitle: "Autres outils et méthodes",
     },
     projects: {
       title: "Mes",
       titleHighlight: "projets",
-      subtitle: "Découvrez une sélection de mes projets récents, allant des applications mobiles aux plateformes web modernes.",
+      subtitle: "Une sélection de mes projets : plateformes SaaS et applications réalisées en stage.",
       technologies: "Technologies utilisées",
       features: "Fonctionnalités principales",
       code: "Code",
@@ -141,39 +140,96 @@ const translations: Record<Language, any> = {
         completed: "Terminé",
       },
       categories: {
-        mobileApp: "Mobile App",
-        desktopApp: "Desktop App",
-        webApp: "Web App",
-        webAi: "Web App + IA",
+        mobileApp: "Application mobile",
+        desktopApp: "Application desktop",
+        webApp: "Application web",
+        webAi: "Application web + IA",
+        saas: "SaaS",
+        internshipWeb: "Stage · Full Stack",
+        internshipMobile: "Stage · Mobile",
+        internshipDesktop: "Stage · Desktop",
       },
       cta: {
-        title: "Intéressé par une collaboration ?",
-        description: "Je suis toujours ouvert à de nouveaux projets passionnants. N'hésitez pas à me contacter pour discuter de vos besoins.",
-        button: "Discutons de votre projet",
+        title: "Une opportunité à me proposer ?",
+        description: "Je recherche un poste d'ingénieure Full Stack & DevOps au Maroc. N'hésitez pas à me contacter pour en discuter.",
+        button: "Contactez-moi",
       },
       list: {
-        eliteClick: {
-          title: "Elite Click - Digitalisation Services Publicité",
-          description: "Application mobile pour la digitalisation des services d'une agence de publicité",
+        syndic: {
+          title: "Syndic Pro Maroc - SaaS de gestion de syndic",
+          description: "SaaS multi-tenant de gestion de syndic de copropriété avec comptabilité en partie double (projet en cours depuis mars 2026)",
           features: [
-            "Digitalisation complète des services",
-            "Interface mobile moderne",
-            "Gestion des clients et projets",
-            "Système de suivi intégré",
-            "Backend robuste avec Node.js",
-            "Base de données MySQL optimisée",
+            "Architecture multi-tenant",
+            "Comptabilité en partie double",
+            "Gestion de syndic de copropriété",
+            "Application web Next.js et application mobile Flutter",
+            "API NestJS avec PostgreSQL et Prisma",
+          ],
+        },
+        factureAuto: {
+          title: "Facturly - Gestion et suivi de factures",
+          description: "Plateforme de gestion et de suivi de factures (2025 - 2026)",
+          features: [
+            "Création et gestion de factures",
+            "Génération de factures en PDF",
+            "Authentification sécurisée avec JWT",
+            "Tableau de bord de suivi",
+            "Gestion des clients",
+            "Déploiement conteneurisé avec Docker",
+          ],
+        },
+        amouch: {
+          title: "AMOUCH - Plateforme vétérinaire et d'adoption",
+          description: "Plateforme vétérinaire et d'adoption d'animaux en architecture microservices (2024 - 2025)",
+          features: [
+            "Architecture microservices",
+            "Catalogue d'animaux et suivi des demandes d'adoption",
+            "Espaces dédiés aux adoptants et aux vétérinaires",
+            "Calendrier de rendez-vous et suivi médical",
+            "Messagerie entre utilisateurs",
+            "Contenus de sensibilisation et d'éducation",
+          ],
+        },
+        fastcube: {
+          title: "FastCube - Stage Full Stack",
+          description: "Stage de mars à juillet 2025 : développement full stack de 9 fonctionnalités et 7 API REST en Agile Scrum (Jira)",
+          features: [
+            "9 fonctionnalités et 7 API REST (React, NestJS, MySQL)",
+            "Sécurisation : JWT, hachage, validation des données",
+            "Tests Jest et documentation OpenAPI",
+            "Temps de réponse réduit de 30 % grâce à l'optimisation des requêtes",
+            "Déploiement avec Docker Compose sur AWS EC2",
+            "CI/CD avec GitHub Actions",
+          ],
+        },
+        eliteClick: {
+          title: "Elite Click - Stage Mobile",
+          description: "Stage d'août à octobre 2025 : application mobile Flutter pour les clients et les agents de l'agence",
+          features: [
+            "Application mobile Flutter pour clients et agents",
+            "API REST et base de données MySQL",
+            "Déploiement en production sur AWS Lightsail",
+            "Code géré avec Git/GitHub",
           ],
         },
         choworks: {
-          title: "ChoWorks - Gestion Interne Entreprise",
-          description: "Application mobile de gestion interne d'entreprise avec interface moderne",
+          title: "ChoWorks - Stage Mobile",
+          description: "Stage d'août à septembre 2024 : application mobile pour centraliser la communication entre les équipes",
           features: [
-            "Interface utilisateur responsive",
-            "Authentification sécurisée Firebase",
-            "Gestion des données en temps réel",
-            "Synchronisation cloud",
-            "Interface intuitive et moderne",
-            "Gestion des utilisateurs et permissions",
+            "Application mobile React Native",
+            "API REST et Firebase",
+            "Communication centralisée entre les équipes",
+            "Travail en Agile Scrum avec Docker et Git/GitHub",
+          ],
+        },
+        renault: {
+          title: "Renault Riva Dacia - Stage Desktop",
+          description: "Stage de mars à avril 2022 : application pour centraliser les données clients",
+          features: [
+            "Application C# / ASP.NET avec Entity Framework",
+            "Bases de données SQL Server et MySQL",
+            "Centralisation des données clients",
+            "Meilleure communication entre clientèle et après-vente",
           ],
         },
         vernaVert: {
@@ -186,42 +242,6 @@ const translations: Record<Language, any> = {
             "Rapports et analytics",
             "Système de planification",
             "Gestion des ressources et équipes",
-          ],
-        },
-        renault: {
-          title: "Renault - Gestion Clientèle",
-          description: "Modernisation du système de gestion clientèle par application desktop",
-          features: [
-            "Interface Windows Forms moderne",
-            "Framework GUNA pour le design",
-            "Gestion complète des clients",
-            "Système de suivi des ventes",
-            "Rapports détaillés",
-            "Base de données MySQL optimisée",
-          ],
-        },
-        fastcube: {
-          title: "FASTCUBE - Plateforme Web IA Multiservice",
-          description: "Plateforme web intelligente avec chatbot, moteur de recommandation et résumé automatique",
-          features: [
-            "Chatbot conversationnel intelligent",
-            "Moteur de recommandation avancé",
-            "Système de résumé automatique",
-            "Architecture full-stack moderne",
-            "Intégration API OpenAI",
-            "Interface utilisateur React.js",
-          ],
-        },
-        amouch: {
-          title: "AMOUCH - Application Web Animalerie",
-          description: "Application web pour animalerie avec architecture microservices",
-          features: [
-            "Architecture microservices scalable",
-            "Interface React.js moderne",
-            "Gestion complète des animaux",
-            "Système de réservation",
-            "Gestion des stocks",
-            "Base de données MySQL relationnelle",
           ],
         },
         tickets: {
@@ -248,34 +268,29 @@ const translations: Record<Language, any> = {
             "KPIs personnalisés avec comparaisons hebdomadaires",
           ],
         },
-        factureAuto: {
-          title: "Invoice - Facture Auto",
-          description: "Application web de gestion et génération automatique de factures pour simplifier le suivi client et la facturation",
-          features: [
-            "Création automatique de factures",
-            "Gestion des clients et des produits",
-            "Calcul des totaux et taxes",
-            "Historique des factures générées",
-            "Interface simple et rapide",
-            "Export et impression de facture",
-          ],
-        },
       },
     },
     contact: {
       title: "Contactez-",
       titleHighlight: "moi",
-      subtitle: "Une idée de projet ? Une question ? N'hésitez pas à me contacter. Je réponds généralement dans les 24 heures.",
+      subtitle: "Une opportunité ? Une question ? N'hésitez pas à me contacter. Je réponds généralement dans les 24 heures.",
       info: "Informations de contact",
       email: "Email",
       phone: "Téléphone",
       location: "Localisation",
-      locationValue: "Maroc",
+      locationValue: "Casablanca, Maroc",
       availability: "Disponibilité",
       availabilityValue: "Lun - Ven, 9h - 18h",
       followMe: "Suivez-moi",
-      availabilityTitle: "Disponibilité",
-      availabilityText: "Je suis disponible pour des projets freelance et des collaborations. Réponse garantie sous 24h pour toute demande.",
+      availabilityTitle: "Recherche active",
+      availabilityText: "Je recherche un poste d'ingénieure Full Stack & DevOps au Maroc. Réponse sous 24h pour toute proposition.",
+      validation: {
+        nameRequired: "Le nom est requis",
+        emailRequired: "L'email est requis",
+        emailInvalid: "Adresse email invalide",
+        subjectRequired: "Le sujet est requis",
+        messageRequired: "Le message est requis",
+      },
       form: {
         title: "Envoyez-moi un message",
         name: "Nom complet",
@@ -289,51 +304,52 @@ const translations: Record<Language, any> = {
         namePlaceholder: "Votre nom",
         emailPlaceholder: "votre@email.com",
         subjectPlaceholder: "Sujet de votre message",
-        messagePlaceholder: "Décrivez votre projet ou votre demande...",
+        messagePlaceholder: "Décrivez votre proposition ou votre demande...",
       },
     },
     certificates: {
-      title: "Certificats",
-      titleHighlight: "professionnels",
-      subtitle: "Formations et certifications validant mes compétences techniques et professionnelles.",
-      aiBusiness: {
-        description: "Rôle de l'IA en entreprise, outils IA, prompting efficace, utilisation éthique de l'intelligence artificielle."
-      },
-      dataScience: {
-        description: "Pratiques data science, outils d'analyse de données, approche data-driven pour la prise de décision."
+      title: "Certifications",
+      titleHighlight: "professionnelles",
+      subtitle: "Formations et certifications validant mes compétences en cloud, DevOps et développement.",
+      awsCloudPractitioner: {
+        description: "Fondamentaux du cloud AWS : services de calcul, stockage, réseau, sécurité et modèle de tarification.",
       },
       mlPython: {
-        description: "Apprentissage supervisé, réseaux neuronaux, utilisation de scikit-learn et TensorFlow pour le machine learning."
-      },
-      pythonEverybody: {
-        description: "Maîtrise de Python, Django, structures de données, analyse de données et bases de données."
-      },
-      fullStackIBM: {
-        description: "Développement full-stack, Cloud, React, Node.js, Docker, Kubernetes et architectures modernes."
-      },
-      pythonSpecialization: {
-        description: "Spécialisation complète en Python avec structures de données, APIs réseau, bases de données et création d'applications pour la récupération, le traitement et la visualisation de données."
+        description: "Apprentissage supervisé, réseaux de neurones, utilisation de scikit-learn et TensorFlow.",
       },
       azureNetworks: {
-        description: "Conception et gestion de réseaux virtuels dans Azure, architecture cloud, sécurité réseau et connectivité hybride."
+        description: "Conception et gestion de réseaux virtuels dans Azure, sécurité réseau et connectivité hybride.",
+      },
+      fullStackIBM: {
+        description: "Développement full stack : cloud, React, Node.js, Docker, Kubernetes et architectures modernes.",
+      },
+      aiBusiness: {
+        description: "Rôle de l'IA en entreprise, outils IA, prompting efficace, utilisation éthique de l'intelligence artificielle.",
+      },
+      dataScience: {
+        description: "Pratiques data science, outils d'analyse de données, approche data-driven pour la prise de décision.",
+      },
+      pythonEverybody: {
+        description: "Python, structures de données, analyse de données et bases de données.",
+      },
+      pythonSpecialization: {
+        description: "Spécialisation Python : structures de données, APIs réseau, bases de données, traitement et visualisation de données.",
       },
       gitGithub: {
-        description: "Maîtrise de Git et GitHub pour le contrôle de version, collaboration sur projets, gestion de branches et workflows professionnels."
+        description: "Git et GitHub : contrôle de version, collaboration, gestion de branches et workflows professionnels.",
       },
       awsBasics: {
-        description: "Fundamentals of AWS cloud services, compute, storage, networking, and core cloud concepts."
+        description: "Bases des services cloud AWS : calcul, stockage, réseau et concepts fondamentaux du cloud.",
       },
       dockerKubernetes: {
-        description: "Learned containerization with Docker, Kubernetes orchestration, and OpenShift deployment."
+        description: "Conteneurisation avec Docker, orchestration avec Kubernetes et déploiement avec OpenShift.",
       },
       reactBasics: {
-        description: "Built interactive user interfaces using React components, hooks, and modern JavaScript."
+        description: "Interfaces interactives avec les composants React, les hooks et JavaScript moderne.",
       },
-      
-    
     },
     footer: {
-      description: "Développeuse Full Stack passionnée par la création d'applications modernes et d'expériences utilisateur exceptionnelles.",
+      description: "Ingénieure Full Stack & DevOps. Je conçois et déploie des applications SaaS en production.",
       navigation: "Navigation",
       contact: "Contact",
       home: "Accueil",
@@ -351,19 +367,21 @@ const translations: Record<Language, any> = {
       about: 'About',
       skills: 'Skills',
       projects: 'Projects',
-      certificates: 'Certificates',
+      certificates: 'Certifications',
       contact: 'Contact',
     },
     hero: {
       greeting: "Hi, I'm Maryam 👋",
       name: "Maryam Fajri",
-      title: "Freelance Full-Stack Engineer",
-      subtitle: "Graduate in Computer Science and Networks",
-      description: "I transform your ideas into innovative digital solutions",
-      details: "Specialized in web, mobile, and artificial intelligence development, I create high-performance applications that combine modern design, robust security, and scalability.",
-      fullStack: "Full-Stack",
+      title: "Full Stack & DevOps Engineer",
+      subtitle: "Graduate in Computer Science and Networks, MIAGE track (Master's level) · EMSI Casablanca",
+      description: "I design and deploy SaaS applications in production.",
+      details: "4 internships in web and mobile development and cloud deployment (React, NestJS, Flutter, Docker, AWS). I'm looking for an engineering position in Morocco.",
+      label: "Full Stack & DevOps Engineer",
+      photoAlt: "Maryam Fajri, Full Stack & DevOps Engineer",
+      fullStack: "Full Stack",
       mobile: "Mobile",
-      aiMl: "AI/ML",
+      cloud: "Cloud",
       devOps: "DevOps",
       viewProjects: "View my projects",
       downloadCV: "Download CV",
@@ -371,64 +389,61 @@ const translations: Record<Language, any> = {
     about: {
       title: "About",
       titleHighlight: "me",
-      subtitle: "Passionate Full-Stack Developer with expertise in web, mobile, and AI development. Specialized in React Native, React.js, Python, .NET Core, and modern technologies.",
+      subtitle: "Full Stack & DevOps Engineer designing and deploying production SaaS applications, from the back end to cloud infrastructure.",
       myJourney: "My Journey",
-      paragraph1: "Graduate in Computer Science and Networks, I am a Full-Stack developer passionate about technological innovation. I acquired my skills through my academic training and personal projects.",
-      paragraph2: "My skills cover React Native and React.js for the frontend, Python/Django and .NET Core for the backend, as well as TensorFlow for AI/ML. I have developed various projects such as the Elite Click mobile application and web solutions with AI integration.",
-      paragraph3: "I master modern architectures, relational databases, and security technologies. My approach focuses on creating high-performance and well-structured applications.",
-      paragraph4: "Always keeping up with technology trends, I enjoy tackling complex challenges and creating innovative solutions that combine performance, security, and scalability.",
+      paragraph1: "Engineering graduate in Computer Science and Networks, MIAGE track (EMSI Casablanca, 5-year degree), after a Specialized Technician diploma in Software Development (OFPPT, El Jadida).",
+      paragraph2: "Through 4 internships in web, mobile and desktop development, I built applications with React, NestJS, Flutter and React Native, on MySQL, PostgreSQL and Firebase databases.",
+      paragraph3: "At FastCube, I developed 9 features and 7 secured REST APIs (JWT, data validation, Jest tests, OpenAPI documentation), cut response time by 30% through query optimization, and deployed with Docker Compose and GitHub Actions on AWS EC2.",
+      paragraph4: "I'm currently building Syndic Pro Maroc, a multi-tenant SaaS for condominium management with double-entry accounting. I'm looking for an engineering position in Morocco.",
       name: "Maryam Fajri",
-      role: "Full Stack Developer",
+      role: "Computer Science and Networks Engineer, MIAGE track",
       location: "Location",
-      remote: "Available remotely",
-      availability: "Availability",
-      immediate: "Immediate",
+      availability: "Looking for",
       specialization: "Specialization",
-      specializationValue: "Full-Stack & AI/ML",
+      specializationValue: "Full Stack & DevOps",
       stats: {
-        languages: "Languages mastered",
-        projects: "Projects completed",
-        tools: "Frameworks & Tools",
-        motivation: "Motivation",
+        internships: "Internships",
+        languages: "Programming languages",
+        saas: "SaaS / platform projects",
+        degree: "Engineering degree",
       },
-      passions: "My Passions",
+      passions: "Interests",
       interests: {
-        development: {
-          title: "Development",
-          description: "Creating modern applications",
+        saas: {
+          title: "SaaS & Full Stack",
+          description: "Building end-to-end applications",
         },
-        design: {
-          title: "UI/UX Design",
-          description: "Attractive user interfaces",
+        cloud: {
+          title: "DevOps & Cloud",
+          description: "Docker, CI/CD, AWS",
         },
-        mobile: {
-          title: "Mobile First",
-          description: "High-performance mobile applications",
+        neuro: {
+          title: "Neuroscience",
+          description: "Cognitive psychology",
         },
-        innovation: {
-          title: "Innovation",
-          description: "Emerging technologies",
+        riding: {
+          title: "Horse riding",
+          description: "Discipline, patience and focus",
         },
       },
     },
     skills: {
       title: "My",
       titleHighlight: "skills",
-      subtitle: "A range of modern technologies to create high-performance applications and exceptional user experiences.",
+      subtitle: "The technologies I use to design, secure and deploy web and mobile applications.",
       categories: {
-        programming: "Programming Languages",
-        frontend: "Frontend & Mobile",
-        backend: "Backend & Frameworks",
-        database: "Databases & Cloud",
-        ai: "AI & Machine Learning",
-        devops: "DevOps & Security",
+        programming: "Languages",
+        frontend: "Web & Mobile",
+        database: "Data",
+        devops: "DevOps & Cloud",
+        quality: "Quality & Security",
       },
-      additionalTitle: "Additional Technologies & Tools",
+      additionalTitle: "Other tools and methods",
     },
     projects: {
       title: "My",
       titleHighlight: "projects",
-      subtitle: "Discover a selection of my recent projects, ranging from mobile applications to modern web platforms.",
+      subtitle: "A selection of my work: SaaS platforms and applications built during internships.",
       technologies: "Technologies used",
       features: "Key features",
       code: "Code",
@@ -442,35 +457,92 @@ const translations: Record<Language, any> = {
         desktopApp: "Desktop App",
         webApp: "Web App",
         webAi: "Web App + AI",
+        saas: "SaaS",
+        internshipWeb: "Internship · Full Stack",
+        internshipMobile: "Internship · Mobile",
+        internshipDesktop: "Internship · Desktop",
       },
       cta: {
-        title: "Interested in collaboration?",
-        description: "I'm always open to exciting new projects. Feel free to contact me to discuss your needs.",
-        button: "Let's discuss your project",
+        title: "Have an opportunity for me?",
+        description: "I'm looking for a Full Stack & DevOps engineering position in Morocco. Feel free to get in touch.",
+        button: "Contact me",
       },
       list: {
-        eliteClick: {
-          title: "Elite Click - Advertising Services Digitization",
-          description: "Mobile application for digitizing advertising agency services",
+        syndic: {
+          title: "Syndic Pro Maroc - Condominium management SaaS",
+          description: "Multi-tenant SaaS for condominium management with double-entry accounting (ongoing since March 2026)",
           features: [
-            "Complete service digitization",
-            "Modern mobile interface",
-            "Client and project management",
-            "Integrated tracking system",
-            "Robust Node.js backend",
-            "Optimized MySQL database",
+            "Multi-tenant architecture",
+            "Double-entry accounting",
+            "Condominium (syndic) management",
+            "Next.js web app and Flutter mobile app",
+            "NestJS API with PostgreSQL and Prisma",
+          ],
+        },
+        factureAuto: {
+          title: "Facturly - Invoice management and tracking",
+          description: "Invoice management and tracking platform (2025 - 2026)",
+          features: [
+            "Invoice creation and management",
+            "PDF invoice generation",
+            "Secure authentication with JWT",
+            "Tracking dashboard",
+            "Client management",
+            "Containerized deployment with Docker",
+          ],
+        },
+        amouch: {
+          title: "AMOUCH - Veterinary and pet adoption platform",
+          description: "Veterinary and pet adoption platform built on a microservices architecture (2024 - 2025)",
+          features: [
+            "Microservices architecture",
+            "Animal catalog and adoption request tracking",
+            "Dedicated spaces for adopters and veterinarians",
+            "Appointment calendar and medical follow-up",
+            "Messaging between users",
+            "Awareness and education content",
+          ],
+        },
+        fastcube: {
+          title: "FastCube - Full Stack Internship",
+          description: "Internship from March to July 2025: full stack development of 9 features and 7 REST APIs in Agile Scrum (Jira)",
+          features: [
+            "9 features and 7 REST APIs (React, NestJS, MySQL)",
+            "Security: JWT, hashing, data validation",
+            "Jest tests and OpenAPI documentation",
+            "30% faster response time through query optimization",
+            "Docker Compose deployment on AWS EC2",
+            "CI/CD with GitHub Actions",
+          ],
+        },
+        eliteClick: {
+          title: "Elite Click - Mobile Internship",
+          description: "Internship from August to October 2025: Flutter mobile app for the agency's clients and agents",
+          features: [
+            "Flutter mobile app for clients and agents",
+            "REST API and MySQL database",
+            "Production deployment on AWS Lightsail",
+            "Code managed with Git/GitHub",
           ],
         },
         choworks: {
-          title: "ChoWorks - Company Internal Management",
-          description: "Mobile application for internal company management with modern interface",
+          title: "ChoWorks - Mobile Internship",
+          description: "Internship from August to September 2024: mobile app centralizing communication between teams",
           features: [
-            "Responsive user interface",
-            "Secure Firebase authentication",
-            "Real-time data management",
-            "Cloud synchronization",
-            "Intuitive and modern interface",
-            "User and permission management",
+            "React Native mobile app",
+            "REST API and Firebase",
+            "Centralized communication between teams",
+            "Agile Scrum with Docker and Git/GitHub",
+          ],
+        },
+        renault: {
+          title: "Renault Riva Dacia - Desktop Internship",
+          description: "Internship from March to April 2022: application centralizing customer data",
+          features: [
+            "C# / ASP.NET application with Entity Framework",
+            "SQL Server and MySQL databases",
+            "Centralized customer data",
+            "Better communication between customer service and after-sales",
           ],
         },
         vernaVert: {
@@ -483,42 +555,6 @@ const translations: Record<Language, any> = {
             "Reports and analytics",
             "Planning system",
             "Resource and team management",
-          ],
-        },
-        renault: {
-          title: "Renault - Customer Management",
-          description: "Modernization of customer management system through desktop application",
-          features: [
-            "Modern Windows Forms interface",
-            "GUNA Framework for design",
-            "Complete customer management",
-            "Sales tracking system",
-            "Detailed reports",
-            "Optimized MySQL database",
-          ],
-        },
-        fastcube: {
-          title: "FASTCUBE - AI Multi-service Web Platform",
-          description: "Intelligent web platform with chatbot, recommendation engine, and automatic summarization",
-          features: [
-            "Intelligent conversational chatbot",
-            "Advanced recommendation engine",
-            "Automatic summarization system",
-            "Modern full-stack architecture",
-            "OpenAI API integration",
-            "React.js user interface",
-          ],
-        },
-        amouch: {
-          title: "AMOUCH - Pet Store Web Application",
-          description: "Web application for pet store with microservices architecture",
-          features: [
-            "Scalable microservices architecture",
-            "Modern React.js interface",
-            "Complete animal management",
-            "Booking system",
-            "Inventory management",
-            "Relational MySQL database",
           ],
         },
         tickets: {
@@ -545,34 +581,29 @@ const translations: Record<Language, any> = {
             "Custom KPIs with weekly comparisons",
           ],
         },
-        factureAuto: {
-          title: "Invoice - Facture Auto",
-          description: "Web application for automatic invoice generation to streamline client tracking and billing workflows",
-          features: [
-            "Automatic invoice generation",
-            "Client and product management",
-            "Totals and tax calculation",
-            "Generated invoice history",
-            "Simple and fast interface",
-            "Invoice export and printing",
-          ],
-        },
       },
     },
     contact: {
       title: "Contact",
       titleHighlight: "me",
-      subtitle: "Have a project idea? A question? Don't hesitate to contact me. I usually respond within 24 hours.",
+      subtitle: "Have an opportunity? A question? Don't hesitate to contact me. I usually respond within 24 hours.",
       info: "Contact information",
       email: "Email",
       phone: "Phone",
       location: "Location",
-      locationValue: "Morocco",
+      locationValue: "Casablanca, Morocco",
       availability: "Availability",
       availabilityValue: "Mon - Fri, 9am - 6pm",
       followMe: "Follow me",
-      availabilityTitle: "Availability",
-      availabilityText: "I am available for freelance projects and collaborations. Response guaranteed within 24 hours for any request.",
+      availabilityTitle: "Actively looking",
+      availabilityText: "I'm looking for a Full Stack & DevOps engineering position in Morocco. I reply within 24 hours to any proposal.",
+      validation: {
+        nameRequired: "Name is required",
+        emailRequired: "Email is required",
+        emailInvalid: "Invalid email address",
+        subjectRequired: "Subject is required",
+        messageRequired: "Message is required",
+      },
       form: {
         title: "Send me a message",
         name: "Full name",
@@ -586,40 +617,52 @@ const translations: Record<Language, any> = {
         namePlaceholder: "Your name",
         emailPlaceholder: "your@email.com",
         subjectPlaceholder: "Subject of your message",
-        messagePlaceholder: "Describe your project or request...",
+        messagePlaceholder: "Describe your proposal or request...",
       },
     },
     certificates: {
       title: "Professional",
-      titleHighlight: "Certificates",
-      subtitle: "Training and certifications validating my technical and professional skills.",
-      aiBusiness: {
-        description: "Role of AI in business, AI tools, effective prompting, ethical use of artificial intelligence."
-      },
-      dataScience: {
-        description: "Data science practices, data analysis tools, data-driven approach for decision making."
+      titleHighlight: "Certifications",
+      subtitle: "Training and certifications validating my skills in cloud, DevOps and development.",
+      awsCloudPractitioner: {
+        description: "AWS cloud fundamentals: compute, storage, networking, security and pricing model.",
       },
       mlPython: {
-        description: "Supervised learning, neural networks, using scikit-learn and TensorFlow for machine learning."
-      },
-      pythonEverybody: {
-        description: "Mastery of Python, Django, data structures, data analysis and databases."
-      },
-      fullStackIBM: {
-        description: "Full-stack development, Cloud, React, Node.js, Docker, Kubernetes and modern architectures."
-      },
-      pythonSpecialization: {
-        description: "Complete Python specialization with data structures, networked APIs, databases, and building applications for data retrieval, processing, and visualization."
+        description: "Supervised learning, neural networks, using scikit-learn and TensorFlow.",
       },
       azureNetworks: {
-        description: "Design and management of virtual networks in Azure, cloud architecture, network security, and hybrid connectivity."
+        description: "Design and management of virtual networks in Azure, network security and hybrid connectivity.",
+      },
+      fullStackIBM: {
+        description: "Full stack development: cloud, React, Node.js, Docker, Kubernetes and modern architectures.",
+      },
+      aiBusiness: {
+        description: "Role of AI in business, AI tools, effective prompting, ethical use of artificial intelligence.",
+      },
+      dataScience: {
+        description: "Data science practices, data analysis tools, data-driven approach for decision making.",
+      },
+      pythonEverybody: {
+        description: "Python, data structures, data analysis and databases.",
+      },
+      pythonSpecialization: {
+        description: "Python specialization: data structures, networked APIs, databases, data processing and visualization.",
       },
       gitGithub: {
-        description: "Mastery of Git and GitHub for version control, project collaboration, branch management, and professional workflows."
-      }
+        description: "Git and GitHub: version control, collaboration, branch management and professional workflows.",
+      },
+      awsBasics: {
+        description: "Basics of AWS cloud services: compute, storage, networking and core cloud concepts.",
+      },
+      dockerKubernetes: {
+        description: "Containerization with Docker, orchestration with Kubernetes and deployment with OpenShift.",
+      },
+      reactBasics: {
+        description: "Interactive interfaces with React components, hooks and modern JavaScript.",
+      },
     },
     footer: {
-      description: "Full Stack Developer passionate about creating modern applications and exceptional user experiences.",
+      description: "Full Stack & DevOps Engineer. I design and deploy SaaS applications in production.",
       navigation: "Navigation",
       contact: "Contact",
       home: "Home",
@@ -632,7 +675,3 @@ const translations: Record<Language, any> = {
     },
   },
 };
-
-
-
-

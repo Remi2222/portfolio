@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award } from 'lucide-react';
@@ -7,133 +8,119 @@ import { containerVariants, itemVariants } from '../constants/animations';
 const Certificates = () => {
   const { t } = useLanguage();
 
+  const colors = {
+    navy: '#071426',
+    card: '#10243E',
+    teal: '#14B8A6',
+    cyan: '#22D3EE',
+    silver: '#CBD5E1',
+    border: '#263D56',
+  };
+
   const certificates = [
     {
-      id: 1,
-      title: "AI for Business Professionals",
-      organization: "HP LIFE",
-      description: t('certificates.aiBusiness.description'),
-      icon: <Award className="text-[#FFD700]" size={32} />,
-      borderColor: "border-[#FFD700]",
-      bgColor: "bg-[#FFD700]/10",
-      hoverBg: "hover:bg-[#FFD700]/20"
-    },
-    {
-      id: 2,
-      title: "Data Science & Analytics",
-      organization: "HP LIFE",
-      description: t('certificates.dataScience.description'),
-      icon: <Award className="text-[#C084FC]" size={32} />,
-      borderColor: "border-[#C084FC]",
-      bgColor: "bg-[#C084FC]/10",
-      hoverBg: "hover:bg-[#C084FC]/20"
+      id: 9,
+      title: "AWS Cloud Practitioner Essentials",
+      organization: "Amazon Web Services (AWS)",
+      description: t('certificates.awsCloudPractitioner.description'),
+      accent: colors.teal,
     },
     {
       id: 3,
       title: "Machine Learning with Python",
       organization: "IBM",
       description: t('certificates.mlPython.description'),
-      icon: <Award className="text-[#FFA500]" size={32} />,
-      borderColor: "border-[#FFA500]",
-      bgColor: "bg-[#FFA500]/10",
-      hoverBg: "hover:bg-[#FFA500]/20"
-    },
-    {
-      id: 4,
-      title: "Python for Everybody",
-      organization: "University of Michigan",
-      description: t('certificates.pythonEverybody.description'),
-      icon: <Award className="text-[#FFD700]" size={32} />,
-      borderColor: "border-[#FFD700]",
-      bgColor: "bg-[#FFD700]/10",
-      hoverBg: "hover:bg-[#FFD700]/20"
-    },
-    {
-      id: 5,
-      title: "Full Stack Software Developer Assessment",
-      organization: "IBM",
-      description: t('certificates.fullStackIBM.description'),
-      icon: <Award className="text-[#C084FC]" size={32} />,
-      borderColor: "border-[#C084FC]",
-      bgColor: "bg-[#C084FC]/10",
-      hoverBg: "hover:bg-[#C084FC]/20"
-    },
-    {
-      id: 6,
-      title: "Python for Everybody Specialization",
-      organization: "Coursera",
-      description: t('certificates.pythonSpecialization.description'),
-      icon: <Award className="text-[#FFD700]" size={32} />,
-      borderColor: "border-[#FFD700]",
-      bgColor: "bg-[#FFD700]/10",
-      hoverBg: "hover:bg-[#FFD700]/20"
+      accent: colors.cyan,
     },
     {
       id: 7,
       title: "Virtual Networks in Azure",
       organization: "Whizlabs / Coursera",
       description: t('certificates.azureNetworks.description'),
-      icon: <Award className="text-[#FFA500]" size={32} />,
-      borderColor: "border-[#FFA500]",
-      bgColor: "bg-[#FFA500]/10",
-      hoverBg: "hover:bg-[#FFA500]/20"
+      accent: colors.teal,
+    },
+    {
+      id: 5,
+      title: "Full Stack Software Developer (Cloud, React, Node.js, Docker, Kubernetes)",
+      organization: "IBM",
+      description: t('certificates.fullStackIBM.description'),
+      accent: colors.cyan,
+    },
+    {
+      id: 1,
+      title: "AI for Business Professionals",
+      organization: "HP LIFE",
+      description: t('certificates.aiBusiness.description'),
+      accent: colors.teal,
+    },
+    {
+      id: 2,
+      title: "Data Science & Analytics",
+      organization: "HP LIFE",
+      description: t('certificates.dataScience.description'),
+      accent: colors.cyan,
+    },
+    {
+      id: 4,
+      title: "Python for Everybody",
+      organization: "University of Michigan",
+      description: t('certificates.pythonEverybody.description'),
+      accent: colors.teal,
+    },
+    {
+      id: 6,
+      title: "Python for Everybody Specialization",
+      organization: "Coursera",
+      description: t('certificates.pythonSpecialization.description'),
+      accent: colors.cyan,
     },
     {
       id: 8,
       title: "Introduction to Git and GitHub",
       organization: "Google / Coursera",
       description: t('certificates.gitGithub.description'),
-      icon: <Award className="text-[#C084FC]" size={32} />,
-      borderColor: "border-[#C084FC]",
-      bgColor: "bg-[#C084FC]/10",
-      hoverBg: "hover:bg-[#C084FC]/20"
-    },
-     {id: 9,
-        title: "AWS Cloud Practitioner Essentials",
-        organization: "Amazon Web Services (AWS)",
-        description: t('certificates.awsCloudPractitioner.description'),
-        icon: <Award className="text-[#FF9900]" size={32} />,
-        borderColor: "border-[#FF9900]",
-        bgColor: "bg-[#FF9900]/10",
-        hoverBg: "hover:bg-[#FF9900]/20"
+      accent: colors.teal,
     },
     {
-        id: 10,
-        title: "AWS Basics",
-        organization: "KodeKloud",
-        description: t('certificates.awsBasics.description'),
-        icon: <Award className="text-[#FF9900]" size={32} />,
-        borderColor: "border-[#FF9900]",
-        bgColor: "bg-[#FF9900]/10",
-        hoverBg: "hover:bg-[#FF9900]/20"
+      id: 10,
+      title: "AWS Basics",
+      organization: "KodeKloud",
+      description: t('certificates.awsBasics.description'),
+      accent: colors.cyan,
     },
     {
-        id: 11,
-        title: "Introduction to Containers with Docker, Kubernetes & OpenShift",
-        organization: "IBM",
-        description: t('certificates.dockerKubernetes.description'),
-        icon: <Award className="text-[#0F62FE]" size={32} />,
-        borderColor: "border-[#0F62FE]",
-        bgColor: "bg-[#0F62FE]/10",
-        hoverBg: "hover:bg-[#0F62FE]/20"
+      id: 11,
+      title: "Introduction to Containers with Docker, Kubernetes & OpenShift",
+      organization: "IBM",
+      description: t('certificates.dockerKubernetes.description'),
+      accent: colors.teal,
     },
-    
     {
-        id: 13,
-        title: "React Basics",
-        organization: "Meta",
-        description: t('certificates.reactBasics.description'),
-        icon: <Award className="text-[#61DAFB]" size={32} />,
-        borderColor: "border-[#61DAFB]",
-        bgColor: "bg-[#61DAFB]/10",
-        hoverBg: "hover:bg-[#61DAFB]/20"
-    }
-      ];
+      id: 13,
+      title: "React Basics",
+      organization: "Meta",
+      description: t('certificates.reactBasics.description'),
+      accent: colors.cyan,
+    },
+  ];
 
   return (
-    <section id="certificates" className="py-32 bg-[#1A0033] relative">
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-40"></div>
+    <section
+      id="certificates"
+      className="py-32 relative"
+      style={{ backgroundColor: '#02232c'}}
+    >
+    
+      <div
+        className="absolute top-0 left-0 right-0 h-1"
+        style={{
+          background: `linear-gradient(to right, transparent, ${colors.teal}, ${colors.cyan}, transparent)`,
+          opacity: 0.7,
+        }}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -143,13 +130,24 @@ const Certificates = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6 text-[#F9FAFB]"
+            className="text-4xl md:text-5xl font-bold mb-6 text-white"
           >
-            {t('certificates.title')} <span className="gradient-text">{t('certificates.titleHighlight')}</span>
+            {t('certificates.title')}{' '}
+            <span
+              style={{
+                background: `linear-gradient(90deg, ${colors.teal}, ${colors.cyan})`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              {t('certificates.titleHighlight')}
+            </span>
           </motion.h2>
+
           <motion.p
             variants={itemVariants}
-            className="text-xl text-[#D1D5DB] max-w-3xl mx-auto"
+            className="text-xl max-w-3xl mx-auto"
+            style={{ color: colors.silver }}
           >
             {t('certificates.subtitle')}
           </motion.p>
@@ -160,29 +158,64 @@ const Certificates = () => {
             <motion.div
               key={certificate.id}
               variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className={`bg-[#2D1B4E] border-2 ${certificate.borderColor} rounded-xl p-6 transition-all duration-300 ${certificate.hoverBg} hover:shadow-lg hover:shadow-[#C084FC]/20`}
+              whileHover={{ y: -7 }}
+              className="rounded-xl p-6 transition-all duration-300 cursor-default"
+              style={{
+                backgroundColor: '#02232c',
+                border: `1px solid ${colors.border}`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = certificate.accent;
+                e.currentTarget.style.boxShadow =
+                  `0 12px 30px ${certificate.accent}20`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = colors.border;
+                e.currentTarget.style.boxShadow = 'none';
+              }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className={`${certificate.bgColor} p-3 rounded-lg`}>
-                  {certificate.icon}
+              <div className="flex items-start justify-between mb-5">
+                <div
+                  className="p-3 rounded-xl"
+                  style={{
+                    backgroundColor: `${certificate.accent}15`,
+                    border: `1px solid ${certificate.accent}35`,
+                  }}
+                >
+                  <Award
+                    size={32}
+                    style={{ color: certificate.accent }}
+                  />
                 </div>
+
+                <div
+                  className="w-2 h-2 rounded-full mt-2"
+                  style={{ backgroundColor: certificate.accent }}
+                />
               </div>
-              
-              <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">
+
+              /* Certificate Title */
+              <h3 className="text-xl font-bold text-white mb-3 leading-snug">
                 {certificate.title}
               </h3>
-              
-              <p className="text-sm italic text-[#C084FC] mb-4">
+
+              <p
+                className="text-sm font-semibold mb-4"
+                style={{ color: certificate.accent }}
+              >
                 {certificate.organization}
               </p>
-              
-              <p className="text-[#D1D5DB] text-sm leading-relaxed">
+
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: colors.silver }}
+              >
                 {certificate.description}
               </p>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
