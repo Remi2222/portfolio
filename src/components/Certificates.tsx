@@ -194,7 +194,7 @@ const Certificates = () => {
                 />
               </div>
 
-              /* Certificate Title */
+             
               <h3 className="text-xl font-bold text-white mb-3 leading-snug">
                 {certificate.title}
               </h3>
