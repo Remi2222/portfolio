@@ -119,29 +119,40 @@ const Hero = () => {
           </motion.div>
 
           <motion.div variants={containerVariants} className="order-1 lg:order-2 text-center lg:text-left">
-            <motion.div variants={itemVariants} className="mb-6">
-              <p className="text-lg text-secondary font-medium">{t('hero.greeting')}</p>
-            </motion.div>
+           {/* Greeting */}
+          <motion.div variants={itemVariants} className="mb-4">
+            <p className="text-sm md:text-base text-secondary font-medium">
+              {t('hero.greeting')}
+            </p>
+          </motion.div>
 
-            <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="gradient-text">{t('hero.name')}</span>
-            </motion.h1>
+          {/* Name - Keep XXL */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[110px] xl:text-[120px] font-black mb-5 tracking-tighter leading-none"
+          >
+            <span className="gradient-text">{t('hero.name')}</span>
+          </motion.h1>
 
-            <motion.p variants={itemVariants} className="text-xl md:text-2xl text-secondary mb-2">
-              {t('hero.title')}
-            </motion.p>
+          {/* Professional Title */}
+          <motion.p variants={itemVariants} className="text-base md:text-lg text-secondary mb-2">
+            {t('hero.title')}
+          </motion.p>
 
-            <motion.p variants={itemVariants} className="text-lg md:text-xl text-secondary mb-6">
-              {t('hero.subtitle')}
-            </motion.p>
+          {/* Subtitle */}
+          <motion.p variants={itemVariants} className="text-sm md:text-base text-secondary mb-4">
+            {t('hero.subtitle')}
+          </motion.p>
 
-            <motion.p variants={itemVariants} className="text-base text-secondary mb-6">
-              {t('hero.description')}
-            </motion.p>
+          {/* Description */}
+          <motion.p variants={itemVariants} className="text-sm md:text-base text-secondary mb-4">
+            {t('hero.description')}
+          </motion.p>
 
-            <motion.p variants={itemVariants} className="text-sm text-secondary mb-8">
-              {t('hero.details')}
-            </motion.p>
+          {/* Details */}
+          <motion.p variants={itemVariants} className="text-xs md:text-sm text-secondary mb-6">
+            {t('hero.details')}
+          </motion.p>
 
             {/* Skills */}
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start space-x-6 mb-10">

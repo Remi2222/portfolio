@@ -64,7 +64,7 @@ const About = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6 text-[#F8FAFC]"
+            className="text-3xl md:text-4xl font-bold mb-6 text-[#F8FAFC]"
           >
             {t('about.title')}{' '}
             <span className="gradient-text">
